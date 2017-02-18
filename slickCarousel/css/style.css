@@ -1,0 +1,13 @@
+.carousel {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.slick-dots {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  bottom: -40px;
+}
