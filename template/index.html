@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='template.js'></script>
+    <script src='main.js'></script>
+    <title>template experiments</title>
+  </head>
+  <body>
+    <div id='container'></div>
+    <script type='text/html' id='template'>
+      <h1><%= name %></h1>
+      <div>
+        <%= description %>
+      </div>
+      <h2><%= heading %></h2>
+      <ul>
+        <li><%= reason1 %></li>
+        <li><%= reason2 %></li>
+        <li><%= reason3 %></li>
+        <li><%= reason4 %></li>
+      </ul>
+    </script>
+  </body>
+</html>
