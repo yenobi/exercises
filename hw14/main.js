@@ -18,12 +18,21 @@ $(function() {
 
   // creating and adding question
   var html = $('#template').html();
-  // content is not a dom-element - it's a string, but why
-  var content = tmpl(html, bestBrowser);
+  var li = document.createElement('li');
+  li.innerHTML = tmpl(html, bestBrowser);
 
-  ol.append(content);
+  ol.append(li);
   form.append(ol);
   form.append(submit);
   container.append(form);
 
 });
+
+/* remain questions
+- how to use cycle to fill all the answers
+- how to use object for more then 1 question
+- then hw 13-14 with localStorage
+- generating from localStorage
+- checking answers
+- modal window with results
+*/
