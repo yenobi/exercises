@@ -1,0 +1,7 @@
+.for-placeholder {
+  color: blue;
+}
+
+.for-placeholder::-webkit-input-placeholder {
+  color: blue;
+}
