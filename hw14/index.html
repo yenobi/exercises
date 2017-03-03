@@ -13,12 +13,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src='template.js'></script>
     <script type='text/html' id="template">
+
       <h2><%= question %></h2>
       <div class="wrapper">
-        <label>
-          <input type="radio" name="<%= name %>" value="<%= value %>"> <%= answer %>
-        </label>
+
+        <% for (var key in answers) { %>
+          <label>
+            <input type="radio" name="<%= name %>" value="<%= key %>"> <%= answers[key] %>
+          </label>
+        <% } %>
       </div>
+
     </script>
     <script src='main.js'></script>
   </body>

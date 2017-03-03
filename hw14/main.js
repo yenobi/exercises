@@ -1,10 +1,28 @@
 $(function() {
-  var bestBrowser = {
+
+// if receive json - JSON.parse();
+
+var myTest = {
+  bestBrowser: {
     question: "What is the best browser?",
+    name: "bestBrowser",
+    answers: {
+      "ie": "Internet Explorer",
+      "chrome": "Chrome",
+      "safari": "Safari"
+    }
+  },
+  worstBrowser: {
+    question: "What is the worst browser?",
     name: "worstBrowser",
-    answer: "Internet Explorer",
-    value: "ie"
-  };
+    answers: {
+      "ie": "Internet Explorer",
+      "chrome": "Chrome",
+      "safari": "Safari"
+    }
+  }
+};
+
   // creating and adding all the controlls
   var container = $('#container');
   var heading = document.createElement('h1');
@@ -17,11 +35,14 @@ $(function() {
   submit.value = 'Check the results';
 
   // creating and adding question
-  var html = $('#template').html();
-  var li = document.createElement('li');
-  li.innerHTML = tmpl(html, bestBrowser);
 
-  ol.append(li);
+  for (var key in myTest) {
+    var html = $('#template').html();
+    var li = document.createElement('li');
+    li.innerHTML = tmpl(html, myTest[key]);
+    ol.append(li);
+  }
+
   form.append(ol);
   form.append(submit);
   container.append(form);
@@ -29,10 +50,12 @@ $(function() {
 });
 
 /* remain questions
-- how to use cycle to fill all the answers
-- how to use object for more then 1 question
+
+task: check the answers
+solution: from on learn.js
+
 - then hw 13-14 with localStorage
 - generating from localStorage
-- checking answers
+
 - modal window with results
 */
