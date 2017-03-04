@@ -5,3 +5,9 @@
 .for-placeholder::-webkit-input-placeholder {
   color: blue;
 }
+
+.field {
+  width: 100px;
+  height: 50px;
+  border: 2px solid black;
+}
