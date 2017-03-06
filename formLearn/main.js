@@ -47,59 +47,91 @@
 //   }
 // }
 
-var div = document.querySelector('.field');
+// solution of fourth task
+// var div = document.querySelector('.field');
+//
+// var container = document.getElementById('container');
+//
+// document.addEventListener('keydown', convertDiv);
+//
+// function convertDiv(e) {
+//   // smth in right way to reuse, but not exactly
+//   // if(!div) {
+//   //   var div = document.querySelector('.field');
+//   // }
+//
+//   if(e.shiftKey && e.keyCode === 49) {
+//     // console.log('begin edit');
+//     container.removeChild(div);
+//
+//     var textarea = document.createElement('textarea');
+//     textarea.classList.add('field');
+//     textarea.setAttribute('autofocus', '');
+//     container.appendChild(textarea);
+//
+//     var textarea = document.querySelector('textarea');
+//     textarea.addEventListener('keydown', convertReverse);
+//   }
+//
+//   function convertReverse(event){
+//
+//     if (event.shiftKey && event.keyCode === 83) {
+//       // console.log('save and log out');
+//       if (textarea.value) {
+//         var content = textarea.value;
+//         container.removeChild(textarea);
+//
+//         createEmptyDiv();
+//
+//       } else {
+//         createEmptyDiv();
+//       }
+//
+//     } else if(event.keyCode === 27) {
+//       // console.log('log out without save');
+//       container.removeChild(textarea);
+//
+//       createEmptyDiv();
+//     }
+//
+//     function createEmptyDiv() {
+//       var div = document.createElement('div');
+//       div.innerHTML = content || "";
+//       div.classList.add('field');
+//       container.appendChild(div);
+//     }
+//   }
+// }
+// can't reuse second time - why?
 
-var container = document.getElementById('container');
+var input = document.getElementById('caps-exp');
 
-document.addEventListener('keydown', convertDiv);
+input.addEventListener('focus', capsAnalyze);
 
-function convertDiv(e) {
-  // smth in right way to reuse, but not exactly
-  // if(!div) {
-  //   var div = document.querySelector('.field');
-  // }
+function capsAnalyze() {
+  var caps = 'disable';
 
-  if(e.shiftKey && e.keyCode === 49) {
-    // console.log('begin edit');
-    container.removeChild(div);
-
-    var textarea = document.createElement('textarea');
-    textarea.classList.add('field');
-    textarea.setAttribute('autofocus', '');
-    container.appendChild(textarea);
-
-    var textarea = document.querySelector('textarea');
-    textarea.addEventListener('keydown', convertReverse);
-  }
-
-  function convertReverse(event){
-
-    if (event.shiftKey && event.keyCode === 83) {
-      // console.log('save and log out');
-      if (textarea.value) {
-        var content = textarea.value;
-        container.removeChild(textarea);
-
-        createEmptyDiv();
-
-      } else {
-        createEmptyDiv();
-      }
-
-    } else if(event.keyCode === 27) {
-      // console.log('log out without save');
-      container.removeChild(textarea);
-
-      createEmptyDiv();
-    }
-
-    function createEmptyDiv() {
-      var div = document.createElement('div');
-      div.innerHTML = content || "";
-      div.classList.add('field');
-      container.appendChild(div);
-    }
+  input.onkeypress = function(e) {
+    var chr = getChar(e);
+    // console.log(chr);
+    // console.log(String.fromCharCode(e.keyCode));
+    console.log(e.which);
+    console.log(e.keyCode);
   }
 }
 
-// can't reuse second time - why?
+// кросс-браузерная функция получения утф-знака
+// по нажатой клавиши
+function getChar(event) {
+    if (event.which == null) {
+      if (event.keyCode < 32) return null;
+      return String.fromCharCode(event.keyCode) // IE
+    }
+
+    if (event.which != 0 && event.charCode != 0) {
+      if (event.which < 32) return null;
+      return String.fromCharCode(event.which) // остальные
+    }
+
+    return null; // специальная клавиша
+  }
