@@ -11,3 +11,8 @@
   height: 50px;
   border: 2px solid black;
 }
+
+#capsIndicator {
+  display:none;
+  color:red;
+}

@@ -105,19 +105,37 @@
 // can't reuse second time - why?
 
 var input = document.getElementById('caps-exp');
+var capsIndicator = document.getElementById('capsIndicator');
 
 input.addEventListener('focus', capsAnalyze);
 
 function capsAnalyze() {
-  var caps = 'disable';
+  var caps = null;
 
   input.onkeypress = function(e) {
     var chr = getChar(e);
-    // console.log(chr);
-    // console.log(String.fromCharCode(e.keyCode));
-    console.log(e.which);
-    console.log(e.keyCode);
+
+    if (e.shiftKey && chr == chr.toUpperCase()) {
+      console.log('shit on, caps off');
+      caps = 'off';
+    } else if (e.shiftKey && chr == chr.toLowerCase()) {
+      console.log('shit on, caps on');
+      caps = 'on';
+    } else if (!e.shiftKey && chr == chr.toUpperCase()) {
+      console.log('shit off, caps on');
+      caps = 'on';
+    } else {
+      console.log('caps off');
+      caps = 'off';
+    }
+
+    if (caps == 'on') {
+      capsIndicator.style.display = 'block';
+    } else {
+      capsIndicator.style.display = 'none';
+    }
   }
+
 }
 
 // кросс-браузерная функция получения утф-знака
