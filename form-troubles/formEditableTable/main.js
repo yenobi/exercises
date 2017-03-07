@@ -39,7 +39,7 @@ table.onclick = function(e) {
   var tdNew = document.createElement('td');
 
   buttonOk.onclick = function() {
-    tdNew.innerHTML = textarea.innerHTML;
+    tdNew.innerHTML = textarea.value;
     reverseAll();
   }
 
