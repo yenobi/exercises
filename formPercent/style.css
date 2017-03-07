@@ -1,0 +1,26 @@
+td select,
+td input {
+  width: 150px;
+}
+
+#diagram td {
+  vertical-align: bottom;
+  text-align: center;
+  padding: 10px;
+}
+
+#diagram div {
+  margin: auto;
+}
+
+#height-before {
+  background: red;
+  width:40px;
+  height:100px
+}
+
+#height-after {
+  background: green;
+  width:40px;
+  height:0
+}
