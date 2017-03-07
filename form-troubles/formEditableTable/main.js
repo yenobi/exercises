@@ -8,8 +8,8 @@ table.onclick = function(e) {
 
   var content = target.innerHTML;
   var classTd = target.className;
-  // var textarea = document.createElement('textarea');
-  var textarea = document.createElement('input');
+  var textarea = document.createElement('textarea');
+  // var textarea = document.createElement('input');
   textarea.type = 'textarea';
   // текстара возвращает текст вместо тегов (заменяет их утф)
   // инпут возвращает правильные теги, а не текст,
