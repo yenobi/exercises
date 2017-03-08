@@ -10,13 +10,15 @@
     var form = document.forms[0];
     var input = form.elements.text;
     var cancel = form.elements.cancel;
-    // console.log(input);
 
     buttonShowPrompt.addEventListener('click', showPrompt);
 
     function showPrompt() {
       formWrapper.style.display = 'block';
+      input.focus();
 
+      // how to combine callback ? and delegate parts of event?
+      
       // this is addding callback
       form.addEventListener('submit', callback);
 
@@ -26,17 +28,15 @@
     }
 
     function callback(e) {
-      // add some conditions for keypress
-      // now cant type in input
-      if (e.type == 'submit') {
-        alert(input.value);
-      } else if (e.type == 'click' || e.type == 'keypress') {
+      if (e.type == 'click' || e.type == 'keypress' && e.keyCode == 27) {
         alert('null');
         formWrapper.style.display = '';
-        console.log('close');
+      } else if (input !== document.activeElement && input.value == '') {
+        e.preventDefault();
+        return;
+      } else if (e.type == 'submit') {
+        alert(input.value);
       }
     }
-    // (input.value || null)
-
   });
 })(document, window, domIsReady);
