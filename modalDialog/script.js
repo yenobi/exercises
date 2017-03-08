@@ -20,37 +20,23 @@
       // this is addding callback
       form.addEventListener('submit', callback);
 
-
+      // this is callback with null
       cancel.addEventListener('click', callback);
-      formWrapper.addEventListener('keydown', callback2);
-
-      // esc or cancel
-      // event on formWrapper for esc ?
-      // event on cancel for form ?
+      document.addEventListener('keypress', callback);
     }
 
-// this didnt work too - why? 
-    function callback2(e) {
-      if(e.keyCode == 27) {
-        formWrapper.style.display = 'none';
-
-      }
-    }
-
-    // how find out the type of event ?
     function callback(e) {
-      // don't work event on click
+      // add some conditions for keypress
+      // now cant type in input
       if (e.type == 'submit') {
         alert(input.value);
-      } else if (e.type == 'click') {
-        alrt('null');
-        formWrapper.style.display = 'none';
+      } else if (e.type == 'click' || e.type == 'keypress') {
+        alert('null');
+        formWrapper.style.display = '';
+        console.log('close');
       }
-      // if e.type click || input.value == ""
     }
     // (input.value || null)
-
-
 
   });
 })(document, window, domIsReady);
