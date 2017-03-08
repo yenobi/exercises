@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='style.css'>
+  <title>Modal dialog window with form</title>
+</head>
+
+<body>
+
+
+  <div id="prompt-form-container">
+    <form id="prompt-form">
+      <div id="prompt-message">Введите, пожалуйста...
+        <br>Что-то..</div>
+      <input name="text" type="text">
+      <input type="submit" value="Ок">
+      <input type="button" name="cancel" value="Отмена">
+    </form>
+  </div>
+
+  <div>
+    <h2>Нажмите на кнопку ниже</h2>
+    <button>Показать модальное окно</button>
+  </div>
+<script src='domIsReady.js'></script>
+<script src='script.js'></script>
+</body>
+
+</html>
