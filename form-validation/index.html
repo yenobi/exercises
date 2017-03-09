@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='style.css'>
+  <title>Form validation</title>
+</head>
+
+<body>
+
+
+  <form>
+    <table>
+      <tr>
+        <td>От кого</td>
+        <td>
+          <input name="from" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>Ваш пароль</td>
+        <td>
+          <input name="password" type="password">
+        </td>
+      </tr>
+      <tr>
+        <td>Повторите пароль</td>
+        <td>
+          <input name="password2" type="password">
+        </td>
+      </tr>
+      <tr>
+        <td>Куда</td>
+        <td>
+          <select name="to">
+            <option value="0"></option>
+            <option value="1">Отдел снабжения</option>
+            <option value="2">Отдел разработки</option>
+            <option value="3">Директору</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    Сообщение:
+    <label>
+      <textarea name="message" style="display:block;width:400px;height:100px"></textarea>
+    </label>
+<!-- button had onclick event with validate function,
+but i want to do validate on submit, not on click -->
+    <input type="submit" value="Проверить">
+  </form>
+  <script src='domIsReady.js'></script>
+  <script src='script.js'></script>
+</body>
+
+</html>
