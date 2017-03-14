@@ -1,0 +1,11 @@
+{
+  "name": "first-angular-app",
+  "version": "0.1.0",
+  "description": "simple list (to do but with friends)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sergey Koshman",
+  "license": "ISC"
+}

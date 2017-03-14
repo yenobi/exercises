@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width, initial-scale=1">
+    <title>my first angular app</title>
+    <script src="lib/angular.min.js"></script>
+  </head>
+  <!-- add one ctrl per 1 section (now we have 1-module-app) -->
+  <body ng-controller="friendListCtrl">
+
+<!-- how to select default value -->
+  <select ng-model="orederProp">
+    <option value="name">Name</option>
+    <option value="surname">Surame</option>
+  </select>
+
+    <ul>
+      <li ng-repeat="friend in company | orderBy:orederProp">
+        <h3>{{friend.name}} {{friend.surname}} <span ng-click="deleteFriend(friend)">[x]</span></h3>
+      </li>
+    </ul>
+
+    <input ng-model="friend.name" type="text" value="name">
+    <input ng-model="friend.surname" type="text" value="surname">
+    <input ng-click="addFriend(friend)" type="submit" value="add">
+
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+  </body>
+</html>
