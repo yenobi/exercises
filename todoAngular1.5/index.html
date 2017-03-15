@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myToDo">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=deivce-width, initial-scale=1">
+    <title>Simple todo-list with angular 1.5</title>
+    <script src="lib/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+    <!-- it's only for one class) -->
+    <style>
+      .done-true {
+        text-decoration: line-through;
+        color: grey;
+      }
+    </style>
+  </head>
+  <body ng-controller="listCtrl">
+    <h2>My first ToDo-list with Angular</h2>
+    <!-- total.length is binding too -->
+    <h3>Total:{{todoList.length}}</h3>
+    <ul ng-repeat="todos in todoList">
+      <!-- todo.done in ng-model for checbox -
+      is it two-side binding?
+      because of exchangeof info?-->
+      <li>
+        <input type="checkbox" ng-model="todos.done">
+        <span class="done-{{todos.done}}">{{todos.text}}</span>
+      </li>
+    </ul>
+    <!-- try to do input without form -->
+    <form>
+      <input type="text" ng-model="todoText">
+      <button ng-click="addTodo()">add</button>
+    </form>
+    <button ng-click="removeCompleted()">remove Completed</button>
+  </body>
+</html>
