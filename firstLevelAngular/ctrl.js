@@ -10,18 +10,22 @@ function listCtrl($scope) {
     },
     {
       text: "second test-phrase"
+    },
+    {
+      text: "third test-phrase"
     }
   ];
 
+  $scope.listSecond = [];
 // can work with such list
 // - mb will be moree comfortable, when two more essence
 //
   // $scope.list = {
   //   first: {
-  //     text: "first"
+  //     text: "first test-phrase"
   //   },
   //   second: {
-  //     text: "second"
+  //     text: "second test-phrase"
   //   }
   // };
 
@@ -32,18 +36,39 @@ function listCtrl($scope) {
   };
 
   $scope.addPhrase = function() {
-    $scope.list.push({
+    // $scope.addToItem - this is object with phrase
+    // if ($scope.list.indexOf($scope.addToItem)) {
+    //   // true if > 0
+    //   // если элемент - первого порядка
+    // };
+
+    console.log($scope.addToItem);
+
+    // работает, но след уровень создается сразу для всех пунктов первого
+    $scope.listSecond.push({
       text: $scope.newItem.text
     });
+
+    // это для одноурвнего дерева, чтобы вставлять именно там, где хочешь
+    // $scope.list.splice(($scope.list.indexOf($scope.addToItem) + 1), 0, {
+    //   text: $scope.newItem.text
+    // });
 
     $scope.newItem.text = '';
 
     $scope.removeFlag();
+    // $scope.secondLevelFlag = true;
   };
 
   // next two expressions look ugly
   $scope.addFlag = function() {
+    var self = this;
+
     $scope.formFlag = true;
+    $scope.addToItem = self.listItem;
+
+    console.log(self.$parent.list);
+    // $scope.addToIndex = $scope.list.indexOf(self.listItem);
   };
 
   $scope.removeFlag = function() {
@@ -54,7 +79,7 @@ function listCtrl($scope) {
 // little step
 // add autofocus to input
 
-// next step
+// next step - realized with splice and index to $scope
 // 1. detect wht plus was clicked
 // 2. add newItem.text exactly to the right place of list
 
@@ -65,3 +90,12 @@ function listCtrl($scope) {
 // - вопрос - могут быть списки не массивами, а объектами?
 // ответ: да, только объект объектов (попробую с несколькими
 // сущностями)
+
+
+// подсписки - это скорей всего модули со своим контроллером,
+// пока отложить, чтобы здесь не сломать все и попробовать на туду-листе
+// 1. подключить модуль
+// 2. прокинуть туда хтмл
+//  - можно ли клонировать имеющийся модуль?
+// 3. отрендерить с новым массивом
+// 4. применить на этом проекте
