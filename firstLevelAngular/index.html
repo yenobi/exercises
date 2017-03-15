@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=deivce-width, initial-scale=1">
+    <link rel="stylesheet" href="form.css">
+    <title>Тестовое задание</title>
+    <script src="lib/angular.min.js"></script>
+    <!-- can add app and ctrl in one element and with dom-ready? -->
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+  </head>
+  <body ng-controller="appCtrl">
+
+    <h2>My day</h2>
+
+    <ul>
+      <li ng-repeat="listItem in list">
+        {{listItem.text}}
+        <span ng-click="addFlag()">[+]</span>
+        <span ng-click="hidePhrase()">[x]</span>
+      </li>
+    </ul>
+
+    <form ng-show="formFlag">
+      <input type='text' ng-model="newItem.text">
+      <button ng-click="addPhrase()">add</button>
+      <span class="hideForm" ng-click="removeFlag()">[x]</span>
+    </form>
+
+  </body>
+</html>
