@@ -1,0 +1,12 @@
+form {
+  width: 410px;
+  border: 1px solid black;
+  padding: 15px;
+}
+input[type="text"] {
+  width: 150px;
+}
+
+.hideForm {
+  float: right;
+}

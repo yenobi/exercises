@@ -12,7 +12,7 @@
   </head>
   <body ng-controller="appCtrl">
 
-    <h2>My day</h2>
+    <h2>Мой день</h2>
 
     <ul>
       <li ng-repeat="listItem in list">
@@ -24,20 +24,15 @@
     </ul>
 
     <form ng-show="formFlag">
+      <select ng-model="newItem.type">
+        <option value="time">Интервал</option>
+        <option value="act">Действие</option>
+        <option value="group">Группа</option>
+      </select>
       <input type='text' ng-model="newItem.text">
-      <button ng-click="addPhrase()">add</button>
+      <button ng-click="addPhrase()">Добавить</button>
       <span class="hideForm" ng-click="removeFlag()">[x]</span>
     </form>
-
-
-  <!-- this is for second level
-  <ul ng-show="secondLevelFlag">
-    <li ng-repeat="listItemSecond in listSecond">
-      {{listItemSecond.text}}
-      <span ng-click="addFlag()">[+]</span>
-      <span ng-click="hidePhrase()">[x]</span>
-    </li>
-  </ul> -->
 
   </body>
 </html>

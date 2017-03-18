@@ -16,19 +16,6 @@ function listCtrl($scope) {
     }
   ];
 
-  $scope.listSecond = [];
-// can work with such list
-// - mb will be moree comfortable, when two more essence
-//
-  // $scope.list = {
-  //   first: {
-  //     text: "first test-phrase"
-  //   },
-  //   second: {
-  //     text: "second test-phrase"
-  //   }
-  // };
-
   $scope.hidePhrase = function() {
     var self = this;
 
@@ -42,22 +29,21 @@ function listCtrl($scope) {
     //   // если элемент - первого порядка
     // };
 
-    console.log($scope.addToItem);
-
     // работает, но след уровень создается сразу для всех пунктов первого
-    $scope.listSecond.push({
-      text: $scope.newItem.text
-    });
-
-    // это для одноурвнего дерева, чтобы вставлять именно там, где хочешь
-    // $scope.list.splice(($scope.list.indexOf($scope.addToItem) + 1), 0, {
+    // $scope.listSecond.push({
     //   text: $scope.newItem.text
     // });
+
+    // это для одноурвнего дерева, чтобы вставлять именно там, где хочешь
+    $scope.list.splice(($scope.list.indexOf($scope.addToItem) + 1), 0, {
+      text: $scope.newItem.text
+    });
 
     $scope.newItem.text = '';
 
     $scope.removeFlag();
     // $scope.secondLevelFlag = true;
+    $scope.addInclude();
   };
 
   // next two expressions look ugly
@@ -74,6 +60,26 @@ function listCtrl($scope) {
   $scope.removeFlag = function() {
     $scope.formFlag = false;
   };
+
+
+// for second level
+$scope.listSecond = [
+    {
+      text: "test-1"
+    },
+    {
+      text: "test-2"
+    }
+  ];
+
+  $scope.addInclude = function() {
+    if ($scope.list.length > 3) {
+      return 'list.html';
+    }
+  };
+
+
+  // end of ctrl
 };
 
 // little step
@@ -99,3 +105,15 @@ function listCtrl($scope) {
 //  - можно ли клонировать имеющийся модуль?
 // 3. отрендерить с новым массивом
 // 4. применить на этом проекте
+
+// can work with such list (exchange for array)
+// - mb will be moree comfortable, when two more essence
+//
+  // $scope.list = {
+  //   first: {
+  //     text: "first test-phrase"
+  //   },
+  //   second: {
+  //     text: "second test-phrase"
+  //   }
+  // };
