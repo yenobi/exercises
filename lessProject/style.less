@@ -1,0 +1,26 @@
+// import some less-files with an easy way
+@import 'color';
+
+@size: 50px;
+// using of var
+#container {
+  color: @main-color;
+
+
+// nesting-rules
+  h1 {
+    color: @heading-color;
+  }
+
+  .littleBox {
+    width: @size;
+    height: @size;
+    background-color: lighten(@heading-color, 30%);
+  }
+
+  .bigBox {
+    width: @size + 50;
+    height: @size + 50;
+    background-color: darken(@heading-color, 30%);
+  }
+}
