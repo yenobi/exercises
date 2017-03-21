@@ -6,6 +6,14 @@
 #container {
   color: @main-color;
 
+// mixin
+// default value
+.mixin(@size: 5px) {
+  width: @size;
+  height: @size;
+}
+
+// guards - more mixins ?
 
 // nesting-rules
   h1 {
@@ -13,14 +21,21 @@
   }
 
   .littleBox {
-    width: @size;
-    height: @size;
+    .mixin(@size);
     background-color: lighten(@heading-color, 30%);
   }
 
   .bigBox {
-    width: @size + 50;
-    height: @size + 50;
+    .mixin(@size + 50);
     background-color: darken(@heading-color, 30%);
   }
+}
+
+// sting interpolation
+
+// this is gow to define
+@root: "/images/";
+// how to use in best usercase
+#form {
+  background-image: url("@{root}background.jpg");
 }
