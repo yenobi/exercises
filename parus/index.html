@@ -3,17 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  TODO: change font for inner docs -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="css/src/notmalize.css">
     <link rel="stylesheet" href="css/src/style.css">
     <title>test</title>
   </head>
   <body>
     <header>
+      <div class="wrapper">
       <a href="#">logotype</a>
-      <!-- icon on css -->
-      <div>menu-icon</div>
-      test text
+      <div class="menu-icon">
+        <div></div>
+      </div>
+      </div>
+
+      <!-- to show and hide menu use move right: -100%-->
+      <nav>
+        <button>Поднять паруса!</button>
+        <ul>
+          <li><a href="#">Яхта</a></li>
+           <li><a href="#">Маршрут</a></li>
+            <li><a href="#">Гости</a></li>
+             <li><a href="#">Бюджет</a></li>
+              <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
-    <!-- why this doesn't work in chrome ? -->
-  <!-- <script src="less.js"></script> -->
+    <section id="first-screen">
+      <h1>Неделя НАСТОЯЩИХ МОРСКИХ ПРИКЛЮЧЕНИЙ</h1>
+      <span>за €399</span>
+      <div>for line</div>
+      <p>29 апреля - 6 мая</p>
+      <p>на парусной яхте по островам Греции!</p>
+      <button>Оставить заявку</button>
+      <button>Другие даты</button>
+    </section>
   </body>
 </html>

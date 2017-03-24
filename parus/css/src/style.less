@@ -1,19 +1,33 @@
+// for fonts 
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'PT Serif', serif;
+// font-family: 'PT Sans', sans-serif;
+
+@fill-color: #c09451;
+
 body {
   height: 2000px;
   font-size: 1em;
   font-family: sans-serif;
+  margin: 0;
 }
 
 header {
   width: 100%;
-  height: 45px;
+  height: 50px;
   border-bottom: 1px solid black;
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  color: red;
+  background-color: white;
+  z-index: 2;
+  
 
-  a {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    color: red;
+    width: 100%;
+
+    a {
     display: block;
     width: 45px;
     height: 45px;
@@ -21,4 +35,86 @@ header {
     background-size: cover;
     text-indent: -9999px;
   }
+
+  .menu-icon {
+    position: relative;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    div {
+      width: 35px;
+      height: 0px;
+      border-bottom: 2px solid black;
+
+      &:before {
+        position: absolute;
+        top: 10px;
+        display: block;
+        content: "  ";
+        width: 35px;
+        height: 2px;
+        background-color: black;
+      }
+
+      &:after {
+         position: absolute;
+        top: 20px;
+        display: block;
+        content: "  ";
+        width: 35px;
+        height: 2px;
+        background-color: black;
+      }
+    }
+   }
+  }
+
+  nav {
+        width: 100%;
+        position: absolute;
+        right: -100%;
+        z-index: 10;
+    display: flex;
+    flex-direction: column;
+        text-transform: uppercase;
+
+    button {
+      width: 250px;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+          margin-top: 10px;
+    margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid @fill-color;
+      background-color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+
+      li {
+            margin-bottom: 10px;
+
+            a {
+              color: black;
+              text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#first-screen {
+  padding-top: 50px;
 }
