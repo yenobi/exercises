@@ -1,0 +1,29 @@
+/* не подходит, потому что нужно много дивов,
+подход с радиальным градиентом лучше, можно
+просто репит включить, но не получается
+сделать то, что хочу на нем
+3-ий вариант - на свг закодить,
+еще более интересный, сначала хтмл-академии курс,
+не забыть про прогрессивное улучшение*/
+.wave {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+}
+
+.wave::after {
+  width: 52px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 2px;
+    left: -1px;
+}
+
+/*background-image: radial-gradient(circle closest-side, #333 10px, white 11px, white 30px, green 31px);*/
+/*background-image: radial-gradient(circle, black 10px, gray 20px);*/
