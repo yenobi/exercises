@@ -69,6 +69,8 @@ header nav {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  background-color: white;
+  transition: right 0.3s ease 0s;
 }
 header nav button {
   width: 250px;
@@ -94,6 +96,9 @@ header nav ul li {
 header nav ul li a {
   color: black;
   text-decoration: none;
+}
+header .shown {
+  right: 0;
 }
 #first-screen {
   padding-top: 50px;
@@ -158,4 +163,63 @@ header nav ul li a {
 }
 #first-screen .wrapper button:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+#yaht {
+  width: 100%;
+}
+#yaht .wrapper {
+  display: flex;
+  justify-content: center;
+}
+#yaht .wrapper h2 {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+#yaht p {
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+#yaht .yaht-carousel {
+  position: relative;
+  margin-bottom: 40%;
+  width: 100%;
+}
+#yaht .yaht-carousel div {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#yaht .yaht-carousel div .yaht-img {
+  margin-top: 10%;
+}
+#yaht .yaht-carousel .slick-next {
+  right: 0px;
+}
+#yaht .yaht-carousel .slick-prev:before,
+#yaht .yaht-carousel .slick-next:before {
+  position: absolute;
+  top: 120px;
+  width: 70px;
+  height: 70px;
+  background-color: #0a326d;
+  color: white;
+  opacity: 1;
+  border-radius: 0px;
+  line-height: 55px;
+  font-size: 60px;
+}
+#yaht .yaht-carousel .slick-next:before {
+  right: 96px;
+  content: '›';
+}
+#yaht .yaht-carousel .slick-prev:before {
+  left: 96px;
+  content: '‹';
+}
+#yaht .yaht-carousel img {
+  max-width: 100%;
 }

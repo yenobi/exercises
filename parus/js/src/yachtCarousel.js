@@ -1,0 +1,5 @@
+(function() {
+        $('.yaht-carousel').slick({
+                
+        });
+})();

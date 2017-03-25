@@ -4,6 +4,8 @@
 // font-family: 'PT Sans', sans-serif;
 
 @fill-color: #c09451;
+@main-color:  #0a326d;
+@main-color-hover: lighten(@main-color, 20%);
 // need fallback with safe web fonts
 @heading-font:  'PT Serif', serif;
 @main-font: 'Open Sans', sans-serif;
@@ -89,6 +91,8 @@ header {
     display: flex;
     flex-direction: column;
         text-transform: uppercase;
+        background-color: white;
+        transition: right 0.3s ease 0s;
 
     button {
       width: 250px;
@@ -118,6 +122,10 @@ header {
         }
       }
     }
+  }
+
+  .shown {
+    right: 0;
   }
 }
 
@@ -193,6 +201,79 @@ header {
       &:hover {
         background-color: rgba(255, 255, 255, 0.3);
       }
+    }
+  }
+}
+
+#yaht {
+  width: 100%;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-family: @main-font;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    font-family: @heading-font;
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .yaht-carousel {
+    position: relative;
+    margin-bottom: 40%;
+    width: 100%;
+
+    div {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .yaht-img {
+        margin-top: 10%;
+      }
+    }
+
+    .slick-next {
+    right: 0px;
+    }
+
+    .slick-prev:before, 
+    .slick-next:before {
+      position: absolute;
+      top: 120px;
+      width: 70px;
+      height: 70px;
+      background-color: @main-color;
+      color: white;
+      opacity: 1;
+      border-radius: 0px;
+      line-height: 55px;
+          font-size: 60px;
+    }
+
+    .slick-next:before {
+      right: 96px;
+      content: '›';
+    }
+
+    .slick-prev:before {
+      left: 96px;
+      content: '‹';
+    }
+
+// how to make hover on slick-arrows? 
+
+    img {
+      max-width: 100%;
     }
   }
 }

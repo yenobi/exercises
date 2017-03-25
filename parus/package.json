@@ -12,9 +12,11 @@
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-less": "^1.4.1",
-    "less": "^2.7.2",
     "grunt-contrib-uglify": "^2.1.0",
     "grunt-contrib-watch": "^1.0.0",
-    "normalize.css": "^5.0.0"
+    "jquery": "^3.2.1",
+    "less": "^2.7.2",
+    "normalize.css": "^5.0.0",
+    "zepto": "^1.2.0"
   }
 }
