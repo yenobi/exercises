@@ -1,0 +1,35 @@
+#container {
+        width: 100%;
+        display: flex;
+       flex-wrap: wrap;
+}
+
+.item {
+        margin: 15px;
+        border: 2px solid black;
+}
+
+.tv {
+        width: 330px;
+        height: 250px;
+}
+
+.sand {
+        width: 540px;
+        height: 290px;
+}
+
+.target {
+        width: 300px;
+        height: 290px;
+}
+
+.maths {
+        width: 550px;
+        height: 120px;
+}
+
+.smile {
+        width: 310px;
+        height: 290px;
+}
