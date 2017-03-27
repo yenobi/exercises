@@ -85,6 +85,11 @@ header nav button {
   text-transform: uppercase;
   font-weight: bold;
 }
+header nav button:hover {
+  cursor: pointer;
+  background-color: #888ea2;
+  color: white;
+}
 header nav ul {
   list-style: none;
   text-align: center;
@@ -96,6 +101,9 @@ header nav ul li {
 header nav ul li a {
   color: black;
   text-decoration: none;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 header .shown {
   right: 0;
@@ -182,6 +190,7 @@ header .shown {
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 10%;
 }
 #yaht .yaht-carousel {
   position: relative;
@@ -213,13 +222,123 @@ header .shown {
   font-size: 60px;
 }
 #yaht .yaht-carousel .slick-next:before {
-  right: 96px;
+  right: 80px;
   content: '›';
 }
 #yaht .yaht-carousel .slick-prev:before {
-  left: 96px;
+  left: 112px;
   content: '‹';
 }
 #yaht .yaht-carousel img {
   max-width: 100%;
+}
+#route {
+  width: 100%;
+  background-image: url(../../img/route-bg.jpg);
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: white;
+}
+#route .header {
+  display: flex;
+  justify-content: center;
+}
+#route h3,
+#route h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+#route .route-item {
+  text-align: center;
+}
+#route .route-item img {
+  max-width: 100%;
+  width: 90%;
+}
+#route .route-item p {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 1em;
+  font-family: 'PT Sans', sans-serif;
+  font-style: italic;
+  margin-bottom: 10%;
+}
+#route button {
+  width: 265px;
+  height: 30px;
+  margin-left: 7%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #c09451;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  background-image: url(../../img/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position-x: 225px;
+  background-position-y: 7px;
+  text-align: left;
+  padding-left: 20px;
+}
+#route button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#contacts {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-family: 'PT Serif', serif;
+  color: #0a326d;
+}
+#contacts .header {
+  display: flex;
+  justify-content: center;
+}
+#contacts .header h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+}
+#contacts .contact {
+  width: 70%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 40px;
+  padding-left: 60px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: 20px;
+  background-position-y: 5px;
+}
+#contacts .phone {
+  background-image: url(../../img/phone.png);
+}
+#contacts .email {
+  background-image: url(../../img/email.png);
+}
+#contacts .socials-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#contacts .socials-wrapper a {
+  display: block;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  min-width: 40px;
+  min-height: 40px;
+  background-size: 40px;
+}
+#contacts .socials-wrapper a:first-of-type {
+  background-image: url(../../img/vk.png);
+}
+#contacts .socials-wrapper a:nth-of-type(2) {
+  background-image: url(../../img/fb.png);
+}
+#contacts .socials-wrapper a:last-of-type {
+  background-image: url(../../img/inst.png);
 }
