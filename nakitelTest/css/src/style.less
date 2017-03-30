@@ -1,0 +1,379 @@
+// vars for fonts
+// TODO: add woff-fonts
+@Bebas: "Bebas Neue Regular";
+@H-reg: "Helvetica Neue Regular";
+@H-bold: "Helvetica Neue Bold";
+@H-light: "Helvetica Neue Light";
+// var for colors
+@main-color: #ef001d;
+@additional-color: #ff3f3e;
+@second-color: #608b30;
+// mixins
+// TODO: linear-gradients on buttons in upper section
+.button-container {
+  border: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: @main-color;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(@main-color, 10%);
+  }
+}
+
+.wrapper-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-and-fence-border {
+  background-image:
+  radial-gradient(circle 307px at center, #b1eb76 0%, #4b791f 100%),
+  linear-gradient(to bottom right, transparent 50.5%, @second-color 50.5%),
+  linear-gradient(to bottom left, transparent 50.5%, @second-color 50.5%),
+  linear-gradient(to top right, transparent 50.5%, @second-color 50.5%),
+  linear-gradient(to top left, transparent 50.5%, @second-color 50.5%);
+  background-repeat: repeat, repeat-x, repeat-x, repeat-x, repeat-x;
+  background-position: 0 0, 10px 0, 10px 0, 10px 100%, 10px 100%;
+  background-size: auto auto, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+  background-clip: padding-box, border-box, border-box, border-box, border-box;
+  background-origin: padding-box, border-box, border-box, border-box, border-box;
+}
+// styles
+header {
+  width: 100%;
+  background-color: @main-color;
+
+  .wrapper {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: @H-light;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // box-shadow: 0 5px 5px rgba(16, 16, 15, 0.5);
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      margin-top: 10px;
+      margin-right: 600px;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      div {
+        width: 35px;
+        height: 3px;
+        background-color: white;
+
+        &:before {
+          position: absolute;
+          top: 10px;
+          display: block;
+          content: "  ";
+          width: 35px;
+          height: 3px;
+          background-color: white;
+        }
+
+        &:after {
+          position: absolute;
+          top: 20px;
+          display: block;
+          content: "  ";
+          width: 35px;
+          height: 3px;
+          background-color: white;
+        }
+      }
+    }
+
+    nav {
+      display: none;
+    }
+
+    .cart {
+      min-height: 35px;
+      font-size: 0.9em;
+      line-height: 1.1em;
+      background-image: url(../../img/cart-icon.png);
+      background-repeat: no-repeat;
+      padding-left: 40px;
+
+      p {
+        width: 110px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: none;
+      margin-left: 10px;
+      margin-right: 10px;
+      color: @additional-color;
+      padding: 10px;
+      box-sizing: content-box;
+
+      &:last-of-type {
+        margin-right: 40px;
+        margin-left: 0px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        color: white;
+      }
+    }
+
+    input {
+      width: 250px;
+      height: 20px;
+      padding: 10px;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      // margin-right: 50px;
+      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: none;
+      background-image: url(../../img/search-icon.png);
+      background-repeat: no-repeat;
+      background-position-x: 235px;
+      background-position-y: 10px;
+      color: white;
+
+      &::-webkit-input-placeholder
+      {
+        color: @additional-color;
+      }
+    }
+
+  }
+}
+
+main {
+  background-image: url(../../img/main-bg.jpg);
+}
+// как добавить шум для фона? сейчас выглядит слишком "плоским"
+#first {
+  width: 100%;
+  height: 470px;
+  // height: 600px;
+  box-shadow: inset 0px 5px 5px rgba(16, 16, 15, 0.5);
+  font-family: @H-reg;
+  color: white;
+  border-bottom: 10px solid transparent;
+  .bg-and-fence-border;
+
+  .upper {
+    .wrapper-container;
+
+    padding-top: 3%;
+
+    .leftGroup {
+      a {
+        color: white;
+        display: block;
+        font-size: 0.9em;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      > a:first-of-type {
+        text-decoration: none;
+        font-size: 1em;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .socials {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+
+        a {
+          min-width: 40px;
+          min-height: 40px;
+          background-repeat: no-repeat;
+          text-indent: -9999px;
+        }
+
+        a:first-of-type {
+          background-image: url(../../img/twitter-icon.png);
+        }
+
+        a:nth-of-type(2) {
+          background-image: url(../../img/vk-icon.png);
+        }
+
+        a:nth-of-type(3) {
+          background-image: url(../../img/facebook-icon.png);
+        }
+
+        a:nth-of-type(4) {
+          background-image: url(../../img/rss-icon.png);
+        }
+
+        a:last-of-type {
+          background-image: url(../../img/google-icon.png);
+        }
+      }
+
+      .cart {
+        width: 190px;
+        height: 70px;
+        // TODO: change cart icon for svg - it's too small!
+        background-image: url(../../img/cart-icon.png);
+        background-repeat: no-repeat;
+        background-size: 35px;
+        background-position-x: 10px;
+        background-position-y: 18px;
+        text-align: left;
+        padding-left: 60px;
+
+        .button-container;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+
+          &:first-of-type {
+            font-weight: bold;
+            font-size: 1.1em;
+          }
+
+          &:nth-of-type(2),
+          &:last-of-type {
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+
+    .logo {
+      text-align: center;
+
+      p {
+        margin-top: 0;
+        font-size: 3em;
+        color: darken(@second-color, 15%);
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px lighten(@second-color, 15%);
+        //rgba(255, 255, 255, 0.4) background-image: linear-gradient(-32deg, rgba(1, 1, 1, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+
+    .rightGroup {
+      font-size: 1.1em;
+      text-align: center;
+      line-height: 1.2em;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:nth-of-type(2) {
+          font-weight: bold;
+        }
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+      }
+
+      button {
+        width: 190px;
+        height: 85px;
+        padding-left: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        span {
+          font-size: 1.3em;
+        }
+        .button-container;
+      }
+    }
+  }
+
+  .doors {
+    // TODO: выровнять надписи под дверьми по пиксель-перфект (наложением)
+    .wrapper-container;
+    color: @second-color;
+    text-transform: uppercase;
+    text-align: center;
+
+    .item {
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 1em;
+
+        &:first-of-type {
+          font-size: 3em;
+        }
+      }
+    }
+
+  }
+}
+
+#carousel {
+  width: 100%;
+  height: 200px;
+}
+
+#content {
+  width: 100%;
+  height: 200px;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  border-top: 10px solid transparent;
+  .bg-and-fence-border;
+
+  .footer-tape {
+    width: 100%;
+    height: 44px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: @main-color;
+
+    .wrapper {
+      .wrapper-container;
+    }
+  }
+}
