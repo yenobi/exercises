@@ -200,6 +200,7 @@ main {
 #first .upper .leftGroup .cart {
   width: 190px;
   height: 70px;
+  border-radius: 2px;
   background-image: url(../../img/cart-icon.png);
   background-repeat: no-repeat;
   background-size: 35px;
@@ -207,6 +208,7 @@ main {
   background-position-y: 18px;
   text-align: left;
   padding-left: 60px;
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
   border: none;
   padding-top: 10px;
   padding-right: 10px;
@@ -259,9 +261,11 @@ main {
   width: 190px;
   height: 85px;
   padding-left: 10px;
+  border-radius: 2px;
   font-size: 1.5em;
   font-weight: bold;
   text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
   border: none;
   padding-top: 10px;
   padding-right: 10px;
@@ -300,7 +304,69 @@ main {
 }
 #carousel {
   width: 100%;
-  height: 200px;
+}
+#carousel .slider {
+  position: relative;
+}
+#carousel .slider .js_slide {
+  background-size: contain;
+  font-family: "Helvetica Neue Regular";
+  font-style: italic;
+  color: white;
+}
+#carousel .slider .item1 {
+  background-image: url(../../img/slider-img1.png);
+}
+#carousel .slider .item2 {
+  background-image: url(../../img/slider-img2.jpg);
+  background-position-y: -180px;
+  background-size: cover;
+}
+#carousel .slider .item3 {
+  background-image: url(../../img/slider-img3.jpg);
+}
+#carousel .frame {
+  /**
+                 * (optional) wrapper width, specifies width of the slider frame.
+                 */
+  width: 880px;
+  position: relative;
+  font-size: 1em;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+#carousel .slides {
+  display: inline-block;
+}
+#carousel li {
+  position: relative;
+  display: inline-block;
+  /**
+                 * (optional) if the content inside the slide element has a defined size.
+                 */
+  width: 1173px;
+  height: 347px;
+}
+#carousel .prev,
+#carousel .next {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  display: block;
+  cursor: pointer;
+}
+#carousel .next {
+  right: 205px;
+}
+#carousel .prev {
+  left: 215px;
+}
+#carousel .next svg,
+#carousel .prev svg {
+  width: 25px;
 }
 #content {
   width: 100%;
@@ -342,12 +408,62 @@ main {
   height: 852px;
   background-size: contain;
   background-image: url(../../img/article-bg.png);
-  padding-top: 30px;
+  padding-top: 24px;
   padding-left: 50px;
   padding-right: 50px;
   box-sizing: border-box;
   font-family: "Helvetica Neue Light";
   font-size: 1.1em;
+  z-index: 2;
+}
+#content .wrapper .banners .call {
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 1.2em;
+  margin-bottom: 60px;
+}
+#content .wrapper .banners .call p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#content .wrapper .banners .call p:nth-of-type(2) {
+  font-weight: bold;
+}
+#content .wrapper .banners .call p:last-of-type {
+  margin-bottom: 20px;
+}
+#content .wrapper .banners .call button {
+  width: 190px;
+  height: 85px;
+  padding-left: 10px;
+  border-radius: 2px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
+  border: none;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: #ef001d;
+  color: white;
+}
+#content .wrapper .banners .call button span {
+  font-size: 1.3em;
+}
+#content .wrapper .banners .call button:hover {
+  cursor: pointer;
+  background-color: #ff233e;
+}
+#content .wrapper .banners .banner {
+  width: 170px;
+  height: 121px;
+  margin-bottom: 60px;
+  background-image: url(../../img/banner.png);
+  background-repeat: no-repeat;
+  background-position-x: -4px;
+  background-position-y: -1px;
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
 }
 footer {
   background-image: radial-gradient(circle 307px at center, #b1eb76 0%, #4b791f 100%), linear-gradient(to bottom right, transparent 50.5%, #608b30 50.5%), linear-gradient(to bottom left, transparent 50.5%, #608b30 50.5%), linear-gradient(to top right, transparent 50.5%, #608b30 50.5%), linear-gradient(to top left, transparent 50.5%, #608b30 50.5%);
@@ -358,6 +474,9 @@ footer {
   background-origin: padding-box, border-box, border-box, border-box, border-box;
   width: 100%;
   height: 200px;
+  position: relative;
+  z-index: 1;
+  top: -50px;
   border-top: 10px solid transparent;
   color: white;
   font-family: "Helvetica Neue Regular";
