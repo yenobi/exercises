@@ -124,7 +124,6 @@ header .wrapper .cart {
   padding-left: 40px;
 }
 header .wrapper .cart p {
-  width: 110px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -180,7 +179,7 @@ main {
   background-origin: padding-box, border-box, border-box, border-box, border-box;
   width: 100%;
   height: 470px;
-  margin-bottom: 180px;
+  margin-bottom: 220px;
   box-shadow: inset 0px 5px 5px rgba(16, 16, 15, 0.5);
   font-family: "Helvetica Neue Regular";
   color: white;
@@ -251,8 +250,6 @@ main {
   background-image: url(../../img/google-icon.png);
 }
 #first .upper .leftGroup .cart {
-  width: 190px;
-  height: 70px;
   border-radius: 2px;
   background-image: url(../../img/cart-icon.png);
   background-repeat: no-repeat;
@@ -290,6 +287,7 @@ main {
 }
 #first .upper .logo p {
   margin-top: 0;
+  font-family: sans-serif;
   font-size: 3em;
   color: #39521c;
   text-transform: uppercase;
@@ -351,11 +349,39 @@ main {
 #first .doors .item p {
   margin-top: 0;
   margin-bottom: 0;
+  font-family: "Bebas Neue Regular";
   font-weight: bold;
-  font-size: 1em;
 }
 #first .doors .item p:first-of-type {
-  font-size: 3em;
+  font-size: 4em;
+}
+#first .doors .item p:last-of-type {
+  font-size: 1.5em;
+  margin-top: -10px;
+}
+#first .doors .item:first-of-type p:first-of-type {
+  margin-top: 5px;
+}
+#first .doors .item:nth-child(2) p:first-of-type {
+  margin-top: -8px;
+  margin-left: 15px;
+}
+#first .doors .item:nth-child(2) p:last-of-type {
+  margin-left: 20px;
+}
+#first .doors .item:nth-child(3) p:first-of-type {
+  margin-top: -8px;
+  margin-left: 5px;
+}
+#first .doors .item:nth-child(3) p:last-of-type {
+  margin-left: 15px;
+}
+#first .doors .item:nth-child(4) p:first-of-type {
+  margin-top: -14px;
+}
+#first .doors .item:last-child p:first-of-type {
+  margin-top: -20px;
+  margin-left: -10px;
 }
 #carousel {
   width: 100%;
@@ -364,18 +390,28 @@ main {
   position: relative;
 }
 #carousel .slider .js_slide {
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Helvetica Neue Regular";
   font-style: italic;
   color: white;
+  border: 5px solid white;
+  box-shadow: 0 3px 10px rgba(1, 1, 1, 0.75), inset 0 8px 11px rgba(1, 1, 1, 0.75);
 }
 #carousel .slider .item1 {
   background-image: url(../../img/slider-img1.png);
+  background-position-x: -9px;
+  background-position-y: -6px;
+  height: 340px;
+  width: 1158px;
+  background-size: inherit;
 }
 #carousel .slider .item2 {
   background-image: url(../../img/slider-img2.jpg);
   background-position-y: -180px;
   background-size: cover;
+  width: 1162px;
+  height: 341px;
 }
 #carousel .slider .item3 {
   background-image: url(../../img/slider-img3.jpg);
@@ -384,7 +420,7 @@ main {
   /**
                  * (optional) wrapper width, specifies width of the slider frame.
                  */
-  width: 880px;
+  width: 1170px;
   position: relative;
   font-size: 1em;
   line-height: 0;
@@ -464,12 +500,14 @@ main {
   padding-top: 24px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-bottom: 60px;
   box-sizing: border-box;
   font-family: "Helvetica Neue Light";
   font-size: 1.1em;
   z-index: 2;
   position: relative;
   box-shadow: 0 4px 10px rgba(1, 1, 1, 0.6);
+  line-height: 24px;
 }
 #content .wrapper article p {
   position: relative;
@@ -547,10 +585,10 @@ footer {
   background-clip: padding-box, border-box, border-box, border-box, border-box;
   background-origin: padding-box, border-box, border-box, border-box, border-box;
   width: 100%;
-  height: 200px;
+  height: 290px;
   position: relative;
   z-index: 1;
-  margin-top: -50px;
+  margin-top: -75px;
   border-top: 10px solid transparent;
   color: white;
   font-family: "Helvetica Neue Regular";
@@ -568,7 +606,7 @@ footer:before {
 footer .footer-tape {
   width: 100%;
   height: 44px;
-  margin-top: 50px;
+  margin-top: 140px;
   margin-bottom: 50px;
   background-color: #ef001d;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75), inset 0 2px 6px rgba(0, 0, 0, 0.75);
@@ -599,6 +637,8 @@ footer .footer-tape .wrapper nav ul li a {
   margin-right: 10px;
   text-decoration: none;
   color: white;
+  font-size: 1.3em;
+  line-height: 0.8em;
 }
 footer .footer-tape .wrapper nav ul li a:hover {
   text-decoration: underline;
