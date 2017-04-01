@@ -25,6 +25,20 @@
   background-clip: padding-box, border-box, border-box, border-box, border-box;
   background-origin: padding-box, border-box, border-box, border-box, border-box;
 }
+.bg-and-fence-border:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../../img/noise2.png);
+  z-index: 1;
+}
+.without-noise {
+  z-index: 2;
+  position: relative;
+}
 header {
   width: 100%;
   background-color: #ef001d;
@@ -74,6 +88,32 @@ header .wrapper .menu-icon div:after {
 }
 header .wrapper nav {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 130px;
+  font-size: 1.1em;
+  line-height: 1em;
+  transition: display 1s;
+}
+header .wrapper nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+header .wrapper nav ul li a {
+  display: block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+}
+header .wrapper nav ul li a:hover {
+  text-decoration: underline;
+}
+header .wrapper nav ul li:last-of-type a {
+  margin-right: 0;
+}
+header .wrapper .shown {
+  display: block;
 }
 header .wrapper .cart {
   min-height: 35px;
@@ -145,6 +185,17 @@ main {
   font-family: "Helvetica Neue Regular";
   color: white;
   border-bottom: 10px solid transparent;
+  position: relative;
+}
+#first:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../../img/noise2.png);
+  z-index: 1;
 }
 #first .upper {
   width: 1200px;
@@ -152,6 +203,8 @@ main {
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
+  position: relative;
   padding-top: 3%;
 }
 #first .upper .leftGroup a {
@@ -286,6 +339,8 @@ main {
   margin-right: auto;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
+  position: relative;
   color: #608b30;
   text-transform: uppercase;
   text-align: center;
@@ -405,9 +460,7 @@ main {
 }
 #content .wrapper article {
   width: 770px;
-  height: 852px;
-  background-size: contain;
-  background-image: url(../../img/article-bg.png);
+  background-color: white;
   padding-top: 24px;
   padding-left: 50px;
   padding-right: 50px;
@@ -415,6 +468,27 @@ main {
   font-family: "Helvetica Neue Light";
   font-size: 1.1em;
   z-index: 2;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(1, 1, 1, 0.6);
+}
+#content .wrapper article p {
+  position: relative;
+  z-index: 5;
+}
+#content .wrapper article:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: linear-gradient(#f7f7f7 90%, transparent 50%);
+  background-size: 2em 2em;
+  background-color: #f0f0f0;
+}
+#content .wrapper .banners {
+  text-align: -webkit-center;
 }
 #content .wrapper .banners .call {
   font-size: 1.1em;
@@ -476,10 +550,20 @@ footer {
   height: 200px;
   position: relative;
   z-index: 1;
-  top: -50px;
+  margin-top: -50px;
   border-top: 10px solid transparent;
   color: white;
   font-family: "Helvetica Neue Regular";
+}
+footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../../img/noise2.png);
+  z-index: 1;
 }
 footer .footer-tape {
   width: 100%;
@@ -500,6 +584,10 @@ footer .footer-tape .wrapper span {
   line-height: 3em;
   font-size: 1em;
   color: #ff6666;
+}
+footer .footer-tape .wrapper nav {
+  z-index: 2;
+  position: relative;
 }
 footer .footer-tape .wrapper nav ul {
   display: flex;

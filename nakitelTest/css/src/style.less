@@ -44,6 +44,23 @@
   background-size: auto auto, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
   background-clip: padding-box, border-box, border-box, border-box, border-box;
   background-origin: padding-box, border-box, border-box, border-box, border-box;
+
+  // this is for noise
+  &:before {
+    content: "";
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-image: url(../../img/noise2.png);
+    z-index: 1;
+  }
+}
+
+.without-noise {
+  z-index: 2;
+  position: relative;
 }
 // styles
 header {
@@ -101,6 +118,41 @@ header {
 
     nav {
       display: none;
+      position: absolute;
+      top: 0;
+      left: 130px;
+      font-size: 1.1em;
+      line-height: 1em;
+      transition: display 1s;
+
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        li {
+          a {
+            display: block;
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          &:last-of-type {
+            a {
+              margin-right: 0;
+            }
+          }
+        }
+
+      }
+    }
+
+    .shown {
+      display: block;
     }
 
     .cart {
@@ -182,9 +234,11 @@ main {
   font-family: @H-reg;
   color: white;
   border-bottom: 10px solid transparent;
+  position: relative;
 
   .upper {
     .wrapper-container;
+    .without-noise;
 
     padding-top: 3%;
 
@@ -328,6 +382,7 @@ main {
   .doors {
     // TODO: выровнять надписи под дверьми по пиксель-перфект (наложением)
     .wrapper-container;
+    .without-noise;
     color: @second-color;
     text-transform: uppercase;
     text-align: center;
@@ -481,19 +536,39 @@ main {
 
     article {
       width: 770px;
-      height: 852px;
-      background-size: contain;
-      background-image: url(../../img/article-bg.png);
+      background-color: white;
       padding-top: 24px;
       padding-left: 50px;
       padding-right: 50px;
       box-sizing: border-box;
       font-family: @H-light;
       font-size: 1.1em;
-          z-index: 2;
+      z-index: 2;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(1, 1, 1, 0.6);
+
+      p {
+        position: relative;
+        z-index: 5;
+      }
+
+          &:after {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: linear-gradient(#f7f7f7 90%, transparent 50%);
+            background-size: 2em 2em;
+            background-color: #f0f0f0;
+          }
     }
 
     .banners {
+      text-align: -webkit-center;
+
       .call {
         font-size: 1.1em;
         text-align: center;
@@ -551,7 +626,8 @@ footer {
   height: 200px;
   position: relative;
   z-index: 1;
-  top: -50px;
+  // top: -50px;
+  margin-top: -50px;
   border-top: 10px solid transparent;
   color: white;
   font-family: @H-reg;
@@ -574,6 +650,8 @@ footer {
       }
 
       nav {
+        .without-noise;
+
         ul {
           display: flex;
           list-style: none;
