@@ -646,3 +646,165 @@ footer .footer-tape .wrapper nav ul li a:hover {
 footer .footer-tape .wrapper nav ul li:last-of-type a {
   margin-right: 0;
 }
+@media screen and (max-width: 325px) {
+  header .wrapper {
+    width: 290px;
+    justify-content: space-between;
+  }
+  header .wrapper .menu-icon {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  header .wrapper button:first-of-type {
+    margin-left: 120px;
+  }
+  header .wrapper button:last-of-type {
+    margin-right: 10px;
+  }
+  header .wrapper .header-nav {
+    width: 100%;
+    background-color: #ef001d;
+    z-index: 10;
+    top: 49px;
+    left: 0px;
+    box-shadow: inset 0px 5px 5px rgba(16, 16, 15, 0.5);
+  }
+  header .wrapper .header-nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .wrapper .header-nav ul li a {
+    font-size: 1.3em;
+    min-height: 30px;
+  }
+  header .wrapper .header-nav ul li:last-child:after {
+    content: "Поиск";
+    display: block;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    min-height: 30px;
+  }
+  header .wrapper .header-nav ul li:last-child:after:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  header .wrapper input[type="text"],
+  header .wrapper .cart {
+    display: none;
+  }
+  #first {
+    display: flex;
+    flex-direction: column;
+    height: 570px;
+    margin-bottom: 0px;
+  }
+  #first .upper {
+    width: 100%;
+    margin-bottom: 600px;
+    flex-direction: column;
+  }
+  #first .upper .logo {
+    order: 1;
+    height: 150px;
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 10px;
+  }
+  #first .upper .logo img {
+    height: 80px;
+    margin-left: 7px;
+  }
+  #first .upper .logo p {
+    margin-top: 13px;
+    margin-left: 10px;
+  }
+  #first .upper .leftGroup {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #first .upper .leftGroup > a:first-of-type,
+  #first .upper .leftGroup a {
+    font-size: 1.5em;
+  }
+  #first .upper .leftGroup .socials {
+    margin-left: 10px;
+    width: 90%;
+  }
+  #first .upper .leftGroup .socials a {
+    min-width: 50px;
+    min-height: 50px;
+    background-size: contain;
+  }
+  #first .upper .leftGroup .cart p:first-of-type {
+    font-size: 1.5em;
+  }
+  #first .upper .leftGroup .cart p:nth-of-type(2),
+  #first .upper .leftGroup .cart p:last-of-type {
+    font-size: 1.2em;
+  }
+  #first .upper .rightGroup {
+    order: 3;
+  }
+  #first .upper .rightGroup > p {
+    font-size: 1.2em;
+  }
+  #first .upper .rightGroup button {
+    width: 230px;
+    height: 100px;
+    font-size: 1.8em;
+  }
+  #first .upper .rightGroup button span {
+    font-size: 1.3em;
+  }
+  #first .doors {
+    display: none;
+  }
+  #carousel {
+    display: none;
+  }
+  #content h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+  }
+  #content .wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  #content .wrapper nav {
+    display: none;
+  }
+  #content .wrapper article {
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+  }
+  #content .wrapper .banners div:first-child {
+    display: none;
+  }
+  #content .wrapper .banners .banner,
+  #content .wrapper .banners .call {
+    margin-bottom: 30px;
+  }
+  footer {
+    margin-top: 0;
+    width: 100%;
+    height: 170px;
+  }
+  footer .footer-tape {
+    width: 100%;
+    margin-top: 70px;
+  }
+  footer .footer-tape .wrapper {
+    width: 90%;
+    justify-content: center;
+  }
+  footer .footer-tape .wrapper nav {
+    display: none;
+  }
+}
