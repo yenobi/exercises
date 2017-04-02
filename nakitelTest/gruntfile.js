@@ -40,7 +40,19 @@ module.exports = function(grunt) {
           'css/src/style.css': 'css/src/style.less'
         }
       }
-    }
+    },
+
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'css/src',
+          src: ['style.css', 'style.min.css'],
+          dest: 'css/build',
+          ext: '.min.css'
+        }]
+      }
+}
 
   });
 
@@ -48,9 +60,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('minif', ['cssmin']);
   // need to configure build-task
-  grunt.registerTask('build', ['concat', 'uglify', 'sass']);
+  grunt.registerTask('build', ['concat', 'uglify', 'cssmin']);
 
 };
