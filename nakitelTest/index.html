@@ -26,7 +26,7 @@
       </nav>
       <div class="cart">
         <p>Товаров: 3</p>
-        <p>Сумма: 5.000 грн.</p>
+        <p>Сумма: 5.000&nbsp;грн.</p>
       </div>
       <button>ru</button>
       <button>ua</button>
@@ -58,7 +58,7 @@
             <img src="img/logo.png" alt="nakitel-logotype">
             <p>nakitel</p>
           </div>
-          <div class="rightGroup">
+          <div class="rightGroup forWeight">
             <p>Телефон горячей линии</p>
             <p>+12(034) 567 89 10</p>
             <p>(пн.- пт. с 9.00 до 18.00)</p>
@@ -98,24 +98,20 @@
         </div>
       </section>
 
-<!-- have some troubles with dots and shadows -->
       <section id="carousel">
-        <div class="slider js_slider">
-                <div class="frame js_frame">
-                    <ul class="slides js_slides">
-                        <li class="js_slide item1"></li>
-                        <li class="js_slide item2"></li>
-                        <li class="js_slide item3"></li>
-                    </ul>
-                </div>
-                <span class="js_prev prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"/></g></svg>
-                </span>
-                <span class="js_next next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5"><g><path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"/></g></svg>
-                </span>
+            <div class="jcarousel-wrapper">
+              <!-- <div class="jcarousel-pagination">
+              </div> -->
+            <div class="jcarousel">
+              <ul>
+                <li class="item1"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+              </ul>
             </div>
-            <!-- <div class="js_simple_dots"></div> -->
+            <a class="jcarousel-prev control" href="#">‹</a>
+            <a class="jcarousel-next control" href="#">›</a>
+          </div>
       </section>
 
       <section id="content">
@@ -175,9 +171,12 @@
         </section>
       </footer>
     </main>
-    
+
     <script src="js/src/menu.js"></script>
-    <script src="js/lib/lory.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="js/lib/jcarousel.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.5/jquery.jcarousel.js"></script>
     <script src="js/src/carousel.js"></script>
+    <!-- <script src="js/lib/lory.min.js"></script> -->
   </body>
 </html>

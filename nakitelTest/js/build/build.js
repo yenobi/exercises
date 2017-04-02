@@ -1,9 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var simple = document.querySelector('.js_slider');
-
-    lory(simple, {
-        infinite: 1
+$(function() {
+    $('.jcarousel').jcarousel({
+        // Configuration goes here
     });
+
+    $('.jcarousel-prev').jcarouselControl({
+      target: '-=1'
+    });
+
+    $('.jcarousel-next').jcarouselControl({
+      target: '+=1'
+    });
+
+    $('.jcarousel-pagination').jcarouselPagination({
+     item: function(page) {
+         return '<a href="#' + page + '">' + page + '</a>';
+     }
+ });
 });
 ;document.addEventListener('DOMContentLoaded', function() {
   var menuIcon = document.querySelector('.menu-icon');

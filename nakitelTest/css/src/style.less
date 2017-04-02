@@ -26,7 +26,7 @@
 
 // mb add some paramers to mixin (width?)
 .wrapper-container {
-  width: 1200px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -69,12 +69,9 @@ header {
   background-color: @main-color;
 
   .wrapper {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    .wrapper-container;
     color: white;
     font-family: @H-light;
-    display: flex;
     justify-content: flex-end;
     align-items: center;
 
@@ -82,7 +79,7 @@ header {
       width: 40px;
       height: 40px;
       margin-top: 10px;
-      margin-right: 600px;
+      margin-right: 51%;
       position: relative;
 
       &:hover {
@@ -166,6 +163,7 @@ header {
       p {
         margin-top: 0;
         margin-bottom: 0;
+        white-space: nowrap;
       }
     }
 
@@ -182,7 +180,7 @@ header {
       box-sizing: content-box;
 
       &:last-of-type {
-        margin-right: 40px;
+        margin-right: 3%;
         margin-left: 0px;
       }
 
@@ -454,94 +452,96 @@ main {
 
 #carousel {
   width: 100%;
-  // height: 200px;
 
-  .slider {
-    position: relative;
+  // controls
+  .jcarousel-prev,
+  .jcarousel-next {
+    position: absolute;
+    top: 160px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+            border-radius: 30px;
+    -webkit-box-shadow: 0 0 2px #999;
+       -moz-box-shadow: 0 0 2px #999;
+            box-shadow: 0 0 2px #999;
+  }
 
-    .js_slide {
-      background-size: cover;
-      background-repeat: no-repeat;
-      font-family: @H-reg;
-      font-style: italic;
-      color: white;
-      border: 5px solid white;
-      box-shadow: 0 3px 10px rgba(1, 1, 1, 0.75), inset 0 8px 11px rgba(1, 1, 1, 0.75);
-    }
+  .jcarousel-prev {
+    left: -50px;
+  }
 
-    .item1 {
-      background-image: url(../../img/slider-img1.png);
-      background-position-x: -9px;
-      background-position-y: -6px;
-      height: 340px;
-      width: 1158px;
-      background-size: inherit;
-    }
+  .jcarousel-next {
+    right: -50px;
+  }
 
-    .item2 {
-      background-image: url(../../img/slider-img2.jpg);
-      background-position-y: -180px;
-      background-size: cover;
-      width: 1162px;
-      height: 341px;
-    }
+  .jcarousel-prev:hover span,
+  .jcarousel-next:hover span {
+    display: block;
+  }
 
-    .item3 {
-      background-image: url(../../img/slider-img3.jpg);
-    }
+  .jcarousel-prev.inactive,
+  .jcarousel-next.inactive {
+    opacity: .5;
+    cursor: default;
   }
 
 
-    .frame {
-                /**
-                 * (optional) wrapper width, specifies width of the slider frame.
-                 */
-        width: 1170px;
+  // main part of carousel
+  .jcarousel-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
 
-        position: relative;
-        font-size: 1em;
-        line-height: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        margin-left: auto;
-        margin-right: auto;
-      }
+  .jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 5px solid white;
+    box-shadow: 0 3px 10px rgba(1, 1, 1, 0.75), inset 0 8px 11px rgba(1, 1, 1, 0.75);
 
-    .slides {
-      display: inline-block;
-      }
-
-    li {
+    ul {
+      width: 20000em;
       position: relative;
-      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-                /**
-                 * (optional) if the content inside the slide element has a defined size.
-                 */
-        // width: 880px;
-        width: 1173px;
-        height: 347px;
-      }
+      li {
+        width: 1063px;
+        height: 300px;
+        float: left;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-    .prev, .next {
-        position: absolute;
-        top: 50%;
-        margin-top: -25px;
-        display: block;
-        cursor: pointer;
-      }
+        &.item1 {
+          background-size: inherit;
+          background-position-x: -10px;
+          background-position-y: -10px;
+          background-image: url(../../img/slider-img1.png);
+        }
 
-    .next {
-        right: 205px;
-      }
+        &.item2 {
+          background-position-y: -170px;
+          background-image: url(../../img/slider-img2.jpg);
+        }
 
-    .prev {
-        left: 215px;
+        &.item3 {
+          background-position-y: -33px;
+          background-image: url(../../img/slider-img3.jpg);
+        }
       }
-
-    .next svg, .prev svg {
-        width: 25px;
-      }
+    }
+  }
 }
 
 #content {
@@ -559,6 +559,8 @@ main {
     .wrapper-container;
 
     nav {
+      margin-right: 1%;
+
       ul {
         list-style: none;
         padding: 0;
@@ -585,7 +587,7 @@ main {
     }
 
     article {
-      width: 770px;
+      width: 90%;
       background-color: white;
       padding-top: 24px;
       padding-left: 50px;
@@ -620,6 +622,8 @@ main {
 
     .banners {
       text-align: -webkit-center;
+      width: 30%;
+      margin-left: 1%;
 
       .call {
         font-size: 1.1em;
@@ -735,16 +739,11 @@ footer {
   }
 }
 
-// need to change markdown of doors-div to add another carousel
-
-@media screen and (max-width: 325px) {
-  // main {
-  //   width: 100%;
-  // }
+@media screen and (max-width: 450px) {
 
   header {
     .wrapper {
-      width: 290px;
+      width: 90%;
       justify-content: space-between;
 
       .menu-icon {
@@ -753,7 +752,7 @@ footer {
       }
 
       button:first-of-type {
-        margin-left: 120px;
+        margin-left: 50%;
       }
 
       button:last-of-type {
@@ -809,7 +808,7 @@ footer {
     display: flex;
     flex-direction: column;
     height: 570px;
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
 
     .upper {
       width: 100%;
@@ -822,6 +821,8 @@ footer {
         display: flex;
         margin-bottom: 100px;
         margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
 
         img {
           height: 80px;
@@ -845,8 +846,9 @@ footer {
         }
 
         .socials {
-          margin-left: 10px;
           width: 90%;
+          margin-left: auto;
+          margin-right: auto;
 
           a {
             min-width: 50px;
@@ -867,7 +869,8 @@ footer {
         }
       }
 
-      .rightGroup {
+      .rightGroup.forWeight {
+        display: block;
         order: 3;
 
         > p {
@@ -896,7 +899,6 @@ footer {
   }
 
   #content {
-    // padding-top: 250px;
 
     h1 {
       font-size: 3.5em;
@@ -912,7 +914,7 @@ footer {
       }
 
       article {
-        width: 290px;
+        width: 90% !important;
         margin-left: auto;
         margin-right: auto;
         padding-top: 35px;
@@ -952,5 +954,194 @@ footer {
             }
           }
         }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  header {
+    .wrapper {
+      .menu-icon {
+        margin-right: 40%;
+      }
+    }
+  }
+
+  #first {
+    .doors {
+      div:last-child {
+        display: none;
+      }
+    }
+  }
+
+  #content {
+    nav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+    header {
+      .wrapper {
+        .menu-icon {
+          margin-right: 30%;
+        }
+      }
+    }
+
+    #first {
+      .upper {
+        .leftGroup {
+          > a:first-of-type {
+            font-size: 1.5em;
+          }
+
+          a:last-of-type {
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+
+    #content .wrapper .banners {
+      margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+  header {
+    .wrapper {
+      .menu-icon {
+        margin-right: 20%;
+      }
+    }
+  }
+
+  #first {
+    .doors {
+      div:first-child {
+        display: none;
+      }
+    }
+  }
+
+  #content {
+    article {
+      p:nth-child(n+5) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #content {
+    .wrapper {
+      flex-direction: column;
+
+      article {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .banners {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        div {
+          margin-top: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    .wrapper {
+      .menu-icon {
+        margin-right: 30%;
+      }
+    }
+
+    .cart {
+      display: none;
+    }
+  }
+
+  #first {
+    .upper {
+      .rightGroup {
+        display: none;
+      }
+
+      .logo {
+        order: 1;
+        margin-top: 20px;
+      }
+
+      .leftGroup {
+        order: 2;
+      }
+    }
+  }
+
+  #content {
+    .wrapper {
+      article {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    height: 220px;
+
+    .footer-tape {
+      margin-top: 100px;
+
+      .wrapper {
+        justify-content: center;
+
+        nav {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    .wrapper {
+      .menu-icon {
+        margin-right: 15%;
+      }
+    }
+  }
+
+  #first {
+    margin-bottom: 200px;
+
+    .doors {
+      justify-content: space-around;
+
+      div:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+  #carousel {
+    display: none;
   }
 }
