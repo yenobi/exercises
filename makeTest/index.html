@@ -9,7 +9,7 @@
                     flex-direction: column;
             }
 
-             input, button {
+             input[type="text"], button {
                     width: 200px;
                     margin-bottom: 20px;
             }
@@ -27,7 +27,8 @@
                                 <input type="text" placeholder="Question" id="question">
                                 <label>
                                 <input type="number" id="qNumber" value="1">number of answers</label>
-                                <button type="submit">create question</button>
+                               <div class="answer-wrapper"></div>
+                               <button type="button">create question</button>
                         </form>
                 </div>
                 <script src="dom.js"></script>
