@@ -15,7 +15,7 @@
         });
 
          // can do without external var? 
-        var text;
+        let text;
         question.addEventListener('blur', function(e) {
                 text = this.value;
         });
@@ -38,6 +38,7 @@
                 }
         }
 
+        // try to create class name Test
         function Test(question, answers, answerRight, key) {
                 this.question = question; 
                 this.answers = answers;
@@ -45,8 +46,9 @@
                 this.key = key;
         };
 
+        // try to add some methods to class 
         Test.prototype.print = function() {
-               console.log(JSON.parse(localStorage.getItem(this.key)));
+               console.log(this);
         };
 
         Test.prototype.save = function() {
@@ -69,19 +71,28 @@
                         }
                 }, this);
 
-                var myTest = new Test(text, answers, answerRight, 'firstQuestion');
+                const myTest = new Test(text, answers, answerRight, 'firstQuestion');
+
+                //  next 2 lines is for inheritance, but didn't wotj as i want 
+                myTest.prototype = Object.create(Test.prototype);
+                myTest.prototype.constructor = Test;
+                // this is for saving to localStorage with inner method of class 
                 myTest.save();
         };
 
-//  the pre-last step1 - make a button that do console.log of question from localStorage
         var forPrint = document.getElementById('forPrint');
-        forPrint.addEventListener('click', function() {
+                forPrint.addEventListener('click', function() {
 
-        });
+                        // search for my question 
+                        let printQ = JSON.parse(localStorage.getItem('firstQuestion'));
+                        
+                        printQ.print();
 
-        // the pre-last-step 2 - clean all the inputs 
+                        // didn't see this - beacuse of scopes? 
+                        myTest.print();
 
-        // the last step - make a button to clean localStorage 
-
+                        localStorage.clear();
+                });
+        
   });
 })(document, window, domIsReady);
