@@ -23,6 +23,7 @@
     "gulp-uglify": "^2.1.2",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.0.0",
+    "normalize.css": "^6.0.0",
     "reset.css": "^2.0.2"
   }
 }

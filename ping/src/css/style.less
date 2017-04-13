@@ -1,11 +1,189 @@
+// fonts 
+
+@import url(../../fonts/fonts.css);
+
+@Open-sans-light:  'open_sans_light', Tahoma, sans-serif;
+// how to fallback extrablod font? 
+@Open-sans-bold: 'open_sans_extrabold', sans-serif;
+@League-gothic-regular:  'league_gothic_regular', sans-serif;
+
+// variables 
+@text-color: white;
+@gray-color: #ececec;
+@light-gray: #f9f9f9;
+
+// mixins 
+
+.paddings {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.url {
+        display: block;
+        color: @text-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: @League-gothic-regular;
+}
+// common
+
+body {
+  font-family: @Open-sans-light;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+main.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+// bg of mountain - for body? 
+// bg with colors for sections below ?
+
+h1, 
+h2, 
+h3 {
+  font-family: @League-gothic-regular;
+}
+
+.about {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 75px;
+  padding-bottom: 60px;
+  background-image: linear-gradient(to top, #322539 0%, #745083 100%);
+  color: @text-color;
+
+  article {
+    padding-left: 51px;
+
+    a {
+      .url;
+      float: right;
+    }
+  }
+}
+
 header {
-  font-size: 1em;
+  width: 100%;
+  .paddings;
+  padding-top: 60px;
+  background-color: grey;
+
+    .logo {
+          display: block;
+          font-size: 0px;
+          width: 155px;
+          height: 39px;
+          margin-bottom: 25px;
+
+          img {
+              width: 155px;
+              height: 39px;
+          }
+    }
 }
 
-.red {
-  background-color: red;
+footer {
+  width: 100%;
+  .paddings;
+  padding-top: 40px;
+  background-color: grey;
 }
 
-.blue {
-  background-color: blue;
+.main-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 75px;
+
+    li {
+      a {
+        margin-right: 20px;
+        .url;
+      }
+    }
+  }
+}
+
+.content {
+    width: 100%;
+  .paddings;
+  padding-top: 90px;
+  padding-bottom: 30px;
+  background-color: @light-gray;
+
+  .articles {
+    a {
+      .url;
+      color: black;
+      float: right;
+    }
+  }
+
+  .logos {
+    margin-top: 90px;
+      ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+          // flex-wrap: wrap;
+
+          li {
+            width: 70px;
+            height: 70px;
+          }
+  }
+  }
+}
+
+.categories {
+  width: 100%;
+  .paddings;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: @gray-color;
+  border-top: 1px solid darken(@gray-color, 10%);
+}
+
+@media screen and (min-width: 960px) {
+  .centrator {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+    .logo {
+      display: inline-block;
+    }
+
+    .header-nav {
+      float: right;
+    }
+  }
+
+  .wrapper-header,
+  .wrapper-about,
+  .wrapper-content,
+  .wrapper-categories,
+  .wrapper-footer,
+  .logos
+   {
+    .centrator;
+  }
 }
