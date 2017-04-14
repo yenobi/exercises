@@ -8,7 +8,9 @@
 @League-gothic-regular:  'league_gothic_regular', sans-serif;
 
 // variables 
-@text-color: white;
+
+@text-color-white: white;
+@text-color-pink: #edbfff;
 @gray-color: #ececec;
 @light-gray: #f9f9f9;
 
@@ -21,7 +23,7 @@
 
 .url {
         display: block;
-        color: @text-color;
+        color: @text-color-white;
         text-decoration: none;
         text-transform: uppercase;
         font-family: @League-gothic-regular;
@@ -29,9 +31,18 @@
 // common
 
 body {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
   font-family: @Open-sans-light;
   font-size: 16px;
   line-height: 24px;
+  // background-color: grey;
+  background-image: url(../../img/body-bg.jpg);
+  // background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+      background-position-x: 47%;
 }
 
 main.container-fluid {
@@ -44,39 +55,17 @@ main.container-fluid {
     margin-left: 0px;
 }
 
-// bg of mountain - for body? 
-// bg with colors for sections below ?
-
 h1, 
 h2, 
 h3 {
   font-family: @League-gothic-regular;
 }
 
-.about {
-  width: 100%;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 75px;
-  padding-bottom: 60px;
-  background-image: linear-gradient(to top, #322539 0%, #745083 100%);
-  color: @text-color;
-
-  article {
-    padding-left: 51px;
-
-    a {
-      .url;
-      float: right;
-    }
-  }
-}
-
 header {
   width: 100%;
   .paddings;
   padding-top: 60px;
-  background-color: grey;
+  // background-color: grey;
 
     .logo {
           display: block;
@@ -84,19 +73,14 @@ header {
           width: 155px;
           height: 39px;
           margin-bottom: 25px;
+          margin-left: auto;
+          margin-right: auto;
 
           img {
               width: 155px;
               height: 39px;
           }
     }
-}
-
-footer {
-  width: 100%;
-  .paddings;
-  padding-top: 40px;
-  background-color: grey;
 }
 
 .main-nav {
@@ -116,6 +100,57 @@ footer {
     }
   }
 }
+
+.slider {
+  .wrapper-slider {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    // delete next line after build slider
+    height: 200px;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+    color: @text-color-white;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: @text-color-pink;
+   }
+}
+
+
+
+.about {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 75px;
+  padding-bottom: 60px;
+  background-image: linear-gradient(to top, #322539 0%, #745083 100%);
+  color: @text-color-white;
+
+  article {
+    padding-left: 51px;
+    background-image: url(../../img/about-sprite.png);
+    background-repeat: no-repeat;
+
+    a {
+      .url;
+      float: right;
+    }
+  }
+}
+
+
+
 
 .content {
     width: 100%;
@@ -160,6 +195,47 @@ footer {
   border-top: 1px solid darken(@gray-color, 10%);
 }
 
+footer {
+  width: 100%;
+  .paddings;
+  padding-top: 40px;
+  background-color: grey;
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+    ul {
+      li:first-child {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      li:nth-child(n+2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .logo {
+      float: left; 
+    }
+
+    .header-nav {
+      clear: both;
+    }
+  }
+
+  .about {
+    article {
+      h3 {
+          margin-top: 0px;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 960px) {
   .centrator {
     width: 960px;
@@ -174,10 +250,12 @@ footer {
 
     .header-nav {
       float: right;
+      clear: right;
     }
   }
 
   .wrapper-header,
+  .wrapper-slider,
   .wrapper-about,
   .wrapper-content,
   .wrapper-categories,
@@ -187,3 +265,5 @@ footer {
     .centrator;
   }
 }
+
+// 960-px - main has some white space on right-side 
