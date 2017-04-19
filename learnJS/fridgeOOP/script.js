@@ -42,7 +42,9 @@
 
       this.getFood = function() {
         // need to return public food, not private
-        return food;
+        // retunr food;
+        let foodCopy = food.slice();
+        return foodCopy;
       };
     }
 
@@ -70,6 +72,6 @@
     fridgeFood.push("вилка", "ложка");
 
     console.log( fridge.getFood() ); // внутри по-прежнему: котлета, сок, варенье
-
+    console.log(fridgeFood);
 
 })(document, window, undefined);
