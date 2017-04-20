@@ -177,9 +177,19 @@ header {
 
   article {
     padding-left: 51px;
+    margin-bottom: 50px;
+    position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+              width: 35px;
+    height: 33px;
+          top: 0;
+          left: 0;
     background-image: url(../../img/about-sprite.png);
     background-repeat: no-repeat;
-        margin-bottom: 50px;
+
+        }
 
     a {
       .url;
@@ -318,6 +328,10 @@ header {
   padding-bottom: 90px;
   background-color: @gray-color;
   border-top: 1px solid darken(@gray-color, 10%);
+
+  .hidden-below-960 {
+    display: none;
+  }
 }
 
 footer {
@@ -334,6 +348,71 @@ footer {
 
       .wrapper-footer {
     margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .slider {
+      position: relative;
+
+      &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 10%;
+          bottom: 10%;
+          width: 100%;
+          background-color: rgba(0,0,0, 0.3);
+      }
+
+  h1, 
+  h2 {
+    text-align: left;
+  }
+
+  .carousel-control {
+    width: 10%;
+  }
+
+   .carousel-caption {
+    float: left;
+    position: relative;
+    padding-top: 130px;
+    text-align: left;
+    width: 203px;
+    left: 8%;
+   }
+
+        .img-container {
+            background-image: url(../../img/iphone-img-480.png);
+            background-repeat: no-repeat;
+            width: 192px;
+            height: 304px;
+            float: right;
+            margin-right: 45px;
+      }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .visible-480 {
+      display: inline!important;
+  }
+
+  .visible-480-block {
+    display: block!important;
+  }
+
+  .content .articles {
+    padding-left: 15%;
+
+    a {
+          padding-right: 10%;
+    }
+  }
+
+  .content .review .title {
+    display: inline-block;
   }
 }
 
@@ -422,25 +501,10 @@ footer {
   }
 
 .slider {
-      position: relative;
 
-      &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: 10%;
-          bottom: 10%;
-          width: 100%;
-          background-color: rgba(0,0,0, 0.3);
-      }
 
   .carousel-control {
     width: 50px;
-  }
-
-  h1, 
-  h2 {
-    text-align: left;
   }
 
   .carousel-indicators {
@@ -450,17 +514,11 @@ footer {
   }
 
   .carousel-caption {
-    // display: flex;
-    float: left;
-    position: relative;
-    padding-top: 130px;
-    text-align: left;
     width: 272px;
     left: 8%;
 
     .text {
       font-size: 16px;
-      // line-height: 30px;
       font-family: @Open-sans-light;
     }
   }
@@ -475,10 +533,8 @@ footer {
 
   .img-container {
     background-image: url(../../img/iphone-img.png);
-    background-repeat: no-repeat;
     width: 274px;
     height: 434px;
-    float: right;
     margin-right: 60px;
   }
 }
@@ -491,15 +547,21 @@ footer {
     }
   }
 
-  .logos {
+ .content .logos {
     ul {
       justify-content: space-between;
+
+      li {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
     }
   }
 
   .footer-nav {
     a {
       font-size: 20px;
+      margin-right: 20px;
     }
   }
 
@@ -525,12 +587,52 @@ footer {
   }
 
   .about {
-    article:nth-child(2) {
-          background-position-x: -335px;
+    article:nth-child(2)::before {
+          background-position-x: -340px;
     }
 
-    article:last-child {
-      background-position-x: -665px;
+    article:last-child::before {
+      background-position-x: -675px;
+    }
+  }
+
+  .content .review .title {
+    display: inline-block;
+  }
+
+  .categories {
+    .hidden-upper-960 {
+      display: none;
+    }
+
+    .visible-960 {
+      display: inline!important;
+    }
+
+    article {
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+    .hidden-below-960 {
+      display: block;
+      padding-top: 23px;
+
+      img {
+        width: 133px;
+        height: 37px;
+      }
+
+      p:first-of-type {
+        margin-top: 15px;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #c5c5c5;
+        text-shadow: 1px 1px 0 #ffffff;
+      }
     }
   }
 
@@ -561,5 +663,5 @@ footer {
 }
 
 // has horizontal scroll on 768px and 960px
-
+//  133x37
 // @media screen and (max-width: 767[x])
