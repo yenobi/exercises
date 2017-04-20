@@ -44,7 +44,47 @@
       this.getFood = function() {
         return food.slice();
       };
-    }
 
-    
+      // не пойму почему не работает
+      this.removeFood = function(item) {
+        let index = food.indexOf(item);
+
+        if (index >= 0) {
+          food.splice(index, 1);
+        };
+      };
+
+      // this.filterFood = function(func(item)) {
+      //   return food.filter(func(item));
+      // };
+  }
+
+    var fridge = new Fridge(500);
+      fridge.enable();
+      fridge.addFood({
+        title: "котлета",
+        calories: 100
+      });
+      fridge.addFood({
+        title: "сок",
+        calories: 30
+      });
+      fridge.addFood({
+        title: "зелень",
+        calories: 10
+      });
+      fridge.addFood({
+        title: "варенье",
+        calories: 150
+      });
+      console.log(fridge.getFood().length);
+      fridge.removeFood({
+        title: "зелень",
+        calories: 10
+      });
+      console.log(fridge.getFood().length);
+
+      fridge.filterFood(function(item) {
+        return item.calories < 50;
+      });
 })(document, window, undefined);
