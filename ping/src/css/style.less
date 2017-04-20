@@ -13,6 +13,8 @@
 @text-color-pink: #edbfff;
 @gray-color: #ececec;
 @light-gray: #f9f9f9;
+@menu-color:#4d354f;
+@menu-color-hover: #251628;
 
 // mixins 
 
@@ -92,7 +94,7 @@ header {
 
     li {
       a {
-        margin-right: 20px;
+        // margin-right: 20px;
         .url;
         font-size: 24px;
 
@@ -133,6 +135,7 @@ header {
   .wrapper-slider {
     margin-top: 30px;
     margin-bottom: 100px;
+    z-index: 1;
 
     // delete next line after build slider
     // height: 200px;
@@ -188,8 +191,6 @@ header {
     }
   }
 }
-
-
 
 
 .content {
@@ -348,6 +349,60 @@ footer {
       }
     }
   }
+
+  .header-popup {
+    position: absolute;
+      width: 250px;
+    left: 50%;
+    margin-left: -125px;
+    text-align: center;
+    background-color: @menu-color;
+    border-radius: 8px;
+    opacity: 0.9;
+        z-index: 2;
+
+    ul {
+      flex-direction: column;
+
+      li {
+        border-bottom: 2px solid #051116;
+
+        &:nth-child(n+2) {
+          display: block;
+
+        }
+
+        &:first-child {
+          margin-left: 0px;
+        margin-right: 0px;
+
+          a {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+
+          a {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+        }
+
+        a {
+              padding-top: 7px;
+              padding-bottom: 7px;
+
+              &:hover {
+                background-color: @menu-color-hover;
+                border-bottom: 2px solid @text-color-pink;
+              }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -361,6 +416,7 @@ footer {
 
       a {
         font-size: 24px;
+        margin-right: 20px;
       }
     }
   }
@@ -505,3 +561,5 @@ footer {
 }
 
 // has horizontal scroll on 768px and 960px
+
+// @media screen and (max-width: 767[x])
