@@ -20,9 +20,12 @@
       Machine.apply(this, arguments);
       // let self = this;
 
+    // this.food = [];
     let food = [];
+
     const CAPACITY = power/100;
 
+    // рабочий сеттер
     this.addFood = function(item) {
       if(!this._enabled) {
         console.log('fridge is off');
@@ -41,11 +44,17 @@
       };
 
       this.getFood = function() {
-        // need to return public food, not private
-        // retunr food;
-        let foodCopy = food.slice();
-        return foodCopy;
+        // console.log(food);
+        return food;
       };
+    //
+    //   неправильно работающщий геттер
+    //   this.getFood = function() {
+    //     // need to return public food, not private
+    //     return food;
+    //     // let foodCopy = food.slice();
+    //     // return foodCopy;
+    //   };
     }
 
     // let fridge = new Fridge(200);
@@ -60,6 +69,7 @@
     // fridge.addFood("варенье", "пирог", "торт");
     // fridge.getFood();
 
+    // третья задача
     let fridge = new Fridge(500);
     fridge.enable();
     fridge.addFood("котлета");
@@ -73,5 +83,7 @@
 
     console.log( fridge.getFood() ); // внутри по-прежнему: котлета, сок, варенье
     console.log(fridgeFood);
-
+    fridgeFood = ["вилка", "ложка"];
+    console.log(fridgeFood);
+    console.log( fridge.getFood() );
 })(document, window, undefined);
