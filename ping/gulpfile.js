@@ -6,13 +6,12 @@ const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
-const eslint = require('gulp-eslint');
+const jslint = require('gulp-jslint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-// need to test plugins for img
-const imagemin     = require('gulp-imagemin'); // Подключаем библиотеку для работы с изображениями
-const pngquant     = require('imagemin-pngquant'); // Подключаем библиотеку для работы с png
-const cache = require('gulp-cache'); // Подключаем библиотеку кеширования
+const imagemin     = require('gulp-imagemin'); 
+const pngquant     = require('imagemin-pngquant'); 
+const cache = require('gulp-cache'); 
 const rename = require('gulp-rename');
 
 gulp.task('less', function() {
@@ -29,9 +28,7 @@ gulp.task('less', function() {
 gulp.task('js', function() {
   return gulp.src('src/js/**.js')
     .pipe(sourcemaps.init())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
+    .pipe(jslint())
     .pipe(concat('build.js'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
@@ -40,25 +37,21 @@ gulp.task('js', function() {
 });
 
 gulp.task('img', function() {
-	return gulp.src('img/**/*') // Берем все изображения из app
-		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
+	return gulp.src('src/img/**/*') 
+		.pipe(cache(imagemin({  
 			interlaced: true,
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
 		})))
-		.pipe(gulp.dest('build/img')); // Выгружаем на продакшен
+		.pipe(gulp.dest('img'));
 });
 
 gulp.task('clean', function() {
   return del('build');
 });
-// вотчер (пока только для стилей)
+
 gulp.task('watch', function() {
   gulp.watch('src/css/*.less', gulp.series('less'));
 });
 
-// smth wrong with this task
-gulp.task('build', gulp.series('clean', 'less', 'js', 'img'));
-// дев-задача - сборка + вотчер сразу
-gulp.task('dev', gulp.series('build', 'watch'));

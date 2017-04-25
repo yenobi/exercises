@@ -18,13 +18,13 @@
     "gulp-csso": "^3.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-imagemin": "^3.2.0",
+    "gulp-jslint": "^1.0.10",
     "gulp-less": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.5.1",
     "gulp-uglify": "^2.1.2",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.0.0",
-    "normalize.css": "^6.0.0",
-    "reset.css": "^2.0.2"
+    "normalize.css": "^6.0.0"
   }
 }

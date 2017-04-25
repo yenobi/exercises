@@ -1,10 +1,6 @@
-'use strict';
+(function(window, document, undefined) {
+    'use strict';
+    
+    $('body').paroller();
 
-// (function(window, document, undefined){
-//         // $('body')
-
-// })(window, document, undefined);
-
-        $('.parallax-window').parallax({
-                imageSrc: '../../img/body-bg.jpg'
-        });
+})(window, document, undefined);
