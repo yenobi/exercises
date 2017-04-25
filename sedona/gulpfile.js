@@ -55,7 +55,7 @@ gulp.task('clean', function() {
 });
 // вотчер (пока только для стилей)
 gulp.task('watch', function() {
-  gulp.watch('src/scss/*.scss', gulp.series('sass'));
+  gulp.watch('src/scss/**/*', gulp.series('sass'));
 });
 
 // smth wrong with this task

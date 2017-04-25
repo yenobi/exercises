@@ -1,0 +1,74 @@
+// variables 
+//fonts
+$font: 'pt_sans_regular', sans-serif;
+$font-size: 14px;
+$line-height: $font-size*1.2;
+$font-headings: 'pt_sans_bold', sans-serif;
+$font-size-headings: 18px;
+$line-height-headings: $font-size-headings*1.2;
+//sizes
+$inner-width: 300px;
+//colors
+//blue
+$main-collor: #81b3d2;
+
+//mixins
+@mixin inner-container {
+    width: $inner-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: $font;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: 0;
+}
+
+//here will be imports for different blocks
+
+//header-block
+@import "components/page-header.scss";
+
+.main-nav__hamb {
+    display: block;
+    width: 24px;
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    font-size: 0px;
+    border: none;
+    background-color: white;
+    border-top: 4px solid $main-collor;
+    cursor: pointer;
+    
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 24px;
+        height: 4px;
+        background-color: $main-collor;
+    }
+    
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 24px;
+        height: 4px;
+        background-color: $main-collor;
+    }
+    
+}
+.main-nav {
+    position: absolute;
+    display: none;
+}
+
+@import "components/welcome-screen.scss";
