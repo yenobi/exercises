@@ -2,6 +2,7 @@
     padding-top: 75px;
     text-align: center;
     text-transform: uppercase;
+    font-family: $font;
     
     &__inner {
         @include inner-container;  

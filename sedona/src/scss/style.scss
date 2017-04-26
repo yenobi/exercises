@@ -1,6 +1,6 @@
 // variables 
 //fonts
-$font: 'pt_sans_regular', sans-serif;
+$font: 'pt_sans_regular', Arial, sans-serif;
 $font-size: 14px;
 $line-height: $font-size*1.2;
 $font-headings: 'pt_sans_bold', sans-serif;
@@ -72,3 +72,10 @@ body {
 }
 
 @import "components/welcome-screen.scss";
+
+@import "components/city-content.scss";
+
+@import "components/tourism-essentials.scss";
+
+@import "components/bridge-content.scss";
+
