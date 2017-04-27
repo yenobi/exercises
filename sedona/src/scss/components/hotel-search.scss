@@ -1,0 +1,30 @@
+.hotel-search {
+    width: 100%;
+    font-family: $font;
+    text-align: center;
+    text-transform: uppercase;
+    
+    &_inner {
+        @include inner-container;
+    }
+    
+    &__header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    > div {
+        line-height: 25px;
+    }
+    
+    &__map {
+        width: 100%;
+        padding-top: 360px;
+        background-image: url(../../img/map-bg.jpg);
+        background-position: center;
+    }
+}
+
