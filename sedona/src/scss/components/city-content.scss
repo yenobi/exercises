@@ -3,7 +3,7 @@
     padding-top: 75px;
     text-align: center;
     text-transform: uppercase;
-    background-color: $main-collor;
+    background-color: $main-color;
     font-family: $font;
     
     &__inner {
@@ -25,7 +25,11 @@
     
     &__landscape {
         width: 100%;
-        min-height: 200px;
-        background-color: lightgray;
+        min-height: 250px;
+//        background-color: lightgray;
+        background-image: url(../../img/city-content__landscape-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
