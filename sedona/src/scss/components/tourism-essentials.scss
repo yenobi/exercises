@@ -1,0 +1,16 @@
+.tourism-essentials {
+    width: 100%;
+    padding-top: 75px;
+    text-transform: uppercase;
+    font-family: $font;
+    
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+     &__inner {
+        @include inner-container;
+    }
+}
