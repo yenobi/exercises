@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lib/normalize.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
+<!--    <link rel="stylesheet" href="fonts/fonts.css">-->
     <link rel="stylesheet" href="build/css/style.min.css">
     <title>Sedona</title>
   </head>
@@ -36,15 +36,18 @@
                 <img src="img\sedona-320.png" alt="sedona">
                 <img src="img\reason-320.png" alt="some reason">
             </div>
-            <h1 class="welcome-screen__header">
-                СЕДОНА — небольшой городок в АРИЗОНЕ,<br>
-                зАСЛУЖИвающий большего!
-            </h1>
-            <div class="welcome-screen__text">
-                Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
-            </div>
         </div>
     </section>
+      
+      <div class="greetings-text">
+        <h1 class="greetings-text__header">
+                СЕДОНА — небольшой городок в АРИЗОНЕ,<br>
+                зАСЛУЖИвающий большего!
+        </h1>
+        <p class="greetings-text__text">
+                Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
+        </p>
+      </div>
       
     <main class="page-content">
 
@@ -60,7 +63,7 @@
                     <div class="city-content__text">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ,ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</div>
                 </div>
             </div>
-                <div class="city-content__landscape">здесь будет фон</div>
+                <div class="city-content__landscape"></div>
         </section>
         
         <section class="tourism-essentials">
@@ -94,24 +97,24 @@
                     <div class="bridge-content__text">Да, по нему можно пройти! Если конечно вы осмелитесь</div>
                 </div>
             </div>
-            <div class="bridge-content__landscape">здесь будет фон</div>
+            <div class="bridge-content__landscape"></div>
         </section>
         
         <section class="tourism-features">
             <ul class="tourism-features__list">
                 <li class="tourism-features__list-item">
                     <h3>Небольшая площадь</h3>
-                    <p>3</p>
+                    <p>- №3 -</p>
                     <p>ВСЕ достопримечательности находятся очень близко</p>
                 </li>
                  <li class="tourism-features__list-item">
                     <h3>Красивая дорога</h3>
-                    <p>4</p>
+                    <p>- №4 -</p>
                     <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
                 </li>
                  <li class="tourism-features__list-item">
                     <h3>Мало туристов</h3>
-                    <p>5</p>
+                    <p>- №5 -</p>
                     <p>Большинство едет в гранд каньон и толпится там</p>
                 </li>
             </ul>
@@ -124,50 +127,53 @@
                 <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
                 <div>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</div>
             </header>
-            <div class="search-form__wrapper">
-                <form class="search-form">
-                    <header class="search-form__header">Поиск гостиницы в Седоне</header>
-                    <label class="search-form__date-input">
-                        дата заезда
-                        <input type="date">
-                    </label>
-                    <label class="search-form__date-input">
-                        дата выезда
-                        <input type="date">
-                    </label>
-                    <label class="search-form__adult-amount">
-                        взрослые
-                        <input type="number">
-                    </label>
-                    <label class="search-form__child-amount">
-                        дети
-                        <input type="number">
-                    </label>
-                    <button class="search-form__button" type="submit">найти</button>
-                </form>
-            </div>
-            <div class="hotel-search__map">
-                сюда бг с картой - прогрессивное улучшение
-                потом айфрейм джс 
-            </div>
         </div>
-    </section>
-      
+        <div class="search-form__wrapper">
+            <form class="search-form">
+                <header class="search-form__header">Поиск гостиницы в Седоне</header>
+                <div class="search-form__inner">
+                    <label class="search-form__date-input">
+                            дата заезда:
+                        <input type="date">
+                    </label>
+                    <label class="search-form__date-input">
+                            дата выезда:
+                        <input type="date">
+                    </label>
+                    <div class="search-form__amount-wrapper">
+                        <label class="search-form__amount">
+                                <h4>взрослые:</h4>
+                                <input type="number" placeholder="2">
+                        </label>
+                        <label class="search-form__amount">
+                                <h4>дети:</h4>
+                            <input type="number" placeholder="0">
+                        </label>
+                    </div>
+                    <button class="search-form__button" type="submit">найти</button>
+                </div>
+            </form>
+        </div>
+        <div class="hotel-search__map">
+            
     <footer class="page-footer">
       <div class="page-footer__inner">
           <div class="page-footer__heading">#visitsedona</div>
           <div class="socials">
-              <ul>
-                  <li><a class="socials__item" href="#"></a></li>
-                  <li><a class="socials__item" href="#"></a></li>
-                  <li><a class="socials__item" href="#"></a></li>
+              <ul class="socials__list">
+                  <li><a class="socials__item socials__item_tw" href="#">twitter</a></li>
+                  <li><a class="socials__item socials__item_fb" href="#">facebook</a></li>
+                  <li><a class="socials__item socials__item_yt" href="#">youtube</a></li>
               </ul>
           </div>
           <div class="page-footer__copyright">
-              <div class="page-footer__copyright-design"></div>
-              <div class="page-footer__copyright-academy"></div>
+              <div class="page-footer__copyright-item page-footer__copyright-item_a">Websity by</div>
+              <div class="page-footer__copyright-item page-footer__copyright-item_html">For</div>
           </div>
       </div>
     </footer>
+        </div>
+    </section>
+      
   </body>
 </html>

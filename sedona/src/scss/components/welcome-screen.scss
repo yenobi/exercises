@@ -1,8 +1,6 @@
 .welcome-screen {
     padding-top: 75px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $font;
+    background-image: url(../../img/welcome-bg.jpg);
     
     &__inner {
         @include inner-container;  
@@ -31,18 +29,5 @@
                 margin-bottom: 50px;
             }
         }
-    }
-    
-    &__header {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        font-family: $font-headings;
-        font-size: $font-size-headings;
-        line-height: 26px;
-    }
-    
-    &__text {
-        margin-bottom: 25px;
-        line-height: 20px;
     }
 }

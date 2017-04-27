@@ -1,9 +1,9 @@
 .page-header {
     width: 100%;
-    min-height: 57px;
+//    min-height: 57px;
     position: fixed;
     background-color: white;
-    border-bottom: 1px solid $main-collor;
+    border-bottom: 1px solid $main-color;
     
     &__inner {
      @include inner-container;   
