@@ -66,3 +66,23 @@
         background-color: $main-color;
     }   
 }
+
+@media screen and (min-width: 768px) {
+    .search-form {
+        position: absolute;
+        background-color: white;
+        width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 100px;
+        right: 100px;
+        top: -81px;
+        
+//        display: none;
+        
+        &__wrapper {
+            position: relative;
+            width: 100%;
+        }
+    }
+}
