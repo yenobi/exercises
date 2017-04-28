@@ -26,9 +26,36 @@
     &__landscape {
         width: 100%;
         min-height: 250px;
-//        background-color: lightgray;
         background-image: url(../../img/bridge-content__landscape-bg.jpg);
         background-position: center;
         background-size: cover;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bridge-content {
+        display: flex;
+        padding-top: 0;
+        
+        &__inner {
+            width: 33%;
+            order: 2;
+        }
+        
+        &__landscape {
+            width: 67%;
+            order: 1;
+        }
+        
+        &__descr {
+            padding-top: 45px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        
+        &__header {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }

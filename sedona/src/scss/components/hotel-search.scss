@@ -4,10 +4,6 @@
     text-align: center;
     text-transform: uppercase;
     
-    &_inner {
-        @include inner-container;
-    }
-    
     &__header {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -28,3 +24,27 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .hotel-search {
+        &__header {
+            h2 {
+                font-size: 24px;
+                line-height: 26px;
+            }
+            
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 90px;
+            }
+        }
+        
+        &__map {
+            padding-top: 550px;
+            background-size: cover;
+        }
+    }
+}

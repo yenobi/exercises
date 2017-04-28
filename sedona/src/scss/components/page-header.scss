@@ -4,6 +4,7 @@
     position: fixed;
     background-color: white;
     border-bottom: 1px solid $main-color;
+    z-index: 10;
     
     &__inner {
      @include inner-container;   

@@ -13,6 +13,7 @@
     
     &__header {
         margin-bottom: 30px;
+        line-height: 24px;
     }
     
     &__subheader {
@@ -21,6 +22,7 @@
     
     &__text{
         margin-bottom: 50px;
+        line-height: 19px;
     }
     
     &__landscape {
@@ -31,5 +33,31 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .city-content {
+        display: flex;
+        padding-top: 0;
+        
+        &__inner {
+            width: 33%;
+        }
+        
+        &__landscape {
+            width: 67%;
+        }
+        
+        &__descr {
+            padding-top: 45px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        
+        &__header {
+            font-size: 16px;
+            line-height: 24px;
+        }
     }
 }
