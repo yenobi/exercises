@@ -7,7 +7,8 @@
     z-index: 10;
     
     &__inner {
-     @include inner-container;   
+     @include inner-container;
+        width: auto;
     }
     
     &__logo-wrapper {
@@ -19,5 +20,9 @@
             max-width: 100%;
             height: auto;
         }
+    }
+    
+    &__nav-wrapper {
+        position: relative;
     }
 }

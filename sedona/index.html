@@ -15,14 +15,22 @@
             <div class="page-header__logo-wrapper">
                 <img src="img\logo-320.png" alt="sedona logotype">
             </div>
-            <button class="main-nav__hamb">toggle-button</button>
+            <button class="main-nav__hamb main-nav__hamb_hidden">toggle-button</button>
             <div class="page-header__nav-wrapper">
-                <nav class="main-nav">
-                    <ul class="main-nav__list">
-                        <li><a class="main-nav__list-item" href="#">Карта штата</a></li>
-                        <li><a class="main-nav__list-item" href="#">Информация</a></li>
-                        <li><a class="main-nav__list-item" href="#">Фото и видео</a></li>
-                        <li><a class="main-nav__list-item" href="#">Гостиницы</a></li>
+                <nav class="main-nav main-nav_desktop">
+                    <ul class="main-nav__list main-nav__list_desktop">
+                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Карта штата
+                            <i class="main-nav__cross main-nav__cross_hidden">
+                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+<polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 
+	22.199,19.396 13.903,11.1 "/>
+</svg>
+                            </i>
+                            </a></li>
+                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Информация</a></li>
+                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Фото и видео</a></li>
+                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Гостиницы</a></li>
                     </ul>
                 </nav>
             </div>
@@ -476,10 +484,16 @@
 <!--
 tasks
 1. open icon-burg with illustrator - resave 
-2. style form 
+2. style form 768
 3. wtf with fonts? 
 - check out variables fonts on 768 to resize auto
-4. menu on 320 with toggle button - just styles
-5. menu on 768 
-6. change photos from design (x1 for 320, x2 for 768)
++4. menu on 320 with toggle button - just styles
++5. menu on 768 
+6. check 1200 
+7. decorative white triangles 
+- pseudo-elements after/before with position: absolute? 
+
+- js 
+1. change photos from design (x1 for 320, x2 for 768)
+2. menu toggle + cross top fade in/out 
 -->
