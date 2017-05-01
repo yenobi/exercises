@@ -1,0 +1,23 @@
+@import "../../fonts/fonts.css";
+@import "var.scss";
+
+body {
+    margin: 0;
+    font-family: $font;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+@import "components/page-header.scss";
+
+@import "components/welcome-screen.scss";
+
+@import "components/main-nav.scss";
+
+@import "components/programs.scss";
+
+@import "components/study-plan.scss";
+
+h1 {
+    font-family: $font-heading;
+}

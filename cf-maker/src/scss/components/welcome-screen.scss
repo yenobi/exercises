@@ -1,0 +1,23 @@
+.welcome-screen {
+    padding-top: 95px;
+    background-color: grey;
+    
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    
+    &__heading {
+        font-size: 2.7em;
+        line-height: 1em;
+        text-transform: uppercase;
+        
+        span {
+            color: $main-color;
+        }
+    }
+    
+    &__sub-heading {
+        font-size: 18px;
+    }
+}

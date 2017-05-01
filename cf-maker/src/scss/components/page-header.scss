@@ -1,0 +1,35 @@
+.page-header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 30px;
+    }
+    
+    &__nav-toggler {
+        border: none;
+        background-color: transparent;
+        color: $textcolor-with-bg;
+        font-family: $font-heading;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+        
+        &:hover,
+        &:focus {
+            color: $main-color;
+        }
+    }
+    
+    &__phone-number {
+        color: white;
+        text-decoration: none;
+        font-family: $font-heading;
+        font-weight: bold;
+    }
+}

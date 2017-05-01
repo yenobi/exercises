@@ -1,0 +1,14 @@
+.study-plan {
+    text-align: left;
+    padding-left: 5%;
+    
+    &__header {
+        font-family: $font-heading;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    &__list-item {
+        text-align: left;
+    }
+}
