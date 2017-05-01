@@ -1,0 +1,78 @@
+// variables 
+//fonts
+@import "../../fonts/fonts.css";
+
+$font: 'pt_sans_regular', Arial, sans-serif;
+$font-size: 14px;
+$line-height: $font-size*1.2;
+$font-headings: 'pt_sans_bold', sans-serif;
+$font-size-headings: 18px;
+$line-height-headings: $font-size-headings*1.2;
+//sizes
+$inner-width: 300px;
+//colors
+//blue
+$main-color: #81b3d2;
+$gray: #eeeeee;
+$brown: #766357;
+$gorgeous-brown: #83746a;
+
+//mixins
+@mixin inner-container {
+    width: $inner-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: $font;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: 0;
+}
+
+//here will be imports for different blocks
+
+//header-block
+@import "components/page-header.scss";
+
+@import "components/main-nav.scss";
+
+@import "components/welcome-screen.scss";
+
+.greetings-text {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font;
+    
+    &__header {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-family: $font-headings;
+        font-size: $font-size-headings;
+        line-height: 26px;
+    }
+    
+    &__text {
+        margin-bottom: 25px;
+        line-height: 20px;
+    }
+}
+
+@import "components/city-content.scss";
+
+@import "components/tourism-essentials.scss";
+
+@import "components/bridge-content.scss";
+
+@import "components/tourism-features.scss";
+
+@import "components/hotel-search.scss";
+
+@import "components/search-form.scss";
+
+@import "components/page-footer.scss";

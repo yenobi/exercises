@@ -1,0 +1,28 @@
+.page-header {
+    width: 100%;
+//    min-height: 57px;
+    position: fixed;
+    background-color: white;
+    border-bottom: 1px solid $main-color;
+    z-index: 10;
+    
+    &__inner {
+     @include inner-container;
+        width: auto;
+    }
+    
+    &__logo-wrapper {
+        width: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+    &__nav-wrapper {
+        position: relative;
+    }
+}

@@ -1,0 +1,70 @@
+.welcome-screen {
+    padding-top: 75px;
+    background-image: url(../../img/welcome-bg.jpg);
+    
+    &__inner {
+        @include inner-container;  
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    svg {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    &__first-text {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        fill: $main-color;
+    }
+    
+    &__gorgeous-text {
+        fill: $gorgeous-brown;
+        margin-bottom: 55px;
+    }
+    
+    &__sedona-text {
+        width: 280px;
+        height: 50px;
+        fill: white;
+        margin-bottom: 68px;
+    }
+    
+    &__because-text {
+        fill: white;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .welcome-screen {
+        &__inner {
+            width: auto;
+        }
+        
+        &__first-text {
+            width: 280px;
+            height: 50px;
+        }
+        
+        &__gorgeous-text {
+            width: 300px;
+            height: 35px;
+        }
+        
+        &__sedona-text {
+            width: 480px;
+            height: 80px;
+        }
+        
+        &__because-text {
+            width: 300px;
+            height: 90px;
+            margin-bottom: 90px;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.search-form {
+    &__wrapper {
+        
+    }
+    
+    &__inner {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 25px;
+        margin-bottom: 50px;
+        text-align: left;
+        font-weight: bold;
+    }
+    
+    &__header {
+        font-family: $font-headings;
+        background-color: $brown;
+        color: white;
+        padding-top: 33px;
+        padding-bottom: 33px;
+        font-size: 18px;
+    }
+    
+    &__date-input {
+        input {
+            width: 235px;
+            height: 38px;
+            background-color: #f2f2f2;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            padding-left: 10px;
+            padding-right: 35px;
+        }
+    }
+    
+    &__amount-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 46px;
+    }
+    
+    &__amount {
+        h4 {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        input[type="number"] {
+            width: 114px;
+            height: 38px;
+            background-color: #f2f2f2;
+            border: none;
+        }
+        
+    }
+    
+    &__button {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 280px;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        background-color: $main-color;
+    }   
+}
+
+@media screen and (min-width: 768px) {
+    .search-form {
+        position: absolute;
+        background-color: white;
+        width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 100px;
+        right: 100px;
+        top: -81px;
+        
+//        display: none;
+        
+        &__wrapper {
+            position: relative;
+            width: 100%;
+        }
+    }
+}
