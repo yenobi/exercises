@@ -31,9 +31,9 @@
       
       <section class="welcome-screen">
           <div class="welcome-screen__stars-wrapper">
-              <div class="welcome-screen__star">star</div>
-              <div class="welcome-screen__star">star</div>
-              <div class="welcome-screen__star">star</div>
+              <div class="welcome-screen__star">
+                  star
+              </div>
             </div>
           <p class="welcome-screen__sup-heading">Intensive program barista training</p>
           <h1 class="welcome-screen__heading">barista training in <span>amsterdam</span></h1>
@@ -48,19 +48,24 @@
               <p class="programs__sub-header">We share their experience and professional barista championships multiple winners</p>
 <!-- mb markup for tabs will change,
     example from jQ UI-->
-              <div class="tabs js-tab__wrapper">
-                  <ul class="js-tabs__list">
-                    <li><a class="js-tabs__list-item js-tabs__list-item_active">Nunc tincidunt</a></li>
-                    <li><a class="js-tabs__list-item">Proin dolor</a></li>
-                    <li><a class="js-tabs__list-item">Aenean lacinia</a></li>
+              <div class="plan-tabs js-tab__wrapper">
+                  <ul class="plan-tabs__list js-tabs__list">
+                    <li><a class="plan-tabs__list-item js-tabs__list-item js-tabs__list-item_active">basic</a></li>
+                    <li><a class="plan-tabs__list-item js-tabs__list-item">premium</a></li>
+                    <li><a class="plan-tabs__list-item js-tabs__list-item">platinum</a></li>
                   </ul>
-                  <div class="js-tabs__content js-hidden">
-                    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante.</p>
+                  <div class="plan-tabs__content js-tabs__content js-hidden">
+                      <img class="plan-tabs__content-img" src="img/basic.jpg" alt="">
+                    <h3 class="plan-tabs__content-header">Beginners course</h3>
+                      <p class="plan-tabs__content-cerf">Certifiacte</p>
+                      <p class="plan-tabs__content-time">240 minets</p>
+                      <p class="plan-tabs__content-price"><span>1 500</span>usd</p>
+                      <button class="plan-tabs__content-button" type="button">registration</button>
                   </div>
-                  <div class="js-tabs__content js-hidden">
+                  <div class="plan-tabs__content js-tabs__content js-hidden">
                     <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
                   </div>
-                  <div class="js-tabs__content js-hidden">
+                  <div class="plan-tabs__content js-tabs__content js-hidden">
                     <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante.</p>
                   </div>
                 </div>
@@ -118,6 +123,7 @@ types of roasting</h3>
               <div class="programs__table-info"></div>
           </div>
       </section>
+      
       <section class="gallery"></section>
       <section class="testimonals">
           <div class="item-1">
