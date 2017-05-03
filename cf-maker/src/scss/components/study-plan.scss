@@ -1,6 +1,7 @@
 .study-plan {
     text-align: left;
     padding-left: 5%;
+    padding-right: 5%;
     
     &__header {
         font-family: $font-heading;
@@ -8,13 +9,37 @@
         text-transform: uppercase;
     }
     
-    &__list-item {
-        text-align: left;
+    &__list {
+        list-style: none;
     }
     
-//    &__hidden {
-//        display: none;
-//    }
+    &__list-item {
+        text-align: left;
+        
+        &:before {
+            content: '-';
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+    
+    &__item {
+        border-top: 1px solid $gray;
+        padding-top: 20px;
+        clear: both;
+    }
+    
+    &__more {
+        float: right;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: $textcolor-without-bg;
+        cursor: pointer;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .js-study-plan__hidden {

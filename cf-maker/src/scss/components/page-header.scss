@@ -3,14 +3,27 @@
     width: 100%;
     background-color: black;
     z-index: 10;
+    border-bottom: 1ps solid $gray-line;
     
     &__inner {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         padding-left: 3%;
         padding-right: 3%;
         padding-top: 30px;
     }
+    
+    &__logotype {
+        width: 110px;
+        position: absolute;
+        top: 41px;
+        left: -49px;
+        
+        img {
+            max-width: 130%;
+        }
+    }
+    
     
     &__nav-toggler {
         border: none;
@@ -32,5 +45,18 @@
         text-decoration: none;
         font-family: $font-heading;
         font-weight: bold;
+        
+//        on 960
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .page-header {
+        &__logotype {
+            width: 150px;
+            top: 20px;
+            left: 20px;        
+        }
     }
 }
