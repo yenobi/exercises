@@ -3,20 +3,20 @@
     width: 100%;
     background-color: black;
     z-index: 10;
-    border-bottom: 1ps solid $gray-line;
+    border-bottom: 1px solid $gray-line;
     
     &__inner {
         display: flex;
         justify-content: flex-end;
         padding-left: 3%;
         padding-right: 3%;
-        padding-top: 30px;
+        padding-top: 18px;
     }
     
     &__logotype {
         width: 110px;
         position: absolute;
-        top: 41px;
+        top: 12px;
         left: -49px;
         
         img {
@@ -47,7 +47,7 @@
         font-weight: bold;
         
 //        on 960
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
 }
 

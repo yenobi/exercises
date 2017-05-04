@@ -1,5 +1,6 @@
 .welcome-screen {
-    padding-top: 95px;
+    padding-top: 75px;
+    padding-bottom: 10px;
     background-color: grey;
     
     width: 100%;
@@ -50,6 +51,61 @@
         
         &:after {
             right: 30px;
+        }
+    }
+    
+    &__circle {
+        font-size: 0px;
+        width: 15px;
+        height: 15px;
+        margin: 15px auto;
+        background-color: $additional-color;
+        border-radius: 50%;
+        position: relative;
+        
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 100px solid $additional-color;
+            position: absolute;
+            top: 3px;
+            right: 25px;
+        }
+        
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;         
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 100px solid $additional-color;
+            position: absolute;
+            top: 3px;
+            left: 25px;
+        }
+    }
+    
+    &__arrow {
+        display: block;
+        margin: 25px auto;
+        width: 50px;
+        height: 50px;
+        border: 1px solid white;
+        border-radius: 50%;
+        font-size: 0;
+        cursor: pointer;
+        
+        &:hover,
+        &:focus {
+            background-color: lighten($additional-color, 20%);
+        }
+        
+        svg {
+            fill: $main-color;
+            margin-top: 18px;
         }
     }
 }
