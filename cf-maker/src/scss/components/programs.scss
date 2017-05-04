@@ -1,11 +1,14 @@
 .programs {
     width: 100%;
+    padding-top: 50px;
     text-align: center;
     
     &__header {
         font-family: $font-heading;
         text-transform: uppercase;
         position: relative;
+        margin-top: 0px;
+
         
         &:before,
         &:after {

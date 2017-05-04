@@ -6,6 +6,13 @@ body {
     font-family: $font;
     font-size: 18px;
     line-height: 22px;
+    background-image: url(../../img/programs-bg.jpg);
+}
+
+.first-screen-wrapper {
+    background-image: url(../../img/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 @import "components/page-header.scss";
@@ -23,3 +30,15 @@ body {
 @import "components/testimonals.scss";
 
 @import "components/ask-question.scss";
+
+@import "components/school-description.scss";
+
+.page-footer {
+    background-color: black;
+}
+
+@import "components/contacts.scss";
+
+@import "components/footer-nav.scss";
+
+@import "components/page-footer.scss";
