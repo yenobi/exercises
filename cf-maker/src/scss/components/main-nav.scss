@@ -1,4 +1,70 @@
 .main-nav {
-    display: none;
+//    display: none;
     position: absolute;
+    width: 100%;
+    top: -234px;
+    left: 0;
+    background-color: black;
+    
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        & li:first-child {
+            position: relative; 
+        }
+        
+//        & li:last-child {
+//            .main-nav__list-item {
+//                border-bottom: none;
+//                
+//                &:hover {
+//                    border-bottom: 3px solid $main-color;
+//                }
+//            }
+//        }
+    }
+    
+    &__list-item {
+        display: block;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font-heading;
+        font-weight: bold;
+        color: white;
+        border-bottom: 1px solid $gray-line;
+        
+        &:hover,
+        &:focus {
+            color: $main-color;
+            border-bottom: 3px solid $main-color;
+        }
+    }
+    
+    &__cross {
+        position: absolute;
+        top: 11px;
+        right: 20px;
+        fill: white;
+        cursor: pointer;
+        
+        &:hover,
+        &:focus {
+            fill: $main-color;
+        }
+    }
 }
+
+@media(min-width: 960px) {
+    .main-nav {
+        &__cross_hidden {
+            display: none;
+        }
+    }
+}
+
+//for animation - make .page-header top: 233px + bg-color: black;

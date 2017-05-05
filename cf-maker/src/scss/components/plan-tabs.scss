@@ -1,0 +1,133 @@
+.plan-tabs {
+    &__list {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        width: 86%;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: $font-heading;
+        
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 0;
+            border-bottom: 1px solid $gray;
+            width: 106%;
+            top: 23px;
+            margin-left: -3%;
+        }
+    }
+    
+    &__list-item {
+        display: block;
+        color: $gray;
+        cursor: pointer;
+    }
+    
+    .js-hidden {
+        display: none;
+    }
+}
+
+//should be separte block beacuse of big amount of nesting elements but choose element because of connected idea (расшифровать более конкретно о том, что не имеет смысла без контекста)
+
+.plan-tabs__content {
+    position: relative;
+    padding-left: 35%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: right;
+    padding-right: 5%;
+    
+    &-img {
+        max-width: 70%;
+        position: absolute;
+        left: -57px;
+        top: 60px;
+    }
+    
+    &-cerf {
+        background-image: url(../../img/cerf.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 45%;
+    }
+    
+    &-time {
+        background-image: url(../../img/time.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 45%;
+    }
+    
+    &-price {
+        font-weight: bold;
+        font-size: 1.2em;
+        
+        span {
+           font-size: 1.5em; 
+        }
+    }
+    
+    &-button {
+        padding: 18px 36px;
+        font-family: $font-heading;
+        font-size: 1em;
+        font-weight: bold;
+        color: $textcolor-with-bg;
+        background-color: $textcolor-without-bg;
+        border: none;
+        text-transform: uppercase;
+        
+        &:hover,
+        &:focus {
+            color: $textcolor-without-bg;
+            background-color: $textcolor-with-bg;
+            border: 1px solid $textcolor-without-bg;
+        }
+    }
+}
+
+.js-tabs__list-item_active {
+    position: relative;
+    z-index: 2;
+    color: $textcolor-without-bg;
+    border-bottom: 3px solid $textcolor-without-bg;
+}
+
+@media(min-width: 375px) {
+    
+    .plan-tabs {
+        &__content-cerf, 
+        &__content-time {
+            background-position-x: 52%;
+        }
+        
+        &__content-cerf {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media(min-width: 960px) {
+    .plan-tabs {
+        width: 50%;
+        
+        &__list {
+            &:after {
+                width: 116%;
+                top: 93px;
+                margin-left: -8%;
+            }
+        }
+        
+        &__list-item {
+            padding: 35px 65px;
+        }
+    }
+}

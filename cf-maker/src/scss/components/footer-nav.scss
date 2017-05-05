@@ -1,0 +1,30 @@
+.footer-nav {
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        
+        
+        &-item {
+            display: block;
+           padding: 20px;
+            color: $textcolor-with-bg;
+            text-transform: uppercase;
+            font-family: $font-heading;
+            border-bottom: 1px solid $gray-line;
+            text-decoration: none;
+            cursor: pointer;
+            
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+        
+        & li:last-child {
+            .footer-nav__list-item {
+                border-bottom: none;
+            }
+        }
+    }
+}

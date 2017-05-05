@@ -3,7 +3,15 @@
     width: 100%;
     z-index: 10;
     border-bottom: 1px solid $gray-line;
-//    background-color: black;
+    
+    &_scrolled {
+        background-color: black;
+    }
+    
+    &_dropdown {
+        top: 233px;
+        background-color: black;   
+    }
     
     &__inner {
         display: flex;
@@ -22,6 +30,21 @@
         img {
             max-width: 130%;
         }
+        
+        &_scrolled {
+            width: 70px;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            
+            img {
+                max-width: 60%;
+            }
+        }
+    }
+    
+    &__main-nav-wrapper {
+        margin-right: 3%;
     }
     
     

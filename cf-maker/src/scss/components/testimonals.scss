@@ -1,0 +1,19 @@
+.testimonals {
+    text-align: center;
+    
+    &__item {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    &__header,
+    &__author {
+        font-family: $font-heading;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    &__photo {
+        max-width: 60%;
+    }
+}

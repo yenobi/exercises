@@ -1,0 +1,49 @@
+.ask-question {
+    margin-bottom: 50px;
+    
+    &__inner {
+        text-align: left;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    &__header {
+        padding-bottom: 15px;
+        font-family: $font-heading;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid $textcolor-without-bg;
+    }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        
+        &-input {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+            border: none;
+            border-bottom: 1px solid $textcolor-without-bg;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            outline: none;
+            background-image: url(../../img/programs-bg.jpg);
+            
+            &:focus {
+                border-bottom: 2px solid $textcolor-without-bg;
+            }
+        }
+        
+        &-submit {
+            display: block;
+            font-family: $font-heading;
+            font-weight: bold;
+            background-color: rgba(0,0,0,0);
+            border: 1px solid $textcolor-without-bg;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+    }
+}
