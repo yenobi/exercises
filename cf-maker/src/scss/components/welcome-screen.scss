@@ -110,7 +110,13 @@
     }
 }
 
-@media screen and (min-width: 960px) {
+@media(min-width: 425px) {
+    .welcome-screen__stars-wrapper {
+        padding-top: 30px;
+    }
+}
+
+@media(min-width: 960px) {
     .welcome-screen {
         padding-top: 150px;
     }

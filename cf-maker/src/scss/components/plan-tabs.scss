@@ -114,6 +114,12 @@
     }
 }
 
+@media(min-width: 425px) {
+    .plan-tabs__content-price {
+        margin-bottom: 50px;
+    }
+}
+
 @media(min-width: 960px) {
     .plan-tabs {
         width: 50%;
