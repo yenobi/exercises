@@ -1,0 +1,29 @@
+.partners {
+    &__inner {
+        background-color: rgba(0,0,0,0.15);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    
+    &__header {
+        font-family: $font-heading;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    &__line {
+        display: block;
+        width: 40%;
+        margin: 30px auto;
+        height: 1px;
+        background-color: black;
+    }
+    
+    &__slider-list {
+        
+        div img {
+            width: 50%;
+        }
+    }
+}

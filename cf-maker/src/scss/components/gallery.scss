@@ -1,0 +1,118 @@
+.gallery {
+//    background-color: saddlebrown;
+    background-image: url(../../img/gallery-bg.jpg);
+    background-size: cover;
+    color: $textcolor-with-bg;
+    text-align: center;
+//    padding-top: 50px;
+    
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 70px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    &:after {
+        background-image: url(../../img/line--bg-lower.png);
+    }
+    
+    &:before {
+        background-image: url(../../img/line--bg-upper.png);
+    }
+    
+    &__inner {
+        
+    }
+    
+    &__header {
+        text-transform: uppercase;
+        font-family: $font-heading;
+        position: relative;
+        
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            vertical-align: top;
+            width: 30px;
+            height: 15px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAdBAMAAADvFanRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAFVBMVEUAAAD9/Pj9/Pj9/Pj9/Pj9/PgAAAAvNgAYAAAABXRSTlMA8EtQsEkYnO8AAAABYktHRACIBR1IAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAMUlEQVQoz2NggAHRUGwggIGeCpSNsQEDhhECXPADB4ZQ/CCACgoIumGkAYJpcuAyDgD93nS+qo8CngAAAABJRU5ErkJggg==");
+        }
+        
+        &:before {
+            margin-top: 4px;
+            margin-right: 10px;
+        } 
+        
+        &:after {
+            transform: rotate(180deg);
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+    }
+    
+    &__sub-header {
+        margin-bottom: 50px;
+    }
+    
+//    for arrows
+    
+    &__slider-nav {
+        position: absolute;
+        width: 100%;
+    }
+    
+    &__slider-arrow {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 2px solid $additional-color;
+            font-size: 0px;
+            position: relative;
+        
+        &:nth-of-type(1) {
+            &:before {
+                content: "←";
+                display: block;
+                font-size: 50px;
+                color: white;
+                position: absolute;
+                top: 12px;
+                right: -18px;
+            }
+        }
+        
+        &:nth-last-of-type(1) {
+            margin-left: 120px;
+            margin-top: 15px;
+            
+            &:before {
+                content: "→";
+                display: block;
+                font-size: 50px;
+                color: white;
+                position: absolute;
+                top: 12px;
+                left: -18px;
+            }
+        }
+    }
+    
+//    for pagination
+    
+    &__slider-pagination {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        
+        span {
+            color: $main-color;
+        }
+    }
+}
