@@ -16,3 +16,11 @@
         }
     }
 }
+
+@media(min-width: 768px) {
+    .contacts__icon-cell {
+        svg {
+            max-width: 40px;
+        }
+    }
+}

@@ -38,12 +38,61 @@
         
         &-submit {
             display: block;
+            width: 110px;
             font-family: $font-heading;
             font-weight: bold;
             background-color: rgba(0,0,0,0);
             border: 1px solid $textcolor-without-bg;
             padding: 10px 20px;
             text-transform: uppercase;
+            position: relative;
+            
+            &:after {
+                content: "→";
+                display: block;
+                font-size: 50px;
+                color: black;
+                position: absolute;
+                top: -18px;
+                left: 90px
+            }
         }
     }
 }
+
+@media(min-width: 768px) {
+    .ask-question {
+        background-image: url(../../img/ask-question__bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        &__inner {
+            width: 58%;
+            margin-left: auto;
+            padding-top: 50px;
+            padding-left: 0;
+        }
+        
+        &__form {
+            display: block;
+        }
+        
+        &__form-submit {
+            float: right;
+            margin-right: 30px;
+            margin-top: -5px;
+        }
+        
+        &__form-input {
+            width: 50%;
+        }
+    }
+}
+
+//    content: "→";
+//    display: block;
+//    font-size: 50px;
+//    color: #fff;
+//    position: absolute;
+//    top: 12px;
+//    left: -18px;

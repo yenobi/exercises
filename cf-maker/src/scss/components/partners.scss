@@ -85,3 +85,27 @@
         
     }
 }
+
+@media(min-width: 768px) {
+    .partners {
+        &__slider-list {
+            div img {
+                max-width: 250px;
+            }
+        }
+        
+        &__slider-nav {
+            a {
+                top: -185px;
+            }
+            
+            & a:nth-of-type(1) {
+                left: 18%;
+            }
+
+            & a:nth-last-of-type(1) {
+                right: 18%;
+            } 
+        }
+    }    
+}

@@ -122,6 +122,8 @@
 
 @media(min-width: 768px) {
     .plan-tabs {
+        margin-bottom: 50px;
+        
         &__list-item {
             padding: 20px;
         }
@@ -131,8 +133,8 @@
         }
         
         &__content-img {
-            max-width: 50%;
-            left: 75px;
+            max-width: 56%;
+            left: 70px;
         }
         
         &__content-cerf, 
@@ -144,7 +146,9 @@
 
 @media(min-width: 960px) {
     .plan-tabs {
-        width: 50%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         
         &__list {
             &:after {

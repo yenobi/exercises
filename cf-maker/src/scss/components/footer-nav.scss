@@ -28,3 +28,32 @@
         }
     }
 }
+
+@media(min-width: 768px) {
+    .footer-nav {
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            
+            &-item {
+                border-bottom: none;
+                
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: white;
+                    margin-left: 52px;
+                }
+            }
+            
+            & li:last-child {
+                .footer-nav__list-item:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

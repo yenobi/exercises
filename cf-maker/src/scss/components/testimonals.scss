@@ -17,3 +17,9 @@
         max-width: 60%;
     }
 }
+
+@media(min-width: 768px) {
+    .testimonals__photo {
+        max-width: 30%;
+    }
+}
