@@ -163,3 +163,14 @@
         }
     }
 }
+
+@media(min-width: 1366px) {
+    .plan-tabs {
+        width: 70%;
+        
+        &__content-img {
+            left: 154px;
+            width: 500px;
+        }
+    }
+}

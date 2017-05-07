@@ -67,4 +67,23 @@
     }
 }
 
+@media(min-width: 1024px) {
+    .main-nav {
+        position: relative;
+        top: 0;
+        background-color: rgba(0,0,0,0);
+        
+        &__list {
+            display: flex;
+        }
+        
+        &__list-item {
+            margin-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: none;
+        }
+    }
+}
+
 //for animation - make .page-header top: 233px + bg-color: black;

@@ -123,3 +123,29 @@
         }
     }
 }
+
+@media(min-width: 1024px) {
+    .programs {
+        &__header {
+            &:before{
+                left: 40%;
+            }
+        
+            &:after {
+                right: 40%;
+            }
+        }
+        
+        &__table {
+            margin-bottom: 50px;
+        }
+        
+        &__table-hidden {
+            display: table-row;
+        }
+        
+        &__table-more {
+            display: none;
+        }
+    }
+}
