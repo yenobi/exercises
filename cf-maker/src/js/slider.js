@@ -86,8 +86,8 @@ window.sliderInit = (function (window, document, undefined) {
 				// Activate Slider
 				mySwipe[index] = Swipe(slider, {
 					// startSlide: 2,
-					// speed: 400,
-					// auto: 3000,
+					 speed: 800,
+					 auto: 6000,
 					continuous: true,
 					// disableScroll: false,
 					// stopPropagation: false,
@@ -124,11 +124,11 @@ window.sliderInit = (function (window, document, undefined) {
 (function(window, document, undefined) {
 'use strict';
 
-    let gallery = document.querySelector('.gallery');
-    let partners = document.querySelector('.partners');
+    var gallery = document.querySelector('.gallery');
+    var partners = document.querySelector('.partners');
     
-    let galleryArrows = Array.prototype.slice.call(gallery.querySelectorAll('.gallery__slider-nav a'));
-    let partnersArrows = Array.prototype.slice.call(partners.querySelectorAll('.partners__slider-nav a'));
+    var galleryArrows = Array.prototype.slice.call(gallery.querySelectorAll('.gallery__slider-nav a'));
+    var partnersArrows = Array.prototype.slice.call(partners.querySelectorAll('.partners__slider-nav a'));
     
     galleryArrows.forEach(function(item){
         item.classList.add('gallery__slider-arrow');

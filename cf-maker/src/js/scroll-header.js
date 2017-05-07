@@ -1,8 +1,8 @@
 (function(window, document, undefined) {
 'use strict';
-    let header = document.querySelector('.page-header');
-    let logo = header.querySelector('.page-header__logotype');
-    let logoIMG = header.querySelector('.page-header__logotype img'); 
+    var header = document.querySelector('.page-header');
+    var logo = header.querySelector('.page-header__logotype');
+    var logoIMG = header.querySelector('.page-header__logotype img'); 
     
     window.onscroll = function() {
         header.classList.add('page-header_scrolled');

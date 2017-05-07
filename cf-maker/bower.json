@@ -3,10 +3,10 @@
   "description": "project for dev-challenge",
   "main": "index.html",
   "authors": [
-    "Sergey Koshman"
+    ""
   ],
   "license": "ISC",
-  "homepage": "https://github.com/yenobi/exercises",
+  "homepage": "",
   "private": true,
   "ignore": [
     "**/.*",

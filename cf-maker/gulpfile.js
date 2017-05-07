@@ -13,6 +13,7 @@ const imagemin     = require('gulp-imagemin');
 const pngquant     = require('imagemin-pngquant'); 
 const cache = require('gulp-cache'); 
 const rename = require('gulp-rename');
+const minify = require('gulp-minify');
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/style.scss')
@@ -22,21 +23,23 @@ gulp.task('sass', function() {
     .pipe(csso())
     .pipe(sourcemaps.write('.'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('js', function() {
   return gulp.src('src/js/**.js')
     .pipe(sourcemaps.init())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
     .pipe(concat('build.js'))
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('js-min', function() {
+    return gulp.src('dist/js/build.js')
+    .pipe(minify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js'));
+})
 
 gulp.task('img', function() {
 	return gulp.src('img/**/*') // Берем все изображения из app
