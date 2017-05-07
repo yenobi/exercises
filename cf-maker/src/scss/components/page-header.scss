@@ -78,8 +78,13 @@
     .page-header {
         &__logotype {
             width: 150px;
-            top: 20px;
-            left: 20px;        
+            top: -4px;
+            left: 20px;
+            
+            &_scrolled {
+                width: 80px;
+                top: 5px;
+            }
         }
     }
 }

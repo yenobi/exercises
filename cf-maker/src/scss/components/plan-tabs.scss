@@ -120,6 +120,28 @@
     }
 }
 
+@media(min-width: 768px) {
+    .plan-tabs {
+        &__list-item {
+            padding: 20px;
+        }
+        
+        &__list:after {
+            top: 63px;
+        }
+        
+        &__content-img {
+            max-width: 50%;
+            left: 75px;
+        }
+        
+        &__content-cerf, 
+        &__content-time {
+            background-position-x: 78%;
+        }
+    }
+}
+
 @media(min-width: 960px) {
     .plan-tabs {
         width: 50%;

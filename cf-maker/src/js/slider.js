@@ -38,7 +38,7 @@ window.sliderInit = (function (window, document, undefined) {
 				// Display Slider navigation
 				var createNavButtons = function () {
 					if ( slideNav !== null ) {
-						slideNav.innerHTML = '<a data-slider-nav-prev href="#">Previous</a>  <a data-slider-nav-next href="#">Next</a>';
+						slideNav.innerHTML = '<a data-slider-nav-prev href="#"> < </a>  <a data-slider-nav-next href="#"> > </a>';
 					}
 				};
 
