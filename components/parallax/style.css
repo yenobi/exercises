@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background-color: grey;
+      height: 2000px;
+  position: relative;
+}
+
+.box {
+  border: 1px solid black;
+  position: absolute;
+}
+
+.box:nth-child(1) {
+  /*margin-left: 50px;
+  margin-top: 100px;*/
+  top: 100px;
+  left: 50px;
+}
+
+.box:nth-child(2) {
+  margin-left: 150px;
+  margin-top: 200px;
+}
+
+.box:nth-child(3) {
+  margin-left: 300px;
+  margin-top: 300px;
+}
+
+.big {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}

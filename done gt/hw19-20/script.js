@@ -1,5 +1,9 @@
 'use strict';
 
+let container1 = document.getElementById('skills');
+let container2 = document.getElementById('names');
+let container3 = document.getElementById('friends');
+
 let input = [{
     "guid": "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
     "index": 0,
@@ -296,6 +300,8 @@ skills.forEach(function(e) {
   };
 });
 
+container1.innerHTML = skills;
+
 // task2. Массив имен (поле name) людей,
 // отсортированных в зависимости от количества их друзей (friends);
 
@@ -312,6 +318,8 @@ tmp.forEach(function(e) {
       e.name
     );
   });
+
+container2.innerHTML = names;
 
 // task3 - Массив всех друзей всех пользователей, не должно быть повторяющихся людей
 
@@ -330,3 +338,5 @@ friends.forEach(function(e) {
     friends.splice(indexRepeat,1);
   };
 });
+
+container3.innerHTML = friends;
