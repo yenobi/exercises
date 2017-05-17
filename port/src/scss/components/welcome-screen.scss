@@ -1,0 +1,6 @@
+.welcome-screen {
+    
+    &__inner {
+        @include margin-sides;
+    }
+}

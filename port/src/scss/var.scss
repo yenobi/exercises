@@ -1,0 +1,18 @@
+//COLORS
+
+//bg-color
+$blue: #272f45;
+//text-color
+$gray: #9aa5a9;
+
+
+//FONTS
+
+$font-main: 'HKGrotesk-Light', Arial, Helvetica, sans-serif;
+$font-heading: 'LeagueSpartan-Bold', Tahoma, Geneva, sans-serif;
+
+//MIXINS
+@mixin margin-sides($margin: 7%) {
+    margin-left: $margin;
+    margin-right: $margin;
+}

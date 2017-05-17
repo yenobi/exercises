@@ -1,0 +1,21 @@
+.page-header {
+    &__inner {
+        padding-top: 5%;
+        padding-bottom: 5%;
+//        margin-left: 7%;
+//        margin-right: 7%;
+        @include margin-sides;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid red;
+    }
+}
+
+
+//for desktop
+//.page-header {
+//    &__inner {
+//        padding-top: 50px;
+//        padding-bottom: 50px;
+//    }
+//}
