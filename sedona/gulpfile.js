@@ -9,11 +9,11 @@ const csso = require('gulp-csso');
 const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-// need to test plugins for img
-const imagemin     = require('gulp-imagemin'); // Подключаем библиотеку для работы с изображениями
-const pngquant     = require('imagemin-pngquant'); // Подключаем библиотеку для работы с png
-const cache = require('gulp-cache'); // Подключаем библиотеку кеширования
+const imagemin     = require('gulp-imagemin'); 
+const pngquant     = require('imagemin-pngquant'); 
+const cache = require('gulp-cache'); 
 const rename = require('gulp-rename');
+const babel = require('gulp-babel');
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/style.scss')
@@ -39,6 +39,14 @@ gulp.task('js', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('babel', function() {
+    return gulp.src('src/js/**.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('src/tmp'));
+})
+
 gulp.task('img', function() {
 	return gulp.src('img/**/*') // Берем все изображения из app
 		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
@@ -53,12 +61,12 @@ gulp.task('img', function() {
 gulp.task('clean', function() {
   return del('build');
 });
-// вотчер (пока только для стилей)
+
 gulp.task('watch', function() {
   gulp.watch('src/scss/**/*', gulp.series('sass'));
 });
 
-// smth wrong with this task
+
 gulp.task('build', gulp.series('clean', 'sass', 'js', 'img'));
-// дев-задача - сборка + вотчер сразу
+
 gulp.task('dev', gulp.series('build', 'watch'));

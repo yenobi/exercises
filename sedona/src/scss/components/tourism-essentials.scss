@@ -24,14 +24,14 @@
         }
         
         p {
-            padding-left: 50px;
+            padding-left: 60px;
         }
     }
     
     &__list-item-icon {
         display: inline-block;
         vertical-align: middle;
-        width: 45px;
+        width: 56px;
         
         svg {
             width: 40px;
@@ -41,7 +41,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media(min-width: 768px) {
     .tourism-essentials {
         margin-bottom: 60px;
         

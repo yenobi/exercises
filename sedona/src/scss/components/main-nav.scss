@@ -3,6 +3,7 @@
     display: block;
     position: absolute;
     top: -303px;
+    transition: top 0.6s;
     
     &__list {
         list-style: none;
@@ -59,6 +60,7 @@
     background-color: white;
     border-top: 4px solid $main-color;
     cursor: pointer;
+    outline-color: $main-color;
     
     &:before {
         content: "";
@@ -83,6 +85,10 @@
     }
     
     }
+}
+
+.main-nav_opened {
+    top: -230px;
 }
 
 @media screen and (min-width: 768px) {

@@ -57,6 +57,11 @@
         background-repeat: no-repeat;
         background-position-y: center;
         
+        &:hover,
+        &:focus {
+            background-color: darken($main-color, 5%);
+        }
+        
         &_tw {
             background-position-x: 14px;
         }
