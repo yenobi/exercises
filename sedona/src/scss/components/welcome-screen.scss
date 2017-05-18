@@ -40,7 +40,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media(min-width: 768px) {
     .welcome-screen {
         &__inner {
             width: auto;
@@ -66,5 +66,12 @@
             height: 90px;
             margin-bottom: 90px;
         }
+    }
+}
+
+@media(min-width: 1280px) {
+    .welcome-screen {
+        @include desktop-container;
+        background-size: cover;
     }
 }

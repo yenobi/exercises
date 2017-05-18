@@ -36,7 +36,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media(min-width: 768px) {
     .city-content {
         display: flex;
         padding-top: 0;
@@ -47,6 +47,7 @@
         
         &__landscape {
             width: 67%;
+            min-height: 350px;
         }
         
         &__descr {
@@ -58,6 +59,25 @@
         &__header {
             font-size: 16px;
             line-height: 24px;
+        }
+    }
+}
+
+@media(min-width: 1280px) {
+    .city-content {
+        &__header {
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+        
+        &__descr {
+            padding-top: 70px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        
+        &__landscape {
+            min-height: 400px;
         }
     }
 }

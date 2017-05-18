@@ -53,7 +53,7 @@
     display: block;
     width: 24px;
     position: absolute;
-    top: 24px;
+    top: 19px;
     right: 16px;
     font-size: 0px;
     border: none;
@@ -91,10 +91,10 @@
     top: -230px;
 }
 
-@media screen and (min-width: 768px) {
+@media(min-width: 768px) {
     .main-nav {
         &_desktop {
-            top: -66px;
+            top: 0px;
         }
         
         &__list {
@@ -135,9 +135,11 @@
                 background-color: white;
 
 
-                &:hover {
+                &:hover,
+                &:focus {
                     background-color: white;
                     text-decoration: underline;
+                    color: $main-color;
                 }
             }
         }
@@ -148,5 +150,12 @@
             }
         }
     
+    }
+}
+
+@media(min-width: 1024px) {
+    .main-nav__list_desktop {
+        padding-right: 4%;
+        padding-left: 4%;
     }
 }
