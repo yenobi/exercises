@@ -1,0 +1,15 @@
+.page-footer {
+    text-align: center;
+}
+
+.stack {
+    &__text {
+        @include margin-sides;
+    }
+}
+
+@media(min-width: 960px) {
+    .stack__text {
+        width: 60%;
+    }
+}

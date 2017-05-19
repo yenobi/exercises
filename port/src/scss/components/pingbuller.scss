@@ -1,13 +1,15 @@
-.welcome-screen {
+.pingbuller {
     margin-bottom: 50px;
     
     &__inner {
         @include margin-sides;
-//        border: 2px solid red;
+        border: 2px solid red;
+        text-align: left;
         padding-left: 10px;
         padding-bottom: 20px;
         color: $white;
-        background-image: url(../../img/welcome-screen__bg.jpg);
+        background-color: #edbfff;
+//        background-image: url(../../img/welcome-screen__bg.jpg);
         background-size: cover;
     }
     
@@ -17,7 +19,7 @@
         padding-top: 60px;
     }
     
-    &__bio {
+    &__text {
         margin-bottom: 50px;
     }
     

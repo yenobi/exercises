@@ -1,0 +1,17 @@
+.contacts {
+    
+    &__icon-wrapper {
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            display: block;
+            min-width: 40px;
+            width: 25%;
+            max-width: 60px;
+            min-height: 40px;
+        }
+    }
+}
+
+//color of git-icon rgb(24, 22, 22);
