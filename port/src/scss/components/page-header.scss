@@ -29,6 +29,14 @@
     }
 }
 
+@media(min-width: 768px) {
+    .page-header {
+        &__inner {
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+    }
+}
 
 //for desktop
 //.page-header {

@@ -1,8 +1,9 @@
 .welcome-screen {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     
     &__inner {
         @include margin-sides;
+        @include container-shadow;
 //        border: 2px solid red;
         padding-left: 10px;
         padding-bottom: 20px;
@@ -43,6 +44,14 @@
     .welcome-screen {
         &__inner {
             padding-left: 20px;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .welcome-screen {
+        &__inner {
+            background-position: center;
         }
     }
 }
