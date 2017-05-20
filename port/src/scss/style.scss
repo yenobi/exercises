@@ -26,3 +26,11 @@ body {
 
 
 @import 'components/page-footer.scss';
+
+@media(min-width: 768px) {
+    .container {
+        display: flex;
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}

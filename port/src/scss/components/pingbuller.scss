@@ -3,13 +3,11 @@
     
     &__inner {
         @include margin-sides;
-        border: 2px solid red;
         text-align: left;
         padding-left: 10px;
         padding-bottom: 20px;
         color: $white;
         background-color: #edbfff;
-//        background-image: url(../../img/welcome-screen__bg.jpg);
         background-size: cover;
     }
     
@@ -24,12 +22,14 @@
     }
     
     &__button {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 50px;
         border: 2px solid $peach;
         background-color: transparent;
         color: $white;
         font-size: 1em;
-        padding: 10px;
-        margin-bottom: 50px;
+        text-decoration: none;
         
         &:hover,
         &:focus {
@@ -40,3 +40,16 @@
 }
 
 //padding-left: 60px
+
+@media(min-width: 768px) {
+    .pingbuller {
+        flex-grow: 1;
+        
+        &__inner {
+            max-width: 303px;
+            padding-left: 30px;
+            margin-left: 8%;
+            margin-right: 0px;
+        }
+    }
+}
