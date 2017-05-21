@@ -47,13 +47,13 @@ body {
 @import "components/welcome-screen.scss";
 
 .greetings-text {
-    width: 95%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
     text-align: center;
     text-transform: uppercase;
     font-family: $font;
+    position: relative;
+    padding-bottom: 30px;
     
     &__header {
         margin-top: 40px;
@@ -66,6 +66,30 @@ body {
     &__text {
         margin-bottom: 25px;
         line-height: 20px;
+    }
+    
+    &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 30px solid $main-color; 
+        border-right: 225px solid transparent;
+        bottom: 0;
+        left: 0;
+    }
+    
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        bottom: 0;
+        right: 0;
+        border-bottom: 30px solid $main-color;
+        border-left: 225px solid transparent;
     }
 }
 
@@ -82,6 +106,15 @@ body {
 @import "components/search-form.scss";
 
 @import "components/page-footer.scss";
+
+@media(min-width: 768px) {
+    .greetings-text {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
 
 @media(min-width: 1280px) {
     body {
