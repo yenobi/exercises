@@ -64,7 +64,15 @@
             padding-left: 30px;
             margin-left: 0%;
             margin-right: 0px;
-            max-width: 303px;
+            max-width: 94%;
         }
     }
 }
+
+//@media(min-width: 1024px) {
+//    .pingbuller {
+//        &__inner {
+//            max-width: 404px;
+//        }
+//    }
+//}

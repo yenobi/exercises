@@ -13,3 +13,10 @@
         width: 60%;
     }
 }
+
+@media(min-width: 1024px) {
+    .stack__text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
