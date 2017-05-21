@@ -66,6 +66,9 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/**/*', gulp.series('sass'));
 });
 
+gulp.task('watch-js', function() {
+  gulp.watch('src/js/*', gulp.series('babel'));
+});
 
 gulp.task('build', gulp.series('clean', 'sass', 'js', 'img'));
 

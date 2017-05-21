@@ -11,7 +11,8 @@
     
     function toggleMenu() {
        header.classList.toggle('page-header_nav-open');
-        nav.classList.toggle('main-nav_opened'); 
+//        nav.classList.toggle('main-nav_opened'); 
+        
     };
     
 })(window, document, undefined);

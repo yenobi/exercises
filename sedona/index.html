@@ -7,7 +7,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="img/icons/android-icon-32x32.png">
     <link rel="stylesheet" href="lib/normalize.css">
-<!--    <link rel="stylesheet" href="fonts/fonts.css">-->
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="build/css/style.min.css">
     <title>Sedona</title>
   </head>
@@ -15,9 +15,10 @@
       
     <header class="page-header">
         <div class="page-header__inner">
-            <div class="page-header__logo-wrapper">
+<!--            change div for a -->
+            <a href="#top" class="page-header__logo-wrapper">
                 <img src="img\logo-320.png" alt="sedona logotype">
-            </div>
+            </a>
             <button class="main-nav__hamb main-nav__hamb_hidden">toggle-button</button>
             <div class="page-header__nav-wrapper">
                 <nav class="main-nav main-nav_desktop">
@@ -31,16 +32,16 @@
 </svg>
                             </i>
                             </a></li>
-                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Информация</a></li>
+                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#info">Информация</a></li>
                         <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Фото и видео</a></li>
-                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#">Гостиницы</a></li>
+                        <li><a class="main-nav__list-item main-nav__list-item_desktop" href="#hotels">Гостиницы</a></li>
                     </ul>
                 </nav>
             </div>
         </div>  
     </header>
       
-    <section class="welcome-screen">
+    <section class="welcome-screen" id="top">
         <div class="welcome-screen__inner">
             <div class="welcome-screen__wrapper">
                 
@@ -332,7 +333,7 @@
                 <div class="city-content__landscape"></div>
         </section>
         
-        <section class="tourism-essentials">
+        <section class="tourism-essentials" id="info">
             <div class="tourism-essentials__inner">
                 <ul class="tourism-essentials__list">
                     <li class="tourism-essentials__list-item">
@@ -444,7 +445,7 @@
         </section>
     </main>
       
-    <section class="hotel-search">
+    <section class="hotel-search" id="hotels">
         <div class="hotel-search__inner">
             <header class="hotel-search__header">
                 <h2>ЗАИНТЕРЕСОВАЛИСЬ?</h2>
@@ -498,21 +499,18 @@
         </div>
     </section>
       
+      <script src="lib/moveTo.min.js"></script>
+      
       <script src="src/tmp/main-nav.js"></script>
+      <script src="src/tmp/smooth.js"></script>
   </body>
 </html>
 
 <!--
 tasks
 
-1. wtf with fonts? 
-- check out variables fonts on 768 to resize auto
-
-3.svg-sprites and calendar with hover in search-form
-
-4. выровнять транзишн анимации в открывании меню 
+1.svg-sprites and calendar with hover in search-form 
 
 - js 
-1. change photos from design (x1 for 320, x2 for 768)
-
+1. service-workers
 -->
