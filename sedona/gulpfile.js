@@ -27,11 +27,8 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src('src/js/**.js')
+  return gulp.src('src/tmp/**.js')
     .pipe(sourcemaps.init())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
     .pipe(concat('build.js'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))

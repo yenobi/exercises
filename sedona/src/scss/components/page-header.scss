@@ -13,6 +13,15 @@
         min-height: 62px;
     }
     
+    &__hamb-container {
+          position: relative;
+          width: 30px;
+          height: 50px;
+          cursor: pointer;
+        float: right;
+        margin-right: 20px;
+    }
+    
     &__logo-wrapper {
         width: 140px;
         position: absolute;
