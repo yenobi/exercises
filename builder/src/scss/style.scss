@@ -11,3 +11,11 @@ body {
 @import 'components/page-header.scss';
 
 @import 'components/main-nav.scss';
+
+main {
+    @include paddings(20px);
+}
+
+@import 'components/welcome-screen.scss';
+
+@import 'components/features.scss';

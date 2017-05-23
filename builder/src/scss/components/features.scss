@@ -1,0 +1,12 @@
+.features {
+    &__item {
+        padding-left: 80px;
+        margin-bottom: 30px;
+    }
+    
+    &__item-icon {
+        width: 35px;
+        height: 35px;
+        background-color: $yellow;
+    }
+}

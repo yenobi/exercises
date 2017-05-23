@@ -5,6 +5,7 @@ $black: #2a2d32;
 $gray: #35383c;
 $gray-light: #cccccc;
 $gray-text: #8a8a8a;
+$white: white;
 
 //color for number in features 
 //#efeff0
@@ -14,3 +15,10 @@ $gray-text: #8a8a8a;
 $font-heading: 'Ubuntu Condensed', sans-serif;
 $font-subheading: 'Ubuntu', Verdna, sans-serif;
 $font-main: Arial, Helvetica, sans-serif;
+
+//mixins
+
+@mixin paddings($padding: 40px) {
+    padding-left: $padding;
+    padding-right: $padding;
+}

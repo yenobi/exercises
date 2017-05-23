@@ -1,0 +1,22 @@
+.welcome-screen {
+    min-height: 300px;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    background-color: $gray-light;
+    
+    &__header {
+        padding-top: 70%;
+        padding-left: 40px;
+        
+        span {
+        line-height: 1.4em;
+            padding: 5px;
+            color: $white;
+            background-color: $gray;
+            
+            &:nth-of-type(1) {
+                color: $yellow;
+            }
+        }
+    }
+}
