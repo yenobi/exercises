@@ -1,0 +1,13 @@
+@import 'var.scss';
+@import 'fonts.scss';
+
+body {
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 18px;
+    
+}
+
+@import 'components/page-header.scss';
+
+@import 'components/main-nav.scss';
