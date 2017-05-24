@@ -1,0 +1,17 @@
+.shop {
+    @include paddings(20px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    &__heading {
+        font-family: $font-subheading;
+        font-weight: bold;
+    }
+    
+    .accordion-panel {
+        width: 280px;
+        height: 500px;
+        
+        background-color: $yellow;
+    }
+}

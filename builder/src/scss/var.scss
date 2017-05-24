@@ -6,6 +6,8 @@ $gray: #35383c;
 $gray-light: #cccccc;
 $gray-text: #8a8a8a;
 $white: white;
+$gray-bg: #f7f7f7;
+$gray-text-footer: #5d6063;
 
 //color for number in features 
 //#efeff0
@@ -21,4 +23,9 @@ $font-main: Arial, Helvetica, sans-serif;
 @mixin paddings($padding: 40px) {
     padding-left: $padding;
     padding-right: $padding;
+}
+
+@mixin top-bottom-gutter($padding-new: 30px) {
+    padding-top: $padding-new;
+    padding-bottom: $padding-new;
 }

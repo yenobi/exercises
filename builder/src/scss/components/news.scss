@@ -1,0 +1,29 @@
+.news {
+    @include paddings(20px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    .item {
+        
+        &__heading-anchor {
+            font-family: $font-subheading;
+            font-weight: bold;
+            
+            &:hover {
+                color: $blue;
+            }
+        }
+        
+        &__subheading {
+            margin-top: 0px;
+            
+            span {
+                color: $blue;
+            }
+        }
+        
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
+}

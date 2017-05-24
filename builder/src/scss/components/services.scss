@@ -1,0 +1,58 @@
+.services {
+    position: relative;
+    margin-bottom: 60px;
+    
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-color: $gray;
+        z-index: 1;
+        min-height: 1530px;
+    }
+    
+    &__header {
+        @include paddings(10%);
+        position: relative;
+        z-index: 2;
+        color: $white;
+        font-family: $font-heading;
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    &__item {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        
+    }
+    
+    &__img {
+        width: 260px;
+        height: 290px;
+        margin-bottom: 25px;
+        background-color: azure;
+    }
+    
+    &__anchor {
+        font-family: $font-subheading;
+        color: $white;
+        text-decoration: none;
+        
+        &:hover {
+            img {
+                background-color: $yellow;
+            }
+            
+            span {
+                color: $yellow;
+            }
+        }
+    }
+    
+}
