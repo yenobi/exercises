@@ -1,6 +1,5 @@
 .services {
     position: relative;
-    margin-bottom: 60px;
     
     &:before {
         display: block;
@@ -13,13 +12,13 @@
     }
     
     &__header {
-        @include paddings(10%);
         position: relative;
         z-index: 2;
         color: $white;
         font-family: $font-heading;
         padding-top: 30px;
         margin-bottom: 30px;
+        text-align: center;
     }
     
     &__item {
@@ -44,9 +43,27 @@
         color: $white;
         text-decoration: none;
         
+        span {
+            display: block;
+        }
+        
+        img {
+            position: relative;
+        }
+        
         &:hover {
-            img {
-                background-color: $yellow;
+            img:before {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjAgMAAABjt1vKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAAD///8AAABzxoNxAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcSURBVBjTY2AAghAGGBh8rFAoCMHKGnj34WUBAE55E3UX4wEgAAAAAElFTkSuQmCC");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: $blue;
             }
             
             span {
@@ -55,4 +72,17 @@
         }
     }
     
+}
+
+@media(min-width: 768px) {
+    .services {
+        &:before {
+            min-height: 820px;
+        }
+        
+        &__item-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 }

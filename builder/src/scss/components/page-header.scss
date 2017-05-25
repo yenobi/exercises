@@ -17,5 +17,34 @@
         width: 100%;
         min-height: 58px;
         background-color: $gray;
+        position: relative;
+    }
+    
+    &__nav-toggler-wrapper {
+        float: right;
+        width: 60px;
+        min-height: 58px;
+        position: relative;
+        cursor: pointer;
+        background-color: $blue;
+        z-index: 5;
+        
+        &:hover {
+            background-color: darken($blue, 10%);
+        }
+        
+        &:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .page-header {
+        &__nav-toggler-wrapper {
+            display: none;
+        }
     }
 }

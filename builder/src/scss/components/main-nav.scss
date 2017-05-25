@@ -1,12 +1,23 @@
 .main-nav {
 //    display: beacuse of mobile
     display: none;
+    clear: both;
+    position: absolute;
+    width: 100%;
+    background-color: $gray;
     
     &__list {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
+        flex-direction: column;
+        
+        & li:last-of-type {
+            .main-nav__list-item {
+                border-bottom: none;
+            }
+        }
     }
     
     &__list-item {
@@ -16,11 +27,28 @@
         font-family: $font-heading;
         text-transform: uppercase;
         text-decoration: none;
+        border-bottom: 1px solid $white;
+        
+        &:hover {
+            color: $yellow;
+        }
     }
-    
-    &__toggler {
-//        for float:right need fixed width
-        float: right;
-        width: 70px;
+}
+
+@media(min-width: 768px) {
+    .main-nav {
+        display: block;
+        
+        &__list {
+            flex-direction: row;
+            
+            & li:first-child {
+                background-color: $blue;
+            }
+        }
+        
+        &__list-item {
+            border-bottom: none;
+        }
     }
 }

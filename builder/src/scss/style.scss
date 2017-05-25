@@ -10,6 +10,8 @@ body {
 
 @import 'components/page-header.scss';
 
+@import 'components/nav-toggler.scss';
+
 @import 'components/main-nav.scss';
 
 main {
@@ -24,6 +26,7 @@ main {
 
 .text-container {
     background-color: $gray-bg;
+    padding-top: 30px;
 }
 
 @import 'components/news.scss';
@@ -48,3 +51,9 @@ main {
 }
 
 @import 'components/page-footer.scss';
+
+@media(min-width: 768px) {
+    .text-container {
+        display: flex;
+    }
+}

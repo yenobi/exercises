@@ -9,4 +9,33 @@
         height: 35px;
         background-color: $yellow;
     }
+    
+    &__item-anchor {
+        font-family: $font-subheading;
+        color: $black;
+        text-decoration: none;
+        font-weight: bold;
+        
+        &:after {
+            display: inline-block;
+            content: '→';
+            margin-left: 10px;
+            color: $blue;
+            font-size: 20px;
+        }
+        
+        &:hover {
+            color: $blue;
+            
+            &:after {
+                color: $gray-text;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .features {
+        display: flex;
+    }
 }

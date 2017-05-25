@@ -62,3 +62,22 @@
         margin-bottom: 0px;
     }
 }
+
+@media(min-width: 425px) {
+    .page-footer {
+        .item {
+            min-width: 140px;
+        }
+    }
+}
+
+//on 768px item will be in one row,
+//there is a trouble near 500-600px
+
+@media(min-width: 768px) {
+    .page-footer {
+        &__footer {
+            text-align: right;
+        }
+    }
+}

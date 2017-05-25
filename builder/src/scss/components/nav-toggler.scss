@@ -1,0 +1,55 @@
+.nav-toggler {
+        display: block;
+        position: absolute;
+        width: 60%;
+        height: 5px;
+        top: 30%;
+        right: 50%;
+        margin-right: -30%;
+        background-color: $white;
+        outline: none;
+        font-size: 0px;
+        border: none;
+        cursor: pointer;  
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            left: 0;
+            height: 5px;
+            background-color: $white;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            left: 0;
+            height: 5px;
+            background-color: $white;
+        }
+
+        &:after, 
+        &:before, 
+        & {
+          transition: all .3s ease-in-out;
+        } 
+        
+        &_nav-opened {
+            background-color: white;
+            
+            &:after {
+                transform: rotate(-45deg);
+                top: 10px;  
+            }
+            
+            &:before {
+                transform: rotate(45deg);
+            }
+        }
+}
