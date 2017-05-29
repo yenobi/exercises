@@ -1,0 +1,31 @@
+.page-footer {
+    background-color: $yellow;
+    width: 100%;
+    padding-top: 70px;
+    
+    &__inner {
+        @include container;
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;        
+    }
+    
+    &__copyright {
+        @include paddings;
+    }
+    
+    &__copyright-text {
+        color: $gray-dark;
+        clear: both;
+        text-align: right;
+    }
+    
+    &__logo {
+        display: block;
+        width: 100px;
+        height: 75px;
+        float: right;
+        background-image: url(../../img/logo-1.svg);
+        background-size: cover;
+    }
+}

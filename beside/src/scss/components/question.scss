@@ -1,0 +1,46 @@
+.question {
+    @include paddings;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $gray-border;
+    
+    &__header {
+        text-transform: uppercase;
+        font-family: $font-subheading;
+        font-weight: 700;
+    }
+    
+    &__text {
+        font-family: $font-subheading;
+        font-weight: 700;
+    }
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        
+        &-submit {
+            color: $white;
+            background-color: $black;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
+        
+        &-input {
+            display: block;
+            
+            input,
+            textarea {
+                width: 100%;
+                box-sizing: border-box;
+                color: $black;
+                @include input;
+            }
+            
+            textarea {
+                min-height: 150px;
+                resize: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.page-header {
+    background-color: $yellow;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
+    &__inner {
+        @include container;
+        border-top: none;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+    
+    &__nav-toggler-wrapper {
+        position: relative;
+        font-family: sans-serif;
+    }
+}

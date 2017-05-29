@@ -1,6 +1,56 @@
-//fonts
+// fonts
 @import 'font.scss';
 
 $font-heading: 'plumb condensced black', 'Impact', 'Arial Black', sans-serif;
 $font-subheading: 'plumb condensced', 'Arial', 'Helvetica', sans-serif;
 $font-text: 'plumb', 'Verdana', 'Geneva', sans-serif;
+
+// colors
+
+$yellow: #f7b132;
+$black: #000000;
+$white: #ffffff;
+//$gray-border: #c3c3c3;
+$gray-border: rgba(0,0,0, 0.5);
+$gray-dark: #73644b;
+
+// mixins 
+@mixin container {
+    box-sizing: border-box;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid $gray-border;
+}
+//container width for desktop? 
+//    width: 97.5%;
+
+@mixin paddings($padding: 10px) {
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+@mixin input {
+    @include placeholder;
+    padding: 7px;
+    font-family: $font-subheading;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        color:$black;
+        font-family: $font-subheading;
+    }
+    &::-moz-placeholder          {
+        color:$black;
+        font-family: $font-subheading;
+    }
+    &:-moz-placeholder           {
+        color:$black;
+        font-family: $font-subheading;
+    }
+    &:-ms-input-placeholder      {
+        color:$black;
+        font-family: $font-subheading;
+    }
+}

@@ -1,0 +1,53 @@
+.contacts {
+    @include paddings;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $gray-border;
+    
+    & h5:first-child {
+            margin-top: 0px;
+        
+    }
+    
+    h5, 
+    a {
+        font-family: $font-subheading;
+        font-weight: 700;
+        color: $black;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    
+    h5 {
+        margin-bottom: 0px;
+        
+        &:nth-first-of-type {
+        }
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    &__subscripton-form {
+        margin-top: 1.67em;
+        
+        input {
+            margin-top: 10px;
+            background-color: transparent;
+            border: 1px solid $gray-border;
+            margin-bottom: 10px;
+            @include input;
+        }
+        
+        
+        button {
+            display: block;
+            padding: 7px;
+            background-color: $black;
+            color: $white;
+            border: none;
+            text-transform: uppercase;
+        }
+    }
+}

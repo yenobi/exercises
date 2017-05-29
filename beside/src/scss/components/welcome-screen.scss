@@ -1,0 +1,23 @@
+.welcome-screen {
+    background-color: $yellow;
+    
+    &__inner {
+        @include container;
+        padding-top: 71px;
+        padding-bottom: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    &__header {
+        font-family: $font-heading;
+        color: $white;
+        letter-spacing: 9px;
+        line-height: 40px;
+        font-size: 2.5em;
+    }
+    
+    &__sub-header {
+        font-weight: 700;
+    }
+}
