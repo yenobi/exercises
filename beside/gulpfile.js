@@ -10,6 +10,42 @@ const imagemin     = require('gulp-imagemin');
 const pngquant     = require('imagemin-pngquant');
 const cache = require('gulp-cache');
 const rename = require('gulp-rename');
+const svgSprite = require('gulp-svg-sprites');
+
+gulp.task('svg', function() {
+    return gulp.src('img/icons/*.svg')
+        .pipe(svgSprite())
+        .pipe(gulp.dest("assets"));
+});
+
+//gulp.task('svg', function() {
+//   return gulp.src('img/icons/*.svg')
+//	.pipe(svgSprite({
+//       shape: {
+//				spacing: {
+//					padding: 5
+//				}
+//			},
+//			mode: {
+//				css: {
+//					dest: "./",
+//					layout: "diagonal",
+//					sprite: paths.sprite.svg,
+//					bust: false,
+//					render: {
+//						scss: {
+//							dest: "css/src/_sprite.scss",
+//							template: "build/tpl/sprite-template.scss"
+//						}
+//					}
+//				}
+//			},
+//			variables: {
+//				mapname: "icons"
+//			}
+//   }))
+//	.pipe(gulp.dest('img'));
+//});
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/style.scss')
