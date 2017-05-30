@@ -18,7 +18,18 @@ body {
 
 @import 'components/arrow-down.scss';
 
-//footer
+// page-main
+
+@import 'components/page-main.scss';
+
+@import 'components/help-filter.scss';
+
+@import 'components/tags.scss';
+
+@import 'components/shelter-filter.scss';
+
+@import 'components/positions.scss';
+// footer
 
 @import 'components/page-footer.scss';
 
@@ -27,3 +38,4 @@ body {
 @import 'components/contacts.scss';
 
 @import 'components/socials.scss';
+

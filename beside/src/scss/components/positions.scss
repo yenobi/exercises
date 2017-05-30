@@ -1,0 +1,54 @@
+.positions {
+    &__header {
+        @include text-form;
+    }
+    
+    &__item {
+        margin-bottom: 90px;
+        
+        &:hover {
+            margin-bottom: 37px;
+        }
+    }
+    
+    &__item-text {
+        display: block;
+    }
+    
+    &__item-img {
+        width: 256px;
+        height: 254px;
+        border: 1px solid gray;
+        margin-bottom: 20px;
+    }
+    
+    &__item-text-additional {
+        display: none;
+        color: $red;
+    }
+    
+    &__item-anchor {
+        display: none;
+        max-width: 93px;
+        max-height: 36px;
+        padding: 10px 15px;
+        border: 1px solid $gray-border;
+        @include text-form;
+        text-decoration: none;
+        text-align: center;
+        color: $black;
+        
+        &:hover,
+        &:focus {
+            background-color: $yellow;
+        }
+    }
+    
+    &__item {
+        &:hover .positions__item-text-additional,
+        &:hover .positions__item-anchor{
+            display: block;
+        }
+    }
+    
+}

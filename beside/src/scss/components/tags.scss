@@ -1,0 +1,17 @@
+.tags {
+    margin-bottom: 60px;
+    
+    &__item {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        border: 1px solid $gray-border;
+        @include text-form;
+        
+        &:hover,
+        &:focus {
+            background-color: $yellow;
+        }
+    }
+}

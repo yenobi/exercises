@@ -63,50 +63,127 @@
       
   <main class="page-main">
       <section class="page-main__filters-wrapper">
-          <section class="help-filter"></section>
-          <section class="tags"></section>
+          <section class="help-filter">
+              <h3 class="help-filter__header">Підбір допомоги</h3>
+              <form class="help-filter__form">
+                  <fieldset class="help-filter__form-container">
+                      <legend class="help-filter__form-header">прибрати параметри пошуку</legend>
+                      <label class="help-filter__form-label">
+                          <input type="checkbox" checked>
+                          <span class="help-filter__form-custom-checkbox"></span>
+                          <span class="help-filter__form-text">фінансова</span>
+                      </label>
+                      <label class="help-filter__form-label">
+                          <input type="checkbox">
+                          <span class="help-filter__form-custom-checkbox"></span>
+                          <span class="help-filter__form-text">матеріальна</span>
+                      </label>
+                      <label class="help-filter__form-label">
+                          <input type="checkbox">
+                          <span class="help-filter__form-custom-checkbox"></span>
+                          <span class="help-filter__form-text">послуга</span>
+                      </label>
+                  </fieldset>
+              </form>
+          </section>
+          
+          <section class="tags">
+              <div class="tags__item">Притулки для тварин</div>
+              <div class="tags__item">освіта</div>
+              <div class="tags__item">інваліди</div>
+              <div class="tags__item">діти</div>
+              <div class="tags__item">Переселенці зони ато</div>
+              <div class="tags__item">Військові</div>
+              <div class="tags__item">літні люди</div>
+          </section>
+          
           <section class="sorting"></section>
-          <section class="shelter-filter"></section>
+          
+          <section class="shelter-filter">
+                <h3 class="shelter-filter__header">притулки</h3>
+              <form class="shelter-filter__form">
+                  <fieldset class="shelter-filter__form-container">
+                      <legend class="shelter-filter__form-header">показати всі позиції</legend>
+                      <label class="shelter-filter__form-label">
+                          <input type="checkbox" checked>
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">амеда</span>
+                      </label>
+                       <label class="shelter-filter__form-label">
+                          <input type="checkbox" checked>
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">сіріус</span>
+                      </label>
+                       <label class="shelter-filter__form-label">
+                          <input type="checkbox" checked>
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">милосердя</span>
+                      </label>
+                       <label class="shelter-filter__form-label">
+                          <input type="checkbox" checked>
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">громадська ініциатива</span>
+                      </label>
+                       <label class="shelter-filter__form-label">
+                          <input type="checkbox" checked>
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">хвости і лапи</span>
+                      </label>
+                       <label class="shelter-filter__form-label">
+                          <input type="checkbox">
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">пан коцький</span>
+                      </label>
+                       <label class="shelter-filter__form-label">
+                          <input type="checkbox">
+                          <span class="shelter-filter__form-custom-checkbox"></span>
+                          <span class="shelter-filter__form-text">звіринець</span>
+                      </label>
+                      
+                      
+                  </fieldset>
+              </form>
+          </section>
       </section>
       
       <section class="page-main__positions-wrapper">
-          <h2 class="positions__header">ПРИТУЛКИ ДЛЯ ТВАРИН</h2>
+          <h3 class="positions__header">ПРИТУЛКИ ДЛЯ ТВАРИН</h3>
           <div class="positions__container">
               <div class="positions__item">
                   <img class="positions__item-img" src="" alt="position image">
-                  <span class="possitions__text">Збираємо кошти на харчування тварин<br> Притулок Сіріус</span>
-                  <span class="possitions__text-additional">сума необмежена</span>
-                  <a class="positions__anchor" href="#">Допомогти</a>
+                  <span class="possitions__item-text">Збираємо кошти на харчування тварин<br> Притулок Сіріус</span>
+                  <span class="positions__item-text-additional">сума необмежена</span>
+                  <a class="positions__item-anchor" href="#">Допомогти</a>
               </div>
               <div class="positions__item">
                   <img class="positions__item-img" src="" alt="position image">
-                  <span class="possitions__text">Необхідно провести вакцинацію собак <br>Притулок Сіріус</span>
-                  <span class="possitions__text-additional">сума необмежена</span>
-                  <a class="positions__anchor" href="#">Допомогти</a>
+                  <span class="possitions__item-text">Необхідно провести вакцинацію собак <br>Притулок Сіріус</span>
+                  <span class="possitions__item-text-additional">сума необмежена</span>
+                  <a class="positions__item-anchor" href="#">Допомогти</a>
               </div>
               <div class="positions__item">
                   <img class="positions__item-img" src="" alt="position image">
-                  <span class="possitions__text">Потрібні кошти на лікування Шаріка<br>Притулок Амеда</span>
-                  <span class="possitions__text-additional">сума необмежена</span>
-                  <a class="positions__anchor" href="#">Допомогти</a>
+                  <span class="possitions__item-text">Потрібні кошти на лікування Шаріка<br>Притулок Амеда</span>
+                  <span class="possitions__item-text-additional">сума необмежена</span>
+                  <a class="positions__item-anchor" href="#">Допомогти</a>
               </div>
               <div class="positions__item">
                   <img class="positions__item-img" src="" alt="position image">
-                  <span class="possitions__text">Допоможіть Мурчику на потез задньої лапи<br>Притулок Милосердя</span>
-                  <span class="possitions__text-additional">сума необмежена</span>
-                  <a class="positions__anchor" href="#">Допомогти</a>
+                  <span class="possitions__item-text">Допоможіть Мурчику на потез задньої лапи<br>Притулок Милосердя</span>
+                  <span class="possitions__item-text-additional">сума необмежена</span>
+                  <a class="positions__item-anchor" href="#">Допомогти</a>
               </div>
               <div class="positions__item">
                   <img class="positions__item-img" src="" alt="position image">
-                  <span class="possitions__text">Збираємо кошти для благоустрою м. Київ<br> Грамадська ініціатива</span>
-                  <span class="possitions__text-additional">сума необмежена</span>
-                  <a class="positions__anchor" href="#">Допомогти</a>
+                  <span class="possitions__item-text">Збираємо кошти для благоустрою м. Київ<br> Грамадська ініціатива</span>
+                  <span class="possitions__item-text-additional">сума необмежена</span>
+                  <a class="positions__item-anchor" href="#">Допомогти</a>
               </div>
               <div class="positions__item">
                   <img class="positions__item-img" src="" alt="position image">
-                  <span class="possitions__text">Збираємо на харчування собак<br>Притулок Хвости і лапи</span>
-                  <span class="possitions__text-additional">сума необмежена</span>
-                  <a class="positions__anchor" href="#">Допомогти</a>
+                  <span class="possitions__item-text">Збираємо на харчування собак<br>Притулок Хвости і лапи</span>
+                  <span class="possitions__item-text-additional">сума необмежена</span>
+                  <a class="positions__item-anchor" href="#">Допомогти</a>
               </div>
           </div>
       </section>
