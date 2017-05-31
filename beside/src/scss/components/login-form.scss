@@ -1,4 +1,55 @@
 .login-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-right: 15px;
+    
+    &__lang-switcher {
+        @include text-form;
+        background-color: transparent;
+        border: none;
+        background-image: url(../../img/icons-sprite.png);
+        background-repeat: no-repeat;
+        min-width: 60px;
+        min-height: 40px;
+        padding-left: 10px;
+        background-position-x: 3px;
+        background-position-y: 14px;
+        
+        &:hover,
+        &:focus {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+    
+    &__login-btn {
+        @include text-form;
+        background-color: transparent;
+        border: none;
+        min-width: 60px;
+        min-height: 50px;
+        padding-top: 25px;
+        margin-bottom: 10px;
+        position: relative;
+        
+        &:before {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: -4px;
+            left: 13px;
+            background-image: url(../../img/icons-sprite.png);
+            background-repeat: no-repeat;
+            background-position-y: -24px;
+        }
+        
+        &:hover,
+        &:focus {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
 }

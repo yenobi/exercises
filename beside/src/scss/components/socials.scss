@@ -15,6 +15,30 @@
         margin: 0px;
         padding: 0px;
         list-style: none;
+        
+        & li:first-child {
+            a:before {
+                background-position-y: -112px; 
+            }
+        }
+        
+        & li:nth-of-type(2) {
+            a:before {
+                background-position-y: -150px;  
+            }
+        }
+        
+        & li:nth-of-type(3) {
+            a:before {
+                background-position-y: -192px;
+            }
+        }
+        
+        & li:nth-last-of-type(1) {
+            a:before {
+                background-position-y: -232px;
+            }
+        }
     }
     
     &__list-item {
@@ -25,11 +49,27 @@
         letter-spacing: 1px;
         padding-left: 45px;
         display: block;
+        max-width: 60px;
         min-height: 30px;
         margin-bottom: 15px;
+        position: relative;
         
-        &:hover {
+        &:hover,
+        &:focus {
+            color: $white;
             text-decoration: underline;
+        }
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            background-image: url(../../img/icons-sprite.png);
+            background-repeat: no-repeat;
+            left: 7px;
+            top: -9px;  
         }
     }  
 }

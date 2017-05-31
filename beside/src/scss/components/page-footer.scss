@@ -22,10 +22,17 @@
     
     &__logo {
         display: block;
+        font-size: 0px;
         width: 100px;
         height: 75px;
         float: right;
-        background-image: url(../../img/logo-1.svg);
-        background-size: cover;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }

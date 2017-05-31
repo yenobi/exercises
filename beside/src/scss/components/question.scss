@@ -14,17 +14,25 @@
         font-weight: 700;
     }
     
+    &__form-submit {
+        color: $white;
+        background-color: $black;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        @include text-form;
+            
+        &:hover,
+        &:focus {
+            background-color: $white;
+            color: $black;
+        } 
+    }
+    
     &__form {
         display: flex;
         flex-direction: column;
         
-        &-submit {
-            color: $white;
-            background-color: $black;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            text-transform: uppercase;
-        }
         
         &-input {
             display: block;

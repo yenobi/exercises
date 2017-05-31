@@ -5,15 +5,23 @@
 //    arrows
     &__prev,
     &__next {
-        height:91px;
+//        height:91px;
+//        width:43px;
+        width: 91px;
+        height: 43px;
+            transform: rotate(-90deg);
         position:absolute;
-        width:43px;
         top:50%;
         margin-top:-30px;
         opacity:0.6;
-        text-indent:-99999px;
         cursor:pointer;
+        color: $white;
         -webkit-transition:opacity 200ms ease-out;
+        @include text-form;
+        background-color: black;
+        text-decoration: none;      
+        text-align: center;
+        line-height: 40px;
         
         &:hover {
             opacity:1;
@@ -21,13 +29,13 @@
     }
     
     &__prev {
-        left:0;
-	background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -200px 25px;
+        left:-24px;
+//	background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -200px 25px;
     }
     
     &__next {
-      right:0;
-	background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -167px 25px;  
+      right:-24px;
+//	background: #000 url('https://lh4.googleusercontent.com/-JN1IZLtuToI/UUoZnMG3C_I/AAAAAAAAAE8/SEbJ9nqXGnY/s226/sprite.png') no-repeat -167px 25px;  
     }
     
     &__list {

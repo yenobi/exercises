@@ -19,4 +19,10 @@
         margin-right: auto;
         margin-top: 15px;
     }
+    
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+        color: $white;
+    }
 }

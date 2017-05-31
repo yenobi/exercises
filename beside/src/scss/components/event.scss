@@ -89,6 +89,26 @@
     &__contacts-socials {
         margin-top: 15px;
         margin-bottom: 15px;
+        display: flex;
+        
+        a {
+            display: block;
+            min-height: 40px;
+            min-width: 40px;
+            background-image: url(../../img/icons-sprite.png);
+            background-repeat: no-repeat;
+            font-size: 0px;
+            text-decoration: none;
+            background-position-x: center;
+            
+            &:nth-of-type(1) {
+                background-position-y: -109px;
+            }
+            
+            &:nth-last-of-type(1) {
+                    background-position-y: -149px;
+            }
+        }
     }
     
     &__contacts-img {
