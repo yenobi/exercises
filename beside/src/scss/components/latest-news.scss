@@ -1,6 +1,7 @@
 .latest-news {
     &__inner {
         @include container;
+        border-top: none;
         padding-top: 15px;
         padding-bottom: 15px;
     }
