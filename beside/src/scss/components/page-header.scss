@@ -4,15 +4,15 @@
     width: 100%;
     top: 0;
     z-index: 10;
-    
+
     &__inner {
         @include container;
         border-top: none;
         display: flex;
         justify-content: space-between;
-        
+
     }
-    
+
     &__logo {
         display: block;
         font-size: 0px;
@@ -20,13 +20,13 @@
         height: 80px;
         padding-top: 10px;
         padding-left: 10px;
-        
+
         img {
             max-width: 100%;
             height: auto;
         }
     }
-    
+
     &__nav-toggler-wrapper {
         position: relative;
         font-family: sans-serif;

@@ -8,7 +8,7 @@
     <title></title>
   </head>
   <body>
-      
+
   <header class="page-header">
         <div class="page-header__inner">
             <a class="page-header__logo" href="#">
@@ -22,14 +22,14 @@
                     <label class="nav-toggler__container" for="toggler">
                         <span class="nav-toggler__button nav-toggler__button_cross"></span>
                     </label>
-                    
+
                     <nav class="nav">
                         <a class="nav-item" href="">Dashboard</a>
                         <a class="nav-item" href="">History</a>
                         <a class="nav-item" href="">Statistics</a>
                         <a class="nav-item" href="">Settings</a>
                     </nav>
-                    
+
 <!--                    <button class="nav-toggler" type="button">toggler</button>-->
                 </div>
 
@@ -45,7 +45,7 @@
                 </nav>
 -->
             </div>
-            
+
             <div class="login-form">
 <!--         how to make heart? what is it?      -->
                 <button class="login-form__lang-switcher" type="button">Ук</button>
@@ -53,38 +53,39 @@
             </div>
         </div>
     </header>
-      
+
     <section class="welcome-screen">
           <div class="welcome-screen__inner">
               <h1 class="welcome-screen__header">НАЙБІЛЬША В УКРАЇНІ БІРЖА ДОБРА</h1>
               <p class="welcome-screen__sub-header">допомагати просто</p>
-              
+
               <div class="welcome-screen__slider-wrapper">
                   <div class="welcome-slider">
                       <ul class="welcome-slider__list">
                           <span class="welcome-slider__item-target" id="target-1"></span>
                           <span class="welcome-slider__item-target" id="target-2"></span>
-                          <span class="welcome-slider__item-target" id="target-3"></span>
-                          <li class="welcome-slider__item welcome-slider__item_first" id="welcome-slider__item-1">1
-                              <a class="welcome-slider__prev" href="#target-3">prev</a>
+                          <li class="welcome-slider__item welcome-slider__item_first" id="welcome-slider__item-1">
+                              <div class="welcome-slider__item-img">
+                                  <img src="img/welcome-slider__img-1.png" alt="image for slider with dog">
+                              </div>
+                              <a class="welcome-slider__prev" href="#target-2">prev</a>
                               <a class="welcome-slider__next" href="#target-2">next</a>
                           </li>
-                          <li class="welcome-slider__item welcome-slider__item_second" id="welcome-slider__item-2">2
+                          <li class="welcome-slider__item welcome-slider__item_second" id="welcome-slider__item-2">
+                              <div class="welcome-slider__item-img">
+                                  <img src="img/welcome-slider__img-2.png" alt="image for slider with grandfather">
+                              </div>
                               <a class="welcome-slider__prev" href="#target-1">prev</a>
-                              <a class="welcome-slider__next" href="#target-3">next</a>
-                          </li>
-                          <li class="welcome-slider__item welcome-slider__item_third" id="welcome-slider__item-3">3
-                              <a class="welcome-slider__prev" href="#target-2">prev</a>
                               <a class="welcome-slider__next" href="#target-1">next</a>
                           </li>
                       </ul>
                   </div>
               </div>
-              
+
               <button class="arrow-down" type="button">Притулки для тварин</button>
           </div>
       </section>
-      
+
   <main class="page-main">
       <section class="page-main__filters-wrapper">
           <section class="help-filter">
@@ -110,7 +111,7 @@
                   </fieldset>
               </form>
           </section>
-          
+
           <section class="tags">
               <div class="tags__item">Притулки для тварин</div>
               <div class="tags__item">освіта</div>
@@ -120,9 +121,9 @@
               <div class="tags__item">Військові</div>
               <div class="tags__item">літні люди</div>
           </section>
-          
+
           <section class="sorting"></section>
-          
+
           <section class="shelter-filter">
                 <h3 class="shelter-filter__header">притулки</h3>
               <form class="shelter-filter__form">
@@ -163,13 +164,13 @@
                           <span class="shelter-filter__form-custom-checkbox"></span>
                           <span class="shelter-filter__form-text">звіринець</span>
                       </label>
-                      
-                      
+
+
                   </fieldset>
               </form>
           </section>
       </section>
-      
+
       <section class="page-main__positions-wrapper">
           <h3 class="positions__header">ПРИТУЛКИ ДЛЯ ТВАРИН</h3>
           <div class="positions__container">
@@ -219,7 +220,7 @@
       </section>
     </main>
 
- 
+
       <section class="event">
           <section class="event__info">
               <div class="event__text-container">
@@ -229,22 +230,41 @@
                 <p class="event__text">
                   Поліпшити умови очікування справжнього дому просто: перераховуй 5 або більше гривень на картку притулку Приватбанк<br>
 <span class="event__text-highlight">5169 3305 1043 1114</span><br>
-Мезінова О. В. (директора притулку) або через сайт 
+Мезінова О. В. (директора притулку) або через сайт
 <a class="event__text-highlight" href="http://sheltersirius.org">http://sheltersirius.org</a> і передай естафету друзям</p>
                 <p class="event__text">
-                  Також можна налаштувати регулярний платіж і годувати 
-хвостів на постійній 
-основі. Як це зробити, дивись тут: 
+                  Також можна налаштувати регулярний платіж і годувати
+хвостів на постійній
+основі. Як це зробити, дивись тут:
 <a class="event__text-highlight" href="goo.gl/cYzT3Y">goo.gl/cYzT3Y</a>
                   </p>
               </div>
               <div class="event__slider-container">
-                  <div class="slider">slider</div>
-                  <p class="slider__text">сума необмежена</p>
-                  <a class="slider__anchor" href="#">допомогти</a>
+                  <div class="event-slider">
+                      <ul class="event-slider__list">
+                          <span class="event-slider__item-target" id="event-target-1"></span>
+                          <span class="event-slider__item-target" id="event-target-2"></span>
+                          <li class="event-slider__item event-slider__item_first">
+                              <div class="event-slider__item-img">
+                                  <img src="img/event-slider__img-1.jpg" alt="image for slider">
+                              </div>
+                              <a class="event-slider__prev" href="#event-target-2">prev</a>
+                              <a class="event-slider__next" href="#event-target-2">next</a>
+                          </li>
+                          <li class="event-slider__item event-slider__item_second">
+                              <div class="event-slider__item-img">
+                                  <img src="img/event-slider__img-2.jpg" alt="image for slider">
+                              </div>
+                              <a class="event-slider__prev" href="#event-target-1">prev</a>
+                              <a class="event-slider__next" href="#event-target-1">next</a>
+                          </li>
+                      </ul>
+                  </div>
               </div>
+              <p class="event__slider-text">сума необмежена</p>
+              <a class="event__slider-anchor" href="#">допомогти</a>
           </section>
-          
+
           <section class="event__contacts">
               <h3 class="event__contacts-header">
                   <span>КОНТАКТИ</span> Притулок Сіріус</h3>
@@ -261,7 +281,7 @@
               <a class="event__contacts-more">ПЕРЕГЛЯНУТИ ІНШІ ПРОЕКТИ ОРГАНІЗАЦІЇ</a>
           </section>
       </section>
-      
+
       <section class="latest-news">
           <div class="latest-news__inner">
               <h3 class="latest-news__header">вас можуть зацікавити</h3>
@@ -293,10 +313,10 @@
               </div>
           </div>
       </section>
-      
+
   <footer class="page-footer">
       <div class="page-footer__inner">
-          
+
           <section class="question">
               <h4 class="question__header">З ПИТАНЬ РОЗМІЩЕННЯ ПРОЕКТІВ ЗАПОВНІТЬ ФОРМУ</h4>
               <form class="question__form" method="">
@@ -316,21 +336,21 @@
               </form>
               <p class="question__text">Всі поля заповняти обов’язково</p>
           </section>
-          
+
           <section class="contacts">
               <h5 class="contacts__phone-heading">ТЕЛЕФОН</h5>
               <a class="contacts__phone" href="063 456 78 90">063 456 78 90</a>
-              
+
               <h5 class="contacts__email-heading">E-mail</h5>
               <a class="contacts__email" href="mailto:info@porjad.gmail.com">info@porjad.gmail.com</a>
-              
+
               <div class="contacts__subscripton-form">
                   <h5 class="contacts__suscription-form-text">Підпишіться і отримуйте новини про нові проекти та активність у вашому кабінеті</h5>
                   <input type="email" placeholder="E-mail">
                   <button type="submit">Підписатися</button>
               </div>
           </section>
-          
+
           <section class="socials">
               <h4 class="socials__header">ПРИЄДНУЙТЕСЬ ДО НАС У СОЦІАЛЬНИХ МЕРЕЖАХ</h4>
               <ul class="socials__list">
@@ -340,7 +360,7 @@
                   <li><a class="socials__list-item" href="#">instagram</a></li>
               </ul>
           </section>
-          
+
           <section class="page-footer__copyright">
               <a class="page-footer__logo" href="#">
                   <img src="img/logo.png" alt="logotype">
@@ -349,6 +369,6 @@
           </section>
       </div>
   </footer>
-      
+
   </body>
 </html>

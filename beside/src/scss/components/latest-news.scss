@@ -5,28 +5,29 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
-    
+
     &__header {
         @include text-form;
         text-align: center;
     }
-    
+
     &__items-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
     }
-    
+
     &__item {
         color: $black;
         text-decoration: none;
         text-align: center;
         margin-bottom: 30px;
         position: relative;
-        
+
         &:hover {
             color: $yellow;
-            
+
             &:before {
                 content: '';
                 display: block;
@@ -36,21 +37,21 @@
                 width: 160px;
                 height: 160px;
                 opacity: 0.6;
-                z-index: 2; 
+                z-index: 2;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAMAAACXZR4WAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEUAAAAzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQAAABDUHYqAAAAKnRSTlMAD5Hq5IkNh+PrENPR1ZCS5ujnhAOfpwYBi5MCZvr9bUDwSB/N1iYJo658RnosAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAGdJREFUCNddzMkWgjAMQNEnaoWCyOCIM+KU//9AT1sOttxN8rIITKKpzOZKLWJJIg06FSPN7FhqcgmsKMJDiYyQhF1Rh4ea9cbv7Q72h383R4zT2eXlSu9mP99bBo9O5PnC8/58ldt+8msXDLKUcv4AAAAASUVORK5CYII=");
                 background-color: $yellow;
             }
-            
+
         }
     }
-    
+
     &__item-img {
         width: 160px;
         height: 160px;
     }
-    
+
     &__item-text {
         display: block;
         @include text-form;
