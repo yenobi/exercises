@@ -2,7 +2,6 @@
     position: relative;
     height: 100%;
 
-//    arrows
     &__prev,
     &__next {
         width: 91px;
@@ -27,12 +26,20 @@
     }
 
     &__prev {
-        left:-50px;
+        left:-24px;
     }
 
     &__next {
-      right:-50px;
+      right:-24px;
     }
+
+    // &__prev {
+    //     left:-50px;
+    // }
+    //
+    // &__next {
+    //   right:-50px;
+    // }
 
     &__list {
         margin: 0;
@@ -90,4 +97,26 @@
         opacity: 1;
     }
 
+}
+
+@media(min-width: 768px) {
+    .event-slider {
+        &__item-img {
+            width: 220px;
+            height: 220px;
+            margin-left: 10px;
+            margin-right: 0px;
+            border: 1px solid $gray-border;
+        }
+
+        &__prev {
+            left: 2px;
+            width: 61px;
+        }
+
+        &__next {
+            right: 14px;
+            width: 61px;
+        }
+    }
 }

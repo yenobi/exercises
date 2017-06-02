@@ -2,18 +2,18 @@
     @include paddings;
     padding-bottom: 25px;
     border-bottom: 1px solid $gray-border;
-    
+
     &__header {
         text-transform: uppercase;
         font-family: $font-subheading;
         font-weight: 700;
     }
-    
+
     &__text {
         font-family: $font-subheading;
         font-weight: 700;
     }
-    
+
     &__form-submit {
         color: $white;
         background-color: $black;
@@ -21,22 +21,22 @@
         border: 1px solid rgba(0, 0, 0, 0.3);
         text-transform: uppercase;
         @include text-form;
-            
+
         &:hover,
         &:focus {
             background-color: $white;
             color: $black;
-        } 
+        }
     }
-    
+
     &__form {
         display: flex;
         flex-direction: column;
-        
-        
+
+
         &-input {
             display: block;
-            
+
             input,
             textarea {
                 width: 100%;
@@ -44,11 +44,19 @@
                 color: $black;
                 @include input;
             }
-            
+
             textarea {
                 min-height: 150px;
                 resize: none;
             }
         }
+    }
+}
+
+@media(min-width: 768px) {
+    .question {
+        padding-top: 70px;
+        border-right: 1px solid $gray-border;
+        flex-shrink: 2;
     }
 }

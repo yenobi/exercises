@@ -14,7 +14,7 @@ $white: #ffffff;
 $gray-border: rgba(0,0,0, 0.5);
 $gray-dark: #73644b;
 $red: #c33e4b;
-// mixins 
+// mixins
 @mixin container {
     box-sizing: border-box;
     width: 90%;
@@ -22,7 +22,7 @@ $red: #c33e4b;
     margin-right: auto;
     border: 1px solid $gray-border;
 }
-//container width for desktop? 
+//container width for desktop?
 //    width: 97.5%;
 
 @mixin paddings($padding: 10px) {

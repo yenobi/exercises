@@ -3,13 +3,13 @@
     padding-top: 35px;
     padding-bottom: 25px;
     border-bottom: 1px solid $gray-border;
-    
+
     & h5:first-child {
             margin-top: 0px;
-        
+
     }
-    
-    h5, 
+
+    h5,
     a {
         font-family: $font-subheading;
         font-weight: 700;
@@ -17,20 +17,20 @@
         text-decoration: none;
         letter-spacing: 1px;
     }
-    
+
     h5 {
         margin-bottom: 0px;
     }
-    
+
     a:hover,
     a:focus {
         text-decoration: underline;
         color: $white;
     }
-    
+
     &__subscripton-form {
         margin-top: 1.67em;
-        
+
         input {
             margin-top: 10px;
             background-color: transparent;
@@ -39,8 +39,8 @@
             outline-color: white;
             @include input;
         }
-        
-        
+
+
         button {
             display: block;
             padding: 7px;
@@ -49,12 +49,21 @@
             border: none;
             text-transform: uppercase;
             @include text-form;
-            
+
                 &:hover,
                 &:focus {
                     background-color: $white;
                     color: $black;
-                } 
+                }
         }
+    }
+}
+
+@media(min-width: 768px) {
+    .contacts {
+        padding-top: 70px;
+        border-right: 1px solid $gray-border;
+        flex-shrink: 1;
+        flex-basis: 200px;
     }
 }

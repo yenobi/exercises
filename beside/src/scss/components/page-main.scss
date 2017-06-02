@@ -2,3 +2,14 @@
     @include container;
     @include paddings;
 }
+
+@media(min-width: 768px) {
+    .page-main {
+        display: flex;
+        justify-content: space-around;
+
+        &__filters-wrapper {
+            flex-basis: 290px;
+        }
+    }
+}

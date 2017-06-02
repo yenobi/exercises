@@ -1,10 +1,10 @@
 .shelter-filter {
     margin-bottom: 60px;
-    
+
     &__header {
         @include text-form;
     }
-    
+
     &__form-container {
         padding: 0px;
         display: flex;
@@ -13,7 +13,7 @@
         @include text-form;
         @include margin-0-fieldset;
     }
-    
+
     &__form-header {
         position: absolute;
         top: 0;
@@ -24,27 +24,32 @@
         background-color: $black;
         color: $white;
     }
-    
+
     &__form-label {
         position: relative;
         margin-bottom: 20px;
-        
+        max-width: 151px;
+
+        &_long {
+            max-width: 210px;
+        }
+
         input {
             position: absolute;
             left: -100%;
         }
-        
+
         input:checked ~ .shelter-filter__form-custom-checkbox {
             background-repeat: no-repeat;
             background-position: center;
             background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAMAAACXZR4WAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEUAAAAzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQzMjQAAABDUHYqAAAAKnRSTlMAD5Hq5IkNh+PrENPR1ZCS5ujnhAOfpwYBi5MCZvr9bUDwSB/N1iYJo658RnosAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAGdJREFUCNddzMkWgjAMQNEnaoWCyOCIM+KU//9AT1sOttxN8rIITKKpzOZKLWJJIg06FSPN7FhqcgmsKMJDiYyQhF1Rh4ea9cbv7Q72h383R4zT2eXlSu9mP99bBo9O5PnC8/58ldt+8msXDLKUcv4AAAAASUVORK5CYII=");
         }
-        
+
         input:checked ~ .shelter-filter__form-text {
             color: $black;
         }
     }
-    
+
     &__form-custom-checkbox {
         display: inline-block;
         vertical-align: middle;
@@ -52,7 +57,7 @@
         height: 29px;
         background-color: $yellow;
     }
-    
+
     &__form-text {
         display: inline-block;
         vertical-align: middle;

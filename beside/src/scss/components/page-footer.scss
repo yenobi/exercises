@@ -39,3 +39,22 @@
         }
     }
 }
+
+@media(min-width: 768px) {
+    .page-footer {
+        padding-top: 0px;
+        position: relative;
+
+        &__inner {
+                flex-direction: row;
+                position: relative;
+        }
+
+        &__copyright {
+            position: absolute;
+            bottom: 10px;
+            right: 0px;
+            max-width: 220px;
+        }
+    }
+}

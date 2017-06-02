@@ -40,3 +40,16 @@
         }
     }
 }
+
+@media(min-width: 768px) {
+    .welcome-screen {
+        &__inner {
+            padding-bottom: 130px;
+        }
+        
+        &__slider-wrapper {
+            height: 280px;
+            margin-bottom: 28%;
+        }
+    }
+}
