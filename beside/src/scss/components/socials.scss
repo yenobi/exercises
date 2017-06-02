@@ -77,8 +77,13 @@
 @media(min-width: 768px) {
     .socials {
         padding-top: 70px;
-        // border-right: 1px solid $gray-border;
         flex-shrink: 1;
         flex-basis: 200px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .socials {
+        padding-top: 90px;
     }
 }

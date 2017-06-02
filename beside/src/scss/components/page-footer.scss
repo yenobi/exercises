@@ -58,3 +58,13 @@
         }
     }
 }
+
+@media(min-width: 1024px) {
+    .page-footer {
+        background-position-y: 10px;
+
+        &__inner {
+                justify-content: space-around;
+        }
+    }
+}

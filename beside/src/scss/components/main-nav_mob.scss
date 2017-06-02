@@ -6,8 +6,8 @@ $transition-delay: 0.05s;
     position: absolute;
     left: -100%;
     top: -100%;
-    
-    &:focus {        
+
+    &:focus {
       & ~ .toggle-container .button-toggle {
         box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
       }
@@ -159,7 +159,7 @@ $transition-delay: 0.05s;
 //  &:nth-child(2) {
 //    letter-spacing: -7px;
 //  }
-    
+
     &:nth-child(1) {
     letter-spacing: -7.8px;
   }
@@ -187,4 +187,12 @@ $transition-delay: 0.05s;
     transform: translateY(-50%) scaleY(5);
     transition: $transition-duration;
   }
+}
+
+@media(min-width: 1024px) {
+    .nav-toggler,
+    .nav-toggler__container,
+    .nav {
+        display: none;
+    }
 }

@@ -57,6 +57,13 @@
     .question {
         padding-top: 70px;
         border-right: 1px solid $gray-border;
+        border-bottom: none;
         flex-shrink: 2;
+    }
+}
+
+@media(min-width: 1024px) {
+    .question {
+        padding-top: 90px;
     }
 }

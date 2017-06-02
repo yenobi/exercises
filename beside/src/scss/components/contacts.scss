@@ -6,7 +6,6 @@
 
     & h5:first-child {
             margin-top: 0px;
-
     }
 
     h5,
@@ -63,7 +62,14 @@
     .contacts {
         padding-top: 70px;
         border-right: 1px solid $gray-border;
+        border-bottom: none;
         flex-shrink: 1;
         flex-basis: 200px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .contacts {
+        padding-top: 90px;
     }
 }
