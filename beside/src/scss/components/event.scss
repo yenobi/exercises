@@ -162,3 +162,26 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .event {
+            width: 1170px;
+
+            &__info {
+                padding-bottom: 176px;
+                flex-basis: 365px;
+                padding-top: 30px;
+            }
+
+            &__slider-container {
+                flex-basis: 450px;
+                margin-right: 20px;
+                margin-left: 0px;
+                padding-top: 45px;
+            }
+
+            &__contacts {
+                padding-top: 30px;
+            }
+    }
+}

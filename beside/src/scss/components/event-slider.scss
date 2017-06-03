@@ -136,3 +136,15 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .event-slider {
+        width: 450px;
+        height: 445px;
+
+        &__item-img {
+            width: 450px;
+            height: 430px;
+        }
+    }
+}

@@ -32,3 +32,11 @@
         font-family: sans-serif;
     }
 }
+
+@media(min-width: 1200px) {
+    .page-header {
+        &__inner {
+                width: 1170px;
+        }
+    }
+}

@@ -80,3 +80,27 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .welcome-screen {
+        background-position-y: 110%;
+
+        &__inner {
+                width: 1170px;
+        }
+
+        &__header {
+            margin-left: 60px;
+            font-size: 3em;
+            max-width: 305px;
+        }
+
+        &__sub-header {
+                margin-left: 60px;
+        }
+
+        &__slider-wrapper {
+            margin-left: 450px;
+        }
+    }
+}

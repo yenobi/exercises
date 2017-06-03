@@ -68,3 +68,11 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .page-footer {
+        &__inner {
+                width: 1170px;
+        }
+    }
+}

@@ -24,3 +24,13 @@
             }
     }
 }
+
+@media(min-width: 1200px) {
+    .page-main {
+            width: 1170px;
+
+            &__positions-wrapper {
+                flex-basis: 900px;
+            }
+    }
+}

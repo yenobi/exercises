@@ -87,3 +87,16 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .latest-news {
+        &__inner {
+                width: 1170px;
+        }
+
+        &__item {
+            margin-left: 0px;
+    margin-right: 0px;
+        }
+    }
+}

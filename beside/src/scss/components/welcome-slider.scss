@@ -104,3 +104,15 @@
         }
     }
 }
+
+@media(min-width: 1200px) {
+    .welcome-slider {
+        &__prev {
+                left: -484px;
+        }
+
+        &__next {
+                right: -122px;
+        }
+    }
+}
