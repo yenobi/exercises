@@ -46,10 +46,37 @@
         &__inner {
             padding-bottom: 130px;
         }
-        
+
         &__slider-wrapper {
             height: 280px;
             margin-bottom: 28%;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    .welcome-screen {
+        &__header {
+            max-width: 270px;
+            margin-top: 130px;
+            margin-left: 20px;
+            display: inline-block;
+            float: left;
+        }
+
+        &__sub-header {
+            margin-left: 20px;
+            margin-top: 0px;
+            max-width: 130px;
+            float: left;
+            clear: both;
+        }
+
+        &__slider-wrapper {
+            max-width: 610px;
+            margin-left: 300px;
+            margin-top: 5px;
+            margin-bottom: 19%;
         }
     }
 }

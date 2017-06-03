@@ -79,3 +79,11 @@
         }
     }
 }
+
+@media(min-width: 1024px) {
+    .latest-news {
+        &__item {
+            margin-right: 30px;
+        }
+    }
+}

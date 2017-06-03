@@ -13,3 +13,14 @@
         }
     }
 }
+
+@media(min-width: 1024px) {
+    .page-main {
+            justify-content: space-between;
+
+            &__positions-wrapper {
+                padding-left: 20px;
+                flex-basis: 600px;
+            }
+    }
+}
