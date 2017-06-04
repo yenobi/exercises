@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Porjad" content="Porjad-web-app">
+    <link rel="icon" sizes="16x16" type="image/png" href="img/favicon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="lib/normalize.css">
     <link rel="stylesheet" href="build/css/style.min.css">
     <title>Поряд - НАЙБІЛЬША В УКРАЇНІ БІРЖА ДОБРА</title>
@@ -17,12 +20,10 @@
 
             <div class="page-header__nav-wrapper">
 
-                <!-- <div class="page-header__nav-toggler-wrapper"> -->
                     <input class="nav-toggler" type="checkbox" id="toggler">
                     <label class="nav-toggler__label" for="toggler">
                         <span class="nav-toggler__button nav-toggler__button_cross"></span>
                     </label>
-
 
                     <nav class="main-nav">
                         <ul class="main-nav__list">
@@ -37,16 +38,8 @@
                     </nav>
                 </div>
 
-                <!-- <nav class="nav">
-                <a class="nav-item" href="">Dashboard</a>
-                <a class="nav-item" href="">History</a>
-                <a class="nav-item" href="">Statistics</a>
-                <a class="nav-item" href="">Settings</a>
-            </nav> -->
-            <!-- </div> -->
-
             <div class="login-form">
-<!--         how to make heart? what is it?      -->
+                <button class="login-form__heart" type="button">2</button>
                 <button class="login-form__lang-switcher" type="button">Ук</button>
                 <button class="login-form__login-btn" type="button">Увійти</button>
             </div>
@@ -85,6 +78,8 @@
           </div>
       </section>
 
+      <link rel="stylesheet" href="build/css/style-main.min.css">
+
   <main class="page-main">
       <section class="page-main__filters-wrapper">
           <section class="help-filter">
@@ -121,7 +116,14 @@
               <div class="tags__item">літні люди</div>
           </section>
 
-          <section class="sorting"></section>
+          <section class="sorting">
+              <h3 class="sorting__header">впорядкувати</h3>
+              <select class="sorting__select">
+                  <option value="">останні додані</option>
+                  <option value="">найпопулярніші</option>
+                  <option value="">за дедлайном</option>
+              </select>
+          </section>
 
           <section class="shelter-filter">
                 <h3 class="shelter-filter__header">притулки</h3>
@@ -219,6 +221,7 @@
       </section>
     </main>
 
+    <link rel="stylesheet" href="build/css/style-foot.min.css">
 
       <section class="event">
           <section class="event__info">

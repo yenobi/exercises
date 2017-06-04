@@ -33,6 +33,14 @@
     // }
 }
 
+@media(min-width: 1024px) {
+    .page-header {
+        &__logo {
+                width: 140px;
+        }
+    }
+}
+
 @media(min-width: 1200px) {
     .page-header {
         &__inner {
