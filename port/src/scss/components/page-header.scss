@@ -7,7 +7,7 @@
         justify-content: space-between;
         position: relative;
     }
-    
+
     &__logo {
         display: block;
         color: $gray;
@@ -15,12 +15,12 @@
         font-family: $font-main;
         text-decoration: none;
         max-width: 170px;
-        
+
         img {
             max-width: 30%;
             height: auto;
         }
-        
+
         span {
             margin-top: 18px;
             vertical-align: top;
@@ -38,10 +38,13 @@
     }
 }
 
-//for desktop
-//.page-header {
-//    &__inner {
-//        padding-top: 50px;
-//        padding-bottom: 50px;
-//    }
-//}
+@media(min-width: 1200px) {
+    .page-header {
+        &__inner {
+            width: 1160px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+        }
+    }
+}

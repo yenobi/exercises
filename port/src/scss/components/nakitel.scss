@@ -1,20 +1,13 @@
 .nakitel {
-    margin-bottom: 20px;
-    
-    &__inner {
-        @include margin-sides;
-        text-align: right;
-        padding-right: 10px;
-        padding-bottom: 50px;
-        color: $white;
-        background-color: #60b8a3;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-        @include container-shadow;
+    @include margin-bottom;
 
+    &__inner {
+        text-align: right;
+        background-color: $light-green;
+        background-size: cover;
+        @include container;
     }
-    
+
     &__content-img {
         max-width: 185px;
         position: absolute;
@@ -22,53 +15,26 @@
         left: 3px;
         z-index: 0;
     }
-    
-    &__header {
-        margin-top: 0px;
-        margin-bottom: 20px;
-        padding-top: 30px;
-        font-size: 1.8em;
-    }
-    
-    &__text {
-        margin-bottom: 50px;
-        z-index: 1;
-        position: relative;
-        font-size: 1.2em;
-    }
-    
-    &__button {
-        display: inline-block;
-        padding: 10px;
-        margin-bottom: 50px;
-        border: 2px solid $peach;
-        background-color: transparent;
-        color: $white;
-        font-size: 1em;
-        text-decoration: none;
-        
-        &:hover,
-        &:focus {
-            background-color: $peach;
-            color: $blue;
-        }
-    }
+
+    @include header;
+
+    @include content-text;
+
+    @include open-btn;
+
 }
-
-//padding-left: 60px
-
 
 @media(min-width: 768px) {
     .nakitel {
         flex-grow: 1;
-        
+
         &__inner {
             padding-right: 30px;
             margin-left: 0px;
-            margin-right: 0px;
+            margin-right: 10px;
             max-width: 86%;
         }
-        
+
         &__button {
             margin-top: 23px;
             margin-bottom: 53px;
@@ -78,9 +44,20 @@
 
 @media(min-width: 1024px) {
     .nakitel {
-        
+        &__inner {
+                max-width: 90%;
+        }
+
         &__button {
             margin-bottom: 74px;
+        }
+    }
+}
+
+@media(min-width:1200px) {
+    .nakitel {
+        &__inner {
+                margin-right: 17px;
         }
     }
 }

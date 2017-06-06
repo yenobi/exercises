@@ -8,11 +8,12 @@ const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const eslint = require('gulp-eslint');
 const concat = require('gulp-concat');
-const imagemin     = require('gulp-imagemin'); 
-const pngquant     = require('imagemin-pngquant'); 
-const cache = require('gulp-cache'); 
+const imagemin     = require('gulp-imagemin');
+const pngquant     = require('imagemin-pngquant');
+const cache = require('gulp-cache');
 const rename = require('gulp-rename');
 const minify = require('gulp-minify');
+const babel = require('gulp-babel');
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/style.scss')
@@ -34,11 +35,8 @@ gulp.task('babel', () => {
 });
 
 gulp.task('js', function() {
-  return gulp.src('src/js/**.js')
+  return gulp.src('src/tmp/**.js')
     .pipe(sourcemaps.init())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
     .pipe(concat('build.js'))
     .pipe(minify())
     .pipe(rename({suffix: '.min'}))
@@ -47,14 +45,14 @@ gulp.task('js', function() {
 });
 
 gulp.task('img', function() {
-	return gulp.src('img/**/*') 
-		.pipe(cache(imagemin({  
+	return gulp.src('img/**/*')
+		.pipe(cache(imagemin({
 			interlaced: true,
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
 		})))
-		.pipe(gulp.dest('build/img')); 
+		.pipe(gulp.dest('build/img'));
 });
 
 gulp.task('clean', function() {

@@ -8,7 +8,7 @@
     <title>Portfolio</title>
   </head>
   <body>
-         
+
   <header class="page-header">
       <div class="page-header__inner">
           <a class="page-header__logo" href="#">
@@ -20,35 +20,70 @@
                       <i class="main-nav__cross main-nav__cross_hidden">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
-<polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 
+<polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199
 	22.199,19.396 13.903,11.1 "/>
 </svg>
                             </i>
-                  <li><a class="main-nav__list-item" href=#>Portfolio
+                  <li><a class="main-nav__list-item" href="#portfolio">Portfolio
                       </a></li>
-                  <li><a class="main-nav__list-item" href=#>Tech stack</a></li>
-                  <li><a class="main-nav__list-item" href=#>Contact me</a></li>
-                  <li><a class="main-nav__list-item" href=#>Download CV</a></li>
+                  <li><a class="main-nav__list-item" href="#stack">Tech stack</a></li>
+                  <li><a class="main-nav__list-item" href="#contacts">Contact me</a></li>
+                  <li><a class="main-nav__list-item" href="Sergey_Koshman_CV.pdf" download="Sergey_Koshman_CV">Download CV</a></li>
               </ul>
           </nav>
           <button class="main-nav__toggler" type="button">toggle</button>
         </div>
     </header>
-      
-  <main>
+
+  <main id="portfolio">
       <section class="welcome-screen">
           <div class="welcome-screen__inner">
-              <h1 class="welcome-screen__header">Hello, World!</h1>
-              <p class="welcome-screen__bio">My name is Sergey Koshman. 
-                <br>I'm junior front-end developer. 
+              <h1 class="welcome-screen__header">Hello!</h1>
+              <p class="welcome-screen__bio">My name is Sergey Koshman.
+                <br>I'm junior front-end developer.
                 <br>This page is going to be my portfolio for first time.
-                <br> Here You can find production-ready projects, 
+                <br> Here You can find production-ready projects,
                 <br>my tech stack and CV.</p>
-              <button class="welcome-screen__button" type="button">Download CV</button>
+              <a class="welcome-screen__button" href="Sergey_Koshman_CV.pdf" download="Sergey_Koshman_CV">Download CV</a>
           </div>
       </section>
-      
-      <div class="container">
+
+      <div class="container container_two-items">
+          <section class="coffee">
+              <div class="coffee__inner">
+                  <h2 class="coffee__header">Coffe-maker</h2>
+                  <p class="coffee__text">Qualifying competitive project<br>
+                      with mobile-first and vanilla JS</p>
+                      <a class="coffee__button" href="https://yenobi.github.io/cf-maker/index.html" target="_blank">Open</a>
+                      <img class="coffee__content-img" src="img/cf-mini.png" alt="coffee machine">
+                  </div>
+              </section>
+
+           <section class="pingbuller">
+              <div class="pingbuller__inner">
+                  <h2 class="pingbuller__header">Pingbuller</h2>
+                  <p class="pingbuller__text">During this poroject study<br> Bootstrap-framework, <br>Less-prepoccessor,<br>
+                    Webmanifest for PWA and <br>Bower as package manager.
+                  </p>
+                  <a class="pingbuller__button" href="https://yenobi.github.io/ping/index.html"  target="_blank">Open</a>
+                  <img class="pingbuller__content-img" src="img/ping-mini.png" alt="mountains related to pingbuller-project">
+              </div>
+          </section>
+
+
+      </div>
+      <div class="container container_three-items">
+          <section class="builder">
+              <div class="builder__inner">
+                  <h2 class="builder__header">Builder</h2>
+                  <p class="builder__text">Mobile-first and<br>
+                  production-ready<br>
+              corporative page</p>
+                  <a class="coffee__button" href="#" target="_blank">Open</a>
+                  <img class="builder__content-img" src="img/builder__min.png" alt="construction helmet">
+              </div>
+          </section>
+
           <section class="nakitel">
               <div class="nakitel__inner">
                   <h2 class="nakitel__header">Nakitel project</h2>
@@ -58,32 +93,31 @@
               </div>
           </section>
 
-           <section class="pingbuller">
-              <div class="pingbuller__inner">
-                  <h2 class="pingbuller__header">Pingbuller project</h2>
-                  <p class="pingbuller__text">During this poroject study<br> Bootstrap-framework, <br>Less-prepoccessor,<br>
-                    Webmanifest for PWA and <br>Bower as package manager.
-                  </p>
-                  <a class="pingbuller__button" href="https://yenobi.github.io/ping/index.html"  target="_blank">Open</a>
-                  <img class="pingbuller__content-img" src="img/ping-mini.png" alt="mountains related to pingbuller-project">
+          <section class="sedona">
+              <div class="sedona__inner">
+                  <h2 class="sedona__header">Sedona</h2>
+                  <p class="sedona__text">Mobile-first project<br>
+                  with simple and elegant design</p>
+                  <a class="sedona__button" href="https://yenobi.github.io/sedona/index.html" target="_blank">Open</a>
+                  <img class="sedona__content-img" src="img/sedona__min.png" alt="sedona mountains">
               </div>
           </section>
+
       </div>
-      
-<!--
-      <section class="coffee">
-          <h2 class="coffee__header">Coffe maker</h2>
-      </section>
--->
+
     </main>
-      
+
   <footer class="page-footer">
-      <section class="stack">
+      <section class="stack" id="stack">
           <h3 class="stack__header">Tech stack</h3>
-          <p class="stack__text">HTML5, CSS3, JavaScript, ES5, ES6, Less, Sass, Bootstrap, jQuery, Git, Photoshop, Illustrator, Adaptive design, Mobile-first, CL-interfaces, JSON, AJAX, CSS-animation, Grunt, Gulp</p>
+          <p class="stack__text">Core-stack: HTML5, CSS3, JavaScript (Es6) git with CLI and git-flow</p>
+          <p class="stack__text">Preprocessors: Less, SCSS</p>
+          <p class="stack__text">Methodology: BEM, mobile-first</p>
+          <p class="stack__text">Frameworks and libraries: jQuery, Bootstrap, Babel</p>
+          <p class="stack__text">Development Tools: Grunt, Gulp, npm, Yarn, Bower</p>
       </section>
-      
-      <section class="contacts">
+
+      <section class="contacts" id="contacts">
           <h3 class="contacts__header">Contact me!</h3>
           <div class="contacts__icon-wrapper">
             <a href="https://github.com/yenobi" target="_blank">
@@ -99,17 +133,7 @@
       </section>
       <p class="page-footer__copyright">© Sergey Koshman</p>
   </footer>
-      
-      <script src="src/js/nav.js"></script>
+
+      <script src="build/js/build.min.js"></script>
   </body>
 </html>
-
-<!--tasks
-
-1. make toggler bigger 
-2. add hideing menu after interaction with list-item
-3. github icon in ai - add white-color (or black)
-4. fix mouse-out icon-animation 
-
-
--->
