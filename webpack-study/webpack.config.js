@@ -27,11 +27,18 @@ module.exports = {
         })
     ],
     
+    resolveLoader: {
+        moduleDirectories: ['node_modules'],
+        moduleTemplates: ['*-loader'],
+        extensions: ['', '.js']
+    },
+    
+    
     module: {
         loaders: [
             {
-        test: /\.js$/,
-        loader: 'babel-loader'
+            test: /\.js$/,
+            loader: 'babel'
         }
         ]
     }
@@ -41,7 +48,12 @@ module.exports = {
 //    entry: "./js/index.js",
 //    output: {
 //        path: "./js/",
-//        filename: PROD ? 'bundle.min.js' : 'bundle.js'
+//        filename: PROD ? 'bundle.min.js' : 'bundleTest.js'
+//    },
+//    watch: !PROD,
+//    
+//    watchOptions: {
+//        aggregateTimeput: 100
 //    },
 //    module: {
 //        loaders: [

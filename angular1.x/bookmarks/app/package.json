@@ -1,0 +1,11 @@
+{
+  "name": "booky",
+  "version": "1.0.0",
+  "description": "simple bookmark-app (like eggly)",
+  "main": "index.html",
+  "author": "Segey Koshman",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1"
+  }
+}
