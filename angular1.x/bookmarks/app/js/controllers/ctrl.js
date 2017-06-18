@@ -53,11 +53,6 @@ booky.controller('mainCtrl', function mainCtrl($scope) {
                                          label: 'Смартфоны'
                                      }];
 
-                                     self.consoleAmount = function() {
-                                         console.log()
-                                     }
-
-                                     self.counterInput = 2;
-
+                                     $scope.counter = 2;
 
                             })
