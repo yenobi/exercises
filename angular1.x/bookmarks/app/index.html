@@ -9,6 +9,7 @@
   <body ng-controller="mainCtrl as ctrl">
   <header>new app booky</header>
   <main>
+
       <div ng-repeat="button in ctrl.modes">
         <label>
             <input type="radio" ng-model="ctrl.data.mode" value="{{button.value}}" name="modes" />
@@ -16,13 +17,17 @@
         </label>
     </div>
     <div ng-include="ctrl.setFile()"></div>
-    <div total-items></div>
-    <!-- <total-items></total-items> -->
+
+    <total-items tablets="ctrl.tablets"></total-items>
+    <br>
+    <counter ng-model="counterInput"></counter>
   </main>
   <footer>
   </footer>
   <script src="node_modules/angular/angular.min.js"></script>
   <script src="js/app.js"></script>
-  <scrip src="js/controllers/ctrl.js"></script>
+  <script src="js/controllers/ctrl.js"></script>
+  <script src="js/directives/totalItems.js"></script>
+  <script src="js/directives/counter.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-booky.controller('mainCtrl', function($scope) {
+booky.controller('mainCtrl', function mainCtrl($scope) {
                                 var self = this;
                                 self.phones = [{
                                         name: 'Nokia Lumia 630',
@@ -41,7 +41,6 @@ booky.controller('mainCtrl', function($scope) {
                                     self.data = {};
                                      self.setFile = function () {
                                        if(self.data.mode=='Tablets') {
-                                           console.log('tablets');
                                            return 'tabletsList.html';
                                        } else if(self.data.mode=='Phones')
                                            return 'phonesList.html';
@@ -54,7 +53,11 @@ booky.controller('mainCtrl', function($scope) {
                                          label: 'Смартфоны'
                                      }];
 
+                                     self.consoleAmount = function() {
+                                         console.log()
+                                     }
+
+                                     self.counterInput = 2;
 
 
-
-                            });
+                            })
