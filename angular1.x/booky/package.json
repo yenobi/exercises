@@ -1,0 +1,12 @@
+{
+  "name": "booky",
+  "version": "1.0.0",
+  "description": "bookmark-app with angular1.x",
+  "main": "index.html",
+  "author": "Sergey Koshman",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1",
+    "bootstrap": "^3.3.7"
+  }
+}

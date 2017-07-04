@@ -1,6 +1,6 @@
 booky.component('awsCounter', {
     bindings: {
-    oneWay: '<'
+    // oneWay: '<'
     },
     controller: ['$scope', function($scope) {
         this.addItem = function() {
