@@ -86,6 +86,31 @@ angular.module('Booky', [])
             resetCreateForm();
         };
     
+        $scope.editedBookmark = null;
+        $scope.tmpEditedBookmark = null;
+    
+        $scope.setEditedBookmark = function(bookmark) {
+            $scope.tmpEditedBookmark = bookmark;
+            $scope.editedBookmark = angular.copy(bookmark);
+        };
+    
+        $scope.updateBookmark = function(bookmark) {
+            var index = $scope.bookmarks.indexOf($scope.tmpEditedBookmark);
+            $scope.bookmarks[index] = bookmark;
+            
+            $scope.editedBookmark = null;
+            $scope.isEditing = false;
+            $scope.tmpEditedBookmark = null;
+        };
+        
+        $scope.isSelecredBookmark = function(bookmarkId) {
+            return $scope.editedBookmark !== null && $scope.editedBookmark.id === bookmarkId;
+        };
+    
+        $scope.deleteBookmark = function(bookmark) {    $scope.bookmarks.splice($scope.bookmarks.indexOf(bookmark), 1);
+        };
+        
+    
     
     
     
