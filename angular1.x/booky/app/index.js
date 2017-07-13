@@ -1,4 +1,16 @@
-angular.module('Booky', [])
+angular.module('booky', [
+    'ui.router',
+    'categories',
+    'categories.bookmarks'
+])
+    .config(function($stateProvider) {
+        $stateProvider
+            .state('booky', {
+                url:'/',
+                templateUrl: 'app/some.html',
+                controller: 'MainCtrl'
+            })
+    })
     .controller('MainCtrl', function($scope){
         $scope.categories = [
             {"id": 0, "name": "Development"},
