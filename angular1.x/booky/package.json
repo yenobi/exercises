@@ -6,8 +6,8 @@
   "author": "Sergey Koshman",
   "license": "MIT",
   "dependencies": {
-    "angular": "1",
-    "angular-ui-router": "^1.0.3",
+    "angular": "1.6",
+    "angular-route": "^1.6.5",
     "bootstrap": "^3.3.7"
   }
 }

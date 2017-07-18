@@ -1,16 +1,19 @@
 angular.module('booky', [
     'ui.router',
+    'ngRoute',
     'categories',
     'categories.bookmarks'
 ])
-    .config(function($stateProvider) {
-        $stateProvider
-            .state('booky', {
-                url:'/',
-                templateUrl: 'app/some.html',
+    .config(['$routeProvider', '$locationProvider',
+        function($routeProvider, $locationProvider) {
+            $routeProvider.
+            when('/', {
+                templateUrl: 'app/categories/categories.tmpl.html',
                 controller: 'MainCtrl'
-            })
-    })
+            });
+
+            $locationProvider.html5Mode(false).hashPrefix('!');
+        }])
     .controller('MainCtrl', function($scope){
         $scope.categories = [
             {"id": 0, "name": "Development"},
@@ -40,7 +43,7 @@ angular.module('booky', [
             $scope.cancelEditing();
         };
     
-        $scope.isCurrentCategoru = function(category) {
+        $scope.isCurrentCategory = function(category) {
           return $scope.currentCategory !== null && category.name === $scope.currentCategory;
         };
     
@@ -122,19 +125,6 @@ angular.module('booky', [
         $scope.deleteBookmark = function(bookmark) {    $scope.bookmarks.splice($scope.bookmarks.indexOf(bookmark), 1);
         };
         
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     });
+
