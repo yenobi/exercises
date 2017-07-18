@@ -1,5 +1,4 @@
 angular.module('booky', [
-    'ui.router',
     'ngRoute',
     'categories',
     'categories.bookmarks'
