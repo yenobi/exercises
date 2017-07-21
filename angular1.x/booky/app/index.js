@@ -1,15 +1,31 @@
 angular.module('booky', [
     'ngRoute',
+    'ui.router',
     'categories',
     'categories.bookmarks'
 ])
-    .config(['$routeProvider', '$locationProvider',
-        function($routeProvider, $locationProvider) {
-            $routeProvider.
-            when('/', {
-                templateUrl: 'app/categories/categories.tmpl.html',
-                controller: 'MainCtrl'
-            });
+    .config(['$routeProvider', '$locationProvider', '$urlRouterProvider', '$stateProvider',
+        function($routeProvider, $locationProvider, $urlRouterProvider, $stateProvider) {
+            // first version, when categories.tmpl.html was one part
+            // $routeProvider.
+            //     when('/', {
+            //         templateUrl: 'app/categories/categories.tmpl.html',
+            //         controller: 'MainCtrl'
+            //     });
+
+                // two views with two separeted pages
+                $routeProvider
+                    .when('/categories', {
+                        controller: 'CategoriesCtrl',
+                        templateUrl: 'app/categories/categories.tmpl.html'
+                    })
+                    .when('/bookmarks', {
+                        controller: 'BookmarksCtrl',
+                        templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html'
+                    });
+
+            // Default path
+            $routeProvider.otherwise({redirectTo: '/categories'});
 
             $locationProvider.html5Mode(false).hashPrefix('!');
         }])
