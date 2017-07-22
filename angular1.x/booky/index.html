@@ -12,17 +12,16 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3 col-md-2 sidebar" ng-view="categories">
+                <div class="col-sm-3 col-md-2 sidebar" ui-view="categories">
 
                 </div>
-                <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view="bookmarks">-->
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view="bookmarks">
 
-                <!--</div>-->
+                </div>
             </div>
         </div>
 
         <script src="vendor/angular.min.js"></script>
-        <script src="vendor/angular-route.js"></script>
         <script src="vendor/angular-ui-router.js"></script>
 
         <script src="app/index.js"></script>

@@ -1,58 +1,34 @@
 angular.module('booky', [
-    'ngRoute',
     'ui.router',
     'categories',
     'categories.bookmarks'
 ])
-    .config(['$routeProvider', '$locationProvider', '$urlRouterProvider', '$stateProvider',
-        function($routeProvider, $locationProvider, $urlRouterProvider, $stateProvider) {
-            // first version, when categories.tmpl.html was one part
-            // $routeProvider.
-            //     when('/', {
-            //         templateUrl: 'app/categories/categories.tmpl.html',
-            //         controller: 'MainCtrl'
-            //     });
+    .config([ '$locationProvider', '$urlRouterProvider', '$stateProvider',
+        function( $locationProvider, $urlRouterProvider, $stateProvider) {
 
-                // two views with two separeted pages
-                $routeProvider
-                    .when('/categories', {
-                        controller: 'CategoriesCtrl',
-                        templateUrl: 'app/categories/categories.tmpl.html'
-                    })
-                    .when('/bookmarks', {
-                        controller: 'BookmarksCtrl',
-                        templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html'
-                    });
+            // why is this ?
+            $stateProvider.
+                state('booky', {
+                    url: '',
+                    abstract: true
+            });
 
-            // Default path
-            $routeProvider.otherwise({redirectTo: '/categories'});
+            // redirecting by default to root app-route
+            $urlRouterProvider.otherwise('/');
 
+            // this is for what ?
             $locationProvider.html5Mode(false).hashPrefix('!');
         }])
-    .controller('MainCtrl', function($scope){
-        $scope.categories = [
-            {"id": 0, "name": "Development"},
-            {"id": 1, "name": "Design"},
-            {"id": 2, "name": "Exercise"},
-            {"id": 3, "name": "Humor"}
-        ];
-    
-        $scope.bookmarks = [
-            {"id":0, "title": "AngularJS", "url": "http://angularjs.org", "category": "Development" },
-            {"id":1, "title": "Egghead.io", "url": "http://angularjs.org", "category": "Development" },
-            {"id":2, "title": "A List Apart", "url": "http://alistapart.com/", "category": "Design" },
-            {"id":3, "title": "One Page Love", "url": "http://onepagelove.com/", "category": "Design" },
-            {"id":4, "title": "MobilityWOD", "url": "http://www.mobilitywod.com/", "category": "Exercise" },
-            {"id":5, "title": "Robb Wolf", "url": "http://robbwolf.com/", "category": "Exercise" },
-            {"id":6, "title": "Senor Gif", "url": "http://memebase.cheezburger.com/senorgif", "category": "Humor" },
-            {"id":7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
-            {"id":8, "title": "Dump", "url": "http://dump.com", "category": "Humor" }
-        ];
+    .controller('MainCtrl', function($scope, $state){
     
         $scope.currentCategory = null;
     
         $scope.setCurrentCategory = function (category) {
             $scope.currentCategory = category;
+
+            // $state.go('booky.categories.bookmarks', {
+            //     category: category.name
+            // });
             
             $scope.cancelCreating();
             $scope.cancelEditing();
