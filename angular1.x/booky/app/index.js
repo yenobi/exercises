@@ -6,11 +6,21 @@ angular.module('booky', [
     .config([ '$locationProvider', '$urlRouterProvider', '$stateProvider',
         function( $locationProvider, $urlRouterProvider, $stateProvider) {
 
+            // default for one page
+            // $stateProvider.
+            //     state('booky', {
+            //     url: '/',
+            //     templateUrl: 'app/categories/categories.tmpl.html'
+            // });
+
             $stateProvider.
                 state('booky', {
-                url: '/',
-                templateUrl: 'app/categories/categories.tmpl.html'
+                    url: '',
+                    abstract: true
             });
+
+            //default path ?
+            $urlRouterProvider.otherwise('/');
 
             // Default path
             // $routeProvider.otherwise({redirectTo: '/categories'});
