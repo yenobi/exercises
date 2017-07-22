@@ -1,7 +1,9 @@
 <a ng-click="setCurrentCategory(null)"><img class="logo" src="assets/img/eggly-logo.png"></a>
 <ul class="nav nav-sidebar">
-    <li ng-repeat="category in categories" ng-class="{'active':isCurrentCategory(category)}">
-        <a ng-click="setCurrentCategory(category)">
+    <li ng-repeat="category in categoriesListCtrl.categories" ng-class="{'active':isCurrentCategory(category)}">
+        <!-- in video part of refactoring was deleting ng-click="setCurrentCategory(category)" statement,
+        but in my version this kills function of switching between some categories (switching - yes, but filter of bookmarks - no -->
+        <a ui-sref="booky.categories.bookmarks({category: category.name})" ng-click="setCurrentCategory(category)">
             {{category.name}}
         </a>
     </li>
