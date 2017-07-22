@@ -11,10 +11,10 @@
     <body ng-controller="MainCtrl">
 
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-3 col-md-2 sidebar" ng-view="categories">
+            <div class="row" ui-view="">
+                <!--<div class="col-sm-3 col-md-2 sidebar" ng-view="categories">-->
 
-                </div>
+                <!--</div>-->
                 <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-view="bookmarks">-->
 
                 <!--</div>-->
@@ -22,7 +22,6 @@
         </div>
 
         <script src="vendor/angular.min.js"></script>
-        <script src="vendor/angular-route.js"></script>
         <script src="vendor/angular-ui-router.js"></script>
 
         <script src="app/index.js"></script>
