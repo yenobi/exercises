@@ -16,14 +16,20 @@ angular.module('categories.bookmarks', [
                 }
             })
     })
-    .controller('BookmarksCtrl', function BookmarksCtrl($stateParams, BookmarksModel) {
+    .controller('BookmarksCtrl', function BookmarksCtrl($stateParams, BookmarksModel, CategoriesModel) {
 
         var bookmarksListCtrl = this;
 
-        bookmarksListCtrl.currentCategoryName = $stateParams.category;
+        CategoriesModel.setCurrentCategory($stateParams.category);
+
+        // bookmarksListCtrl.currentCategoryName = $stateParams.category;
 
         BookmarksModel.getBookmarks().
-            then(function(response) {
-            bookmarksListCtrl.bookmarks = response;
+            then(function(bookmarks) {
+            bookmarksListCtrl.bookmarks = bookmarks;
         });
+
+        bookmarksListCtrl.getCurrentCategory = CategoriesModel.getCurrentCategory;
+
+        bookmarksListCtrl.getCurrentCategoryName = CategoriesModel.getCurrentCategoryName;
     });
