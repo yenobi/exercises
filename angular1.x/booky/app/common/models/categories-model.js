@@ -1,16 +1,23 @@
 angular.module('booky.models.categories', [
 
 ])
-    .service('CategoriesModel', function() {
-        var model = this;
-        categories = [
-            {"id": 0, "name": "Development"},
-            {"id": 1, "name": "Design"},
-            {"id": 2, "name": "Exercise"},
-            {"id": 3, "name": "Humor"}
-        ];
+    .service('CategoriesModel', function($http) {
+        var model = this,
+            URLS = {
+                FETCH: 'data/categories.json'
+            },
+            categories;
+
+        function extract(response) {
+            return response.data;
+        }
+
+        function cacheCategories(result) {
+            categories = extract(result);
+            return categories;
+        }
 
         model.getCategories = function() {
-           return categories;
+            return $http.get(URLS.FETCH).then(cacheCategories);
         };
     });
