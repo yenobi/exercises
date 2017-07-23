@@ -16,13 +16,20 @@ angular.module('categories.bookmarks', [
                 }
             })
     })
-    .controller('BookmarksCtrl', function BookmarksCtrl($stateParams, BookmarksModel) {
-        // can do something like this ?
-        // $someCtrl = $ctrl;
+    .controller('BookmarksCtrl', function BookmarksCtrl($stateParams, BookmarksModel, CategoriesModel) {
 
         var bookmarksListCtrl = this;
 
-        bookmarksListCtrl.currentCategoryName = $stateParams.category;
+        CategoriesModel.setCurrentCategory($stateParams.category);
 
-        bookmarksListCtrl.bookmarks = BookmarksModel.getBookmarks();
+        // bookmarksListCtrl.currentCategoryName = $stateParams.category;
+
+        BookmarksModel.getBookmarks().
+            then(function(bookmarks) {
+            bookmarksListCtrl.bookmarks = bookmarks;
+        });
+
+        bookmarksListCtrl.getCurrentCategory = CategoriesModel.getCurrentCategory;
+
+        bookmarksListCtrl.getCurrentCategoryName = CategoriesModel.getCurrentCategoryName;
     });
