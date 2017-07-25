@@ -9,6 +9,40 @@ angular.module('categories.bookmarks.create', [
                 controller: 'CreateBookmarkCtrl as createBookmarkCtrl'
             })
     })
-    .controller('CreateBookmarkCtrl', function() {
+    .controller('CreateBookmarkCtrl', function($state, $stateParams, BookmarksModel) {
+        var createBookmarkCtrl = this;
 
+        function returnToBookmarks() {
+            $state.go('booky.categories.bookmarks', {
+                category: $stateParams.category
+            })
+        }
+
+        function cancelCreating() {
+            returnToBookmarks();
+        }
+
+        createBookmarkCtrl.cancelCreating = cancelCreating;
+
+        function createBookmark(bookmark) {
+            // debugger;
+            BookmarksModel.createBookmark(bookmark);
+            returnToBookmarks();
+        }
+
+        createBookmarkCtrl.createBookmark = createBookmark;
+
+        function resetForm() {
+            createBookmarkCtrl.newBookmark = {
+                titel: '',
+                url: '',
+                category: $stateParams.category
+            }
+        }
+
+        resetForm();
+
+        createBookmarkCtrl.tmpFunc = function() {
+            console.log(createBookmarkCtrl.newBookmark);
+        }
     });
