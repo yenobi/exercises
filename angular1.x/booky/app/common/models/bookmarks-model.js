@@ -77,4 +77,8 @@ angular.module('booky.models.bookmarks', [
 
             bookmarks[index] = bookmark;
         };
+        
+        model.deleteBookmark = function(bookmark) {
+            bookmarks.splice(bookmarks.indexOf(bookmark), 1);
+        };
     });
