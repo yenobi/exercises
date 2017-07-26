@@ -25,7 +25,6 @@ angular.module('categories.bookmarks.create', [
         createBookmarkCtrl.cancelCreating = cancelCreating;
 
         function createBookmark(bookmark) {
-            // debugger;
             BookmarksModel.createBookmark(bookmark);
             returnToBookmarks();
         }

@@ -1,5 +1,6 @@
 angular.module('booky', [
     'ui.router',
+    'ngAnimate',
     'categories',
     'categories.bookmarks'
 ])

@@ -23,10 +23,6 @@ angular.module('booky.models.bookmarks', [
             })
         }
 
-        // categories.find(function (c) {
-        //     return c.name == categoryName;
-        // });
-
         model.getBookmarkById = function(bookmarkId) {
            var deferred = $q.defer();
 
@@ -76,5 +72,9 @@ angular.module('booky.models.bookmarks', [
             });
 
             bookmarks[index] = bookmark;
+        };
+        
+        model.deleteBookmark = function(bookmark) {
+            bookmarks.splice(bookmarks.indexOf(bookmark), 1);
         };
     });

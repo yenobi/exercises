@@ -1,9 +1,7 @@
 <h1>{{bookmarksListCtrl.currentCategoryName}}</h1>
 
-<!--<div ng-class="{active: isSelectedBookmark(bookmark.id)}"  ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.getCurrentCategoryName()}">-->
-<!--delete active state, because in this iteration we show name of editing bookmark with h4-tag-->
-<div ng-class="{active: isSelectedBookmark(bookmark.id)}"  ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.getCurrentCategoryName()}">
-    <button type="button" class="close" ng-click="deleteBookmark(bookmark)">&times;</button>
+<div ng-repeat="bookmark in bookmarksListCtrl.bookmarks | filter:{category:bookmarksListCtrl.getCurrentCategoryName()}">
+    <button type="button" class="close" ng-click="bookmarksListCtrl.deleteBookmark(bookmark)">&times;</button>
     <button type="button" class="btn btn-link" ui-sref="booky.categories.bookmarks.edit({bookmarkId:bookmark.id})"><span class="glyphicon glyphicon-pencil"></span>
     </button>
     <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
@@ -17,19 +15,3 @@
     </button>
 
 </ui-view>
-
-<!--<div ng-if="shouldShowCreating()">-->
-    <!--<button type="button" class="btn btn-link" ng-click="startCreating()">-->
-        <!--<span class="glyphicon glyphicon-plus"></span>-->
-        <!--Create Bookmark-->
-    <!--</button>-->
-
-<!--</div>-->
-
-
-<!-- EDITING -->
-<!--<div ng-show="shouldShowEditing()">-->
-    <!--<h4>Editing {{editedBookmark.title}}</h4>-->
-
-    <!---->
-<!--</div>-->
