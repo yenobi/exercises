@@ -22,8 +22,6 @@ angular.module('categories.bookmarks', [
 
         CategoriesModel.setCurrentCategory($stateParams.category);
 
-        // bookmarksListCtrl.currentCategoryName = $stateParams.category;
-
         BookmarksModel.getBookmarks().
             then(function(bookmarks) {
             bookmarksListCtrl.bookmarks = bookmarks;
