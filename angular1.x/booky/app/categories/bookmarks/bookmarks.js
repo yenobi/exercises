@@ -2,28 +2,27 @@ angular.module('categories.bookmarks', [
     'categories.bookmarks.create',
     'categories.bookmarks.edit',
     'booky.models.bookmarks',
-    'booky.models.categories'
+    'booky.models.categories',
 ])
-    .config(function($stateProvider) {
+    .config(($stateProvider) => {
         $stateProvider
             .state('booky.categories.bookmarks', {
                 url: 'categories/:category',
                 views: {
                     'bookmarks@': {
                         templateUrl: 'app/categories/bookmarks/bookmarks.tmpl.html',
-                        controller: 'BookmarksCtrl as bookmarksListCtrl'
-                    }
-                }
-            })
+                        controller: 'BookmarksCtrl as bookmarksListCtrl',
+                    },
+                },
+            });
     })
     .controller('BookmarksCtrl', function BookmarksCtrl($stateParams, BookmarksModel, CategoriesModel) {
-
-        var bookmarksListCtrl = this;
+        const bookmarksListCtrl = this;
 
         CategoriesModel.setCurrentCategory($stateParams.category);
 
-        BookmarksModel.getBookmarks().
-            then(function(bookmarks) {
+        BookmarksModel.getBookmarks()
+            .then((bookmarks) => {
             bookmarksListCtrl.bookmarks = bookmarks;
         });
 

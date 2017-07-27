@@ -1,21 +1,22 @@
 angular.module('categories.bookmarks.edit', [
 
 ])
-    .config(function($stateProvider) {
+    .config(($stateProvider) => {
         $stateProvider
             .state('booky.categories.bookmarks.edit', {
                 url: '/bookmarks/:bookmarkId/edit',
                 templateUrl: 'app/categories/bookmarks/edit/bookmark-edit.tmpl.html',
-                controller: 'EditBookmarkCtrl as editBookmarkCtrl'
-            })
+                controller: 'EditBookmarkCtrl as editBookmarkCtrl',
+            });
     })
-    .controller('EditBookmarkCtrl', function($state, $stateParams, BookmarksModel) {
-        var editBookmarkCtrl = this;
+    .controller('EditBookmarkCtrl',
+        function EditBookmarkCtrl($state, $stateParams, BookmarksModel) {
+        const editBookmarkCtrl = this;
 
         function returnToBookmarks() {
             $state.go('booky.categories.bookmarks', {
-                category: $stateParams.category
-            })
+                category: $stateParams.category,
+            });
         }
 
         function cancelEditing() {
@@ -29,17 +30,17 @@ angular.module('categories.bookmarks.edit', [
         }
 
         BookmarksModel.getBookmarkById($stateParams.bookmarkId)
-            .then(function(bookmark) {
-                if( bookmark) {
+            .then((bookmark) => {
+                if (bookmark) {
                     editBookmarkCtrl.bookmark = bookmark;
 
-                    //in case of we want to cancel editing
+                    // in case of we want to cancel editing
                     editBookmarkCtrl.editedBookmark = angular.copy(editBookmarkCtrl.bookmark);
                 } else {
                     returnToBookmarks();
                 }
             });
 
-        editBookmarkCtrl.cancelEditing = cancelEditing;
-        editBookmarkCtrl.updateBookmark = updateBookmark;
-    });
+            editBookmarkCtrl.cancelEditing = cancelEditing;
+            editBookmarkCtrl.updateBookmark = updateBookmark;
+        });
