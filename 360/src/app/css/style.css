@@ -1,0 +1,14 @@
+@import '_mixins.css';
+
+.someClass {
+    background-color: red;
+    
+    &__wrapper {
+        background-color: aqua;
+    }
+}
+
+
+.someRepeatingClass {
+    @add-mixin someMixin;
+}

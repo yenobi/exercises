@@ -1,0 +1,4 @@
+@define-mixin someMixin {
+    color: white;
+    background: blue;
+}

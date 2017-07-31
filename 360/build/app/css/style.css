@@ -1,0 +1,12 @@
+.someClass {
+    background-color: red;
+}
+    
+    .someClass__wrapper {
+        background-color: aqua;
+    }
+
+.someRepeatingClass {
+    color: white;
+    background: blue;
+}

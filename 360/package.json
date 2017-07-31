@@ -1,0 +1,23 @@
+{
+  "name": "360-landing-page",
+  "version": "1.0.0",
+  "description": "landing page for 360-samsung-camera",
+  "main": "index.html",
+  "author": "Sergey Koshman",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "eslint": "^4.3.0",
+    "gulp": "gulpjs/gulp.git#4.0",
+    "gulp-csso": "^3.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "node-static": "^0.7.9",
+    "postcss": "^6.0.8",
+    "postcss-import": "^10.0.0",
+    "postcss-mixins": "^6.0.1",
+    "postcss-nested": "^2.1.0"
+  },
+  "dependencies": {}
+}
