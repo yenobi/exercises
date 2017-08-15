@@ -1,23 +1,30 @@
-var animal = {
-    name: 'Fido',
-    species: 'Dog',
-    age: 5,
-    speak: function () {
-        console.log('Wof!');
+//  interfaces, class, enums
+var $ = function (selector) {
+    // find Dom
+};
+$.version = 1.12;
+var element = $('#container');
+var $ = function (selector) {
+    // Find DOM element
+};
+$.version = 1.18;
+$.fn.todo = function (todo) {
+    if (todo) {
+        $(this).data('todo', todo);
+    }
+    else {
+        return $(this).data('todo');
     }
 };
-function calculateAge(birthYear) {
-    return Date.now() - birthYear;
-}
+var todo = { name: "Pick up drycleaning" };
+var container = $('#container');
+container.data('todo', todo);
+var savedTodo = container.data('todo');
+container.todo(todo);
+// anonymous types - just to check if var have or no exactly property that i need 
+var item;
+item = { age: 41 };
 function totalLength(x, y) {
     var total = x.length + y.length;
-    x.slice(0);
-    //  type-guard syntax 
-    if (x instanceof Array) {
-        x.push('abc');
-    }
-    if (x instanceof String) {
-        x.substr(1);
-    }
     return total;
 }
