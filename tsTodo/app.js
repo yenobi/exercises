@@ -1,7 +1,23 @@
-var container = document.getElementById('container');
-var todo = {
-    id: 123,
-    name: 'Pick up drycleaning',
-    completed: true
+var animal = {
+    name: 'Fido',
+    species: 'Dog',
+    age: 5,
+    speak: function () {
+        console.log('Wof!');
+    }
 };
-container.innerHTML = "\n<div todo='" + todo.id + "' class=\"list-group-item}\">\n    <i class=\"" + (todo.completed ? "" : "hidden") + " text-success glyphicon glyphicon-ok\"></i>\n    <span class=\"name\">" + todo.name + "</span>\n</div>\n";
+function calculateAge(birthYear) {
+    return Date.now() - birthYear;
+}
+function totalLength(x, y) {
+    var total = x.length + y.length;
+    x.slice(0);
+    //  type-guard syntax 
+    if (x instanceof Array) {
+        x.push('abc');
+    }
+    if (x instanceof String) {
+        x.substr(1);
+    }
+    return total;
+}

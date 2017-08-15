@@ -1,14 +1,50 @@
-var container = document.getElementById('container');
-
-var todo = {
-    id: 123,
-    name: 'Pick up drycleaning',
-    completed: true
+var animal = {
+    name: 'Fido',
+    species: 'Dog',
+    age: 5,
+    speak: () => {
+        console.log('Wof!');
+    }
 }
 
-container.innerHTML = `
-<div todo='${todo.id}' class="list-group-item}">
-    <i class="${ todo.completed ? "" : "hidden"} text-success glyphicon glyphicon-ok"></i>
-    <span class="name">${todo.name}</span>
-</div>
-`;
+function calculateAge(birthYear) {
+    return Date.now() - birthYear;
+}
+
+// unioin types (with pipe or OR operator)
+// function totalLength(x: (string | any[]), y: (string | any[])): number {
+//     let total: number = x.length + y.length;
+
+//     x.slice(0);
+
+//     //  type-guard syntax 
+//     if (x instanceof Array) {
+//         x.push('abc');
+//     }
+
+//     if (x instanceof String) {
+//         x.substr(1);
+//     }
+
+//     return total;
+// }
+
+// overloaded functions 
+function totalLength(x: string, y: string): number 
+function totalLength(x: any[], y: any[]): number 
+function totalLength(x: (string | any[]), y: (string | any[])): number {
+    let total: number = x.length + y.length;
+
+    x.slice(0);
+
+    //  type-guard syntax 
+    if (x instanceof Array) {
+        x.push('abc');
+    }
+
+    if (x instanceof String) {
+        x.substr(1);
+    }
+
+    return total;
+}
