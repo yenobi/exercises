@@ -1,92 +1,38 @@
-//  interfaces, class, enums
+/* From the last video...
 
-// f.e. to define what i expect to return from REST
-//  describe data-stucture
-// interface Todo {
-//     name: string;
-//     completed?: boolean;
-// }
-
-// //  describe methods 
-// interface ITodoService {
-//     add(todo: Todo): Todo;
-//     delete(todoId: number): void;
-//     getAll(): Todo[];
-//     getById(todoId: number): Todo;
-// }
-
-// var todo: Todo = {
-//     name: 'Do something',
-//     completed: false
-// };
-
-
-// interfaces for functions (f.e. libs)
-interface jQuery {
-    (selector: string): HTMLElement;
-    version: number;
-} 
-
-var $ = <jQuery>function(selector) {
-    // find Dom
+function TodoService() {
+    this.todos = [];
 }
 
-$.version = 1.12;
-
-var element = $('#container');
-
-var $ = <jQuery>function (selector: string) {
-    // Find DOM element
+TodoService.prototype.getAll = function() {
+    return this.todos;
 }
 
-$.version = 1.18;
+*/
 
+class TodoService {
 
-interface Todo {
-    name: string;
-    completed?: boolean;
-}
-
-interface jQuery {
-    (selector: (string | any)): jQueryElement;
-    fn: any;
-    version: number;
-}
-
-interface jQueryElement {
-    data(name: string): any;
-    data(name: string, data: any): jQueryElement;
-}
-
-// this didn't overwrigth but extend initial interface
-interface jQueryElement {
-    todo(): Todo;
-    todo(todo: Todo): jQueryElement;
-}
-
-$.fn.todo = function (todo?: Todo): Todo {
-
-    if (todo) {
-        $(this).data('todo', todo)
-    } else {
-        return $(this).data('todo');
+    // when new inst -> new property (this.todos) have been created
+    // and we pass type of it (array of Todo inetrfaces)
+    // also we can pass todos ad a parameter when create new inst 
+    constructor(private todos: Todo[]) {
     }
 
+    getAll() {
+        return this.todos;
+    }
 }
 
-var todo = { name: "Pick up drycleaning" };
-var container = $('#container');
-container.data('todo', todo)
-var savedTodo = container.data('todo');
+// interfaces didn't compile 
+interface Todo {
+    name: string;
+    state: TodoState;
+}
 
-container.todo(todo);
-
-// anonymous types - just to check if var have or no exactly property that i need 
-var item: { name: string };
-
-item = { age: 41 }
-
-function totalLength(x: { length: number }, y: { length: number }): number {
-    var total: number = x.length + y.length;
-    return total;
+// enums will be compiled
+enum TodoState {
+    New = 1,
+    Active,
+    Complete,
+    Deleted
 }

@@ -1,30 +1,31 @@
-//  interfaces, class, enums
-var $ = function (selector) {
-    // find Dom
-};
-$.version = 1.12;
-var element = $('#container');
-var $ = function (selector) {
-    // Find DOM element
-};
-$.version = 1.18;
-$.fn.todo = function (todo) {
-    if (todo) {
-        $(this).data('todo', todo);
-    }
-    else {
-        return $(this).data('todo');
-    }
-};
-var todo = { name: "Pick up drycleaning" };
-var container = $('#container');
-container.data('todo', todo);
-var savedTodo = container.data('todo');
-container.todo(todo);
-// anonymous types - just to check if var have or no exactly property that i need 
-var item;
-item = { age: 41 };
-function totalLength(x, y) {
-    var total = x.length + y.length;
-    return total;
+/* From the last video...
+
+function TodoService() {
+    this.todos = [];
 }
+
+TodoService.prototype.getAll = function() {
+    return this.todos;
+}
+
+*/
+var TodoService = (function () {
+    // when new inst -> new property (this.todos) have been created
+    // and we pass type of it (array of Todo inetrfaces)
+    // also we can pass todos ad a parameter when create new inst 
+    function TodoService(todos) {
+        this.todos = todos;
+    }
+    TodoService.prototype.getAll = function () {
+        return this.todos;
+    };
+    return TodoService;
+}());
+// enums will be compiled
+var TodoState;
+(function (TodoState) {
+    TodoState[TodoState["New"] = 1] = "New";
+    TodoState[TodoState["Active"] = 2] = "Active";
+    TodoState[TodoState["Complete"] = 3] = "Complete";
+    TodoState[TodoState["Deleted"] = 4] = "Deleted";
+})(TodoState || (TodoState = {}));
