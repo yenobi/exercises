@@ -42,17 +42,17 @@ function listCtrl($scope) {
     });
   };
 
-  var state = 'new-to-late';
+  $scope.state = 'new-to-late';
 
   $scope.indexFilter = function() {
 
-        if (state === 'new-to-late') {
-            state = 'late-to-new';
+        if ($scope.state === 'new-to-late') {
+            $scope.state = 'late-to-new';
             return $scope.todoList.sort( function(a, b) {
                 return b.index- a.index;
             } );
-        } else if (state === 'late-to-new') {
-            state = 'new-to-late';
+        } else if ($scope.state === 'late-to-new') {
+            $scope.state = 'new-to-late';
 
             return $scope.todoList.sort( function(a, b) {
                 return a.index - b.index;
@@ -60,18 +60,18 @@ function listCtrl($scope) {
         }
   };
 
-  var nameState;
+  $scope.nameState = undefined;
 
-  $scope.nameFilter = function(e) {
+  $scope.nameFilter = function() {
 
-      if ( nameState === undefined || nameState === 'z-to-a') {
-          nameState = 'a-to-z';
+      if ( $scope.nameState === undefined || $scope.nameState === 'z-to-a') {
+          $scope.nameState = 'a-to-z';
 
           return $scope.todoList.sort( function(a, b) {
               return a.text.charAt(0) > b.text.charAt(0);
           } );
-      } else if (nameState === 'a-to-z') {
-          nameState = 'z-to-a';
+      } else if ($scope.nameState === 'a-to-z') {
+          $scope.nameState = 'z-to-a';
 
           return $scope.todoList.sort( function(a, b) {
               return b.text.charAt(0) > a.text.charAt(0);
