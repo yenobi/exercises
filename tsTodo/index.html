@@ -28,9 +28,9 @@
 
           <ul class="task__list">
 
-              <li class="task" ng-repeat="todos in todoList">
+              <li class="task" ng-repeat="todos in todoList track by $index">
                   <label>
-                      <input type="checkbox" ng-model="todos.done" class="task__checkbox">
+                      <input type="checkbox" ng-model="todos.done" class="task__checkbox" data-id="{{$index}}">
                       <span class="task__custom-checkbox"></span>
                       <span class="task__index">{{todos.index}}</span>
                       <span class="done-{{todos.done}} task__text">{{todos.text}}</span>
