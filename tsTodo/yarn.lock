@@ -19,6 +19,10 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
+"@types/angular@^1.6.31":
+  version "1.6.31"
+  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.31.tgz#480b8ae62197d7a21046305add9f6dc25ac6e7e2"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"

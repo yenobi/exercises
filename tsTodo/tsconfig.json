@@ -1,5 +1,20 @@
 {
      "compilerOptions": {
-         "target": "es5"
-     }
+       "module": "system",
+       "target": "es5",
+       "sourceMap": true,
+       "outFile": "./src/tmp/bundle.js",
+       "outDir": "./src/tmp",
+       "rootDir": "./src/ts/",
+       "strict": true,
+       "noUnusedLocals": true,
+       "noUnusedParameters": true
+     },
+  "files": [
+    "./src/ts/app.ts",
+    "./src/ts/models.ts",
+    "./src/ts/ctrl.ts",
+    "./src/ts/view.ts",
+    "./vendor/angular.index.d.ts"
+  ]
 }
