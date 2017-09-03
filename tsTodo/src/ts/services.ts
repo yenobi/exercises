@@ -28,5 +28,19 @@ module storageService {
         // }
     });
 
-    export
+    module  Whatever {
+        export class WhateverSmth {
+            constructor(public some: string) {
+    
+            }
+        }
+    }
 }
+
+//  need to write class MyService extends basic-ng-service from angular.d.ts ? 
+class MyService {
+    // fields 
+    constructor() {
+    }
+}
+// where to init service, cntrl, directives and other classes ? 
