@@ -3,14 +3,16 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { SharedModule } from './_shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
