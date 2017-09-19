@@ -9,6 +9,11 @@ import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 
+import {ProductsModule} from './products/products.module';
+import { childRoutes } from './products/products.module';
+
+// import { MainComponent } from './products2/main/main.component';
+
 // should try in anouther file 
 const routes: Routes = [
   // basic routes
@@ -30,7 +35,7 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
-    // children: childRoutes
+    children: childRoutes
   }, 
   {path: 'product/:id', component: ProductComponent}
 ];
@@ -42,14 +47,16 @@ const routes: Routes = [
     ContactComponent,
     AboutComponent,
     ProductsComponent,
-    ProductComponent
+    ProductComponent,
+    // Products2Module
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    // ProductsModule
+    ProductsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

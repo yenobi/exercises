@@ -4,3 +4,14 @@
 
 <p *ngIf="route != undefined">{{route}}</p>
 <button type="button" (click)="consoleRouteParam();">click</button>
+
+<div class="some nav">
+  <a [routerLink]="['./main']">Main</a>
+  <a [routerLink]="['./more-info']">More info</a> |
+  Enter Id: <input #id size="6" type="number">
+  <button type="button" (click)="goToProduct(id.value)">Go</button>
+</div>
+
+<div class="prdocuts-area">
+  <router-outlet></router-outlet>
+</div>
