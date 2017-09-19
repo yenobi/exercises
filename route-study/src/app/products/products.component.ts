@@ -4,9 +4,6 @@ import {
   Router
 } from '@angular/router';
 
-// const routes: Routes = [
-//   {path: ''}
-// ]
 
 @Component({
   selector: 'app-products',
