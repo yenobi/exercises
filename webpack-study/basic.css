@@ -1,0 +1,11 @@
+.nav-list {
+    background-color: lightblue;
+
+    &__item {
+        text-decoration: underline;
+
+        &_second {
+            text-decoration: line-through;
+        }
+    }
+}
