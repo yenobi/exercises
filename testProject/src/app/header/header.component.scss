@@ -1,0 +1,23 @@
+@import '~styles.scss';
+
+.wrapper {
+    background-color: var(--background-color);
+    display: grid;
+
+    &__child {
+        border: 1px solid var(--third-color);
+
+        &_first {
+            color: $defaultColor;
+        }
+
+        &_second {
+            color: $anotherColor;
+        }
+
+        &_third {
+            --background-color: grey;
+            background-color: var(--background-color);
+        }
+    }
+}
