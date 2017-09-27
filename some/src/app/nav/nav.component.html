@@ -1,10 +1,16 @@
 <nav>
   <ul>
     <li>
-      <a [routerLink]="['/events']">All events</a>
+      <a [routerLink]="['/events']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}">All events</a>
     </li>
     <li>
-      <a [routerLink]="['/events/new']">Create event</a>
+      <a [routerLink]="['/events/new']"
+             routerLinkActive="active">Create event</a>
+    </li>
+    <li style="float:right">
+      <a [routerLink]="['/user/profile']">John Dou</a>
     </li>
   </ul>
 </nav>

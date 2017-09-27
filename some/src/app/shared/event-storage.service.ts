@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Rx';
 
 @Injectable()
 export class EventStorageService {
 
   constructor() { }
 
-  getEvents():object[] {
-    return EVENTS;
+  getEvents(): Subject<{}> {
+    //  for emulating getting from real server with 100-ms ping
+    let subject = new Subject()
+    setTimeout(() => {
+      subject.next(EVENTS)
+      subject.complete()
+    }, 100)
+    return subject
   }
 
   getEvent(id: number) {
