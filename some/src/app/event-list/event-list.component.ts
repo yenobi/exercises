@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core'
 import { EventStorageService } from '../shared/event-storage.service'
 import { ToastrService } from '../common/toastr.service'
 import { ActivatedRoute } from '@angular/router'
+import {IEvent} from '../shared/event.model';
 
 @Component({
   // selector: 'app-event-list',
@@ -10,17 +11,16 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
-  events: any;
+  public events: IEvent[];
 
-  constructor(private eventStorageService: EventStorageService,
-                        private toastrService: ToastrService,
-                        private route: ActivatedRoute) {
+  public constructor(private eventStorageService: EventStorageService, private toastrService: ToastrService,
+                     private route: ActivatedRoute) {
    }
 
   //  better to put such things (fetching data with ajax for exmaple)
-  // to onInit part of components lifecycle, not in constructor - why ? 
-  // it needs some time to execute -> longer loading ? 
-  ngOnInit() {
+  // to onInit part of components lifecycle, not in constructor - why ?
+  // it needs some time to execute -> longer loading ?
+  public ngOnInit(): void {
     this.events = this.route.snapshot.data['events']
     // this.eventStorageService.getEvents().subscribe(res => {
     //   this.events = res;
@@ -28,7 +28,7 @@ export class EventListComponent implements OnInit {
     // );
   }
 
-  handleThumbnailClick(eventName) {
+  public handleThumbnailClick(eventName: string): void {
     console.log(`eventName is ${eventName}`);
     this.toastrService.success(eventName);
   }

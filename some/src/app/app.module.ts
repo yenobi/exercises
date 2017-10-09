@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { AppComponent } from './app.component';
 import { EventListComponent } from './event-list/event-list.component';
-import { EventThumbnailComponent } from './event-thumbnail/event-thumbnail.component';
 import { NavComponent } from './nav/nav.component';
 import { EventStorageService } from './shared/event-storage.service';
 import { EventRouteActivatorService } from './shared/event-route-activator.service';
@@ -13,16 +12,18 @@ import { EventDetailsComponent } from './event-details/event-details.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ErrorComponent } from './error/error.component';
 import { EventListResolverService } from './shared/event-list-resolver.service';
+import {EventThumbnailComponent} from './event-thumbnail/event-thumbnail.component';
+import {AuthService} from './user/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
-    EventThumbnailComponent,
     NavComponent,
     EventDetailsComponent,
     CreateEventComponent,
     ErrorComponent,
+    EventThumbnailComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,8 @@ import { EventListResolverService } from './shared/event-list-resolver.service';
     ToastrService,
     EventRouteActivatorService,
     EventListResolverService,
-    { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState}
+    { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState},
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
