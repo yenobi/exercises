@@ -10,7 +10,8 @@
              routerLinkActive="active">Create event</a>
     </li>
     <li style="float:right">
-      <a [routerLink]="['/user/profile']">John Dou</a>
+      <a *ngIf="!auth.isAuthenticated()" [routerLink]="['/user/login']">Login</a>
+      <a *ngIf="auth.isAuthenticated()" [routerLink]="['/user/profile']">Welcome {{auth._currentUser.firstName}}</a>
     </li>
   </ul>
 </nav>
