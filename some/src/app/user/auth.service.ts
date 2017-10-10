@@ -3,11 +3,11 @@ import {IUser} from './user.model';
 
 @Injectable()
 export class AuthService {
-  private _currentUser: IUser;
+  public currentUser: IUser;
 
   public constructor() { }
   public loginUser(username: string, password: string): void {
-    this._currentUser = {
+    this.currentUser = {
       id: 1,
       userName: 'userName',
       firstName: 'John',
@@ -15,7 +15,11 @@ export class AuthService {
     };
   }
   public isAuthenticated(): boolean {
-    return !!this._currentUser;
+    return !!this.currentUser;
+  }
+  public updateCurrentUser(firstName: string, lastName: string): void {
+    this.currentUser.firstName = firstName;
+    this.currentUser.lastName = lastName;
   }
 
 }

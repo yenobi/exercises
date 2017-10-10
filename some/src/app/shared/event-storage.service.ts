@@ -21,6 +21,11 @@ export class EventStorageService {
   public getEvent(id: number): IEvent {
     return EVENTS.find((event: IEvent) => event.id === id);
   }
+  public saveEvent(event: IEvent): void {
+    event.id = 999;
+    event.sessions = [];
+    EVENTS.push(event);
+  }
 
 }
 

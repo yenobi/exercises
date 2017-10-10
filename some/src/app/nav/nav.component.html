@@ -11,7 +11,7 @@
     </li>
     <li style="float:right">
       <a *ngIf="!auth.isAuthenticated()" [routerLink]="['/user/login']">Login</a>
-      <a *ngIf="auth.isAuthenticated()" [routerLink]="['/user/profile']">Welcome {{auth._currentUser.firstName}}</a>
+      <a *ngIf="auth.isAuthenticated()" [routerLink]="['/user/profile']">Welcome {{auth.currentUser.firstName}} {{auth.currentUser.lastName}}</a>
     </li>
   </ul>
 </nav>
