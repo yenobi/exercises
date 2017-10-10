@@ -14,6 +14,7 @@ import { ErrorComponent } from './error/error.component';
 import { EventListResolverService } from './shared/event-list-resolver.service';
 import {EventThumbnailComponent} from './event-thumbnail/event-thumbnail.component';
 import {AuthService} from './user/auth.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import {AuthService} from './user/auth.service';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     EventStorageService,
@@ -41,7 +44,7 @@ import {AuthService} from './user/auth.service';
 })
 export class AppModule { }
 
-function checkDirtyState(component: CreateEventComponent): boolean {
+export function checkDirtyState(component: CreateEventComponent): boolean {
   if (component.isDirty) {
     return window.confirm('You have not saves this event! Do you really want to cance?');
   }
