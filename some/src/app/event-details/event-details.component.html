@@ -20,4 +20,16 @@
       </address>
     </div>
   </div>
+
+  <hr>
+
+  <h3>Sessions</h3>
+
+  <div>
+    <a type="button" (click)="addSession()" style="cursor: pointer;">Add Session</a>
+  </div>
+
+  <app-session-list *ngIf="!addMode" [sessions]="event?.sessions"></app-session-list>
+
+  <app-create-session *ngIf="addMode" (cancelAddSession)="cancelAddSession()"></app-create-session>
 </div>

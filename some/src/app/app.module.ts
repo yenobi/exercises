@@ -16,6 +16,7 @@ import {EventThumbnailComponent} from './event-thumbnail/event-thumbnail.compone
 import {AuthService} from './user/auth.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CreateSessionComponent } from './event-details/create-session/create-session.component';
+import { SessionListComponent } from './event-details/session-list/session-list.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CreateSessionComponent } from './event-details/create-session/create-se
     ErrorComponent,
     EventThumbnailComponent,
     CreateSessionComponent,
+    SessionListComponent,
   ],
   imports: [
     BrowserModule,
