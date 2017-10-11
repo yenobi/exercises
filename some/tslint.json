@@ -76,7 +76,7 @@
       "parameters"
     ],
     "no-eval": true,
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false,
     "no-unsafe-finally": true,
     "one-line": [
       true,
