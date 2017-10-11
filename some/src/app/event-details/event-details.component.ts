@@ -10,12 +10,20 @@ import {IEvent} from '../shared/event.model';
 })
 export class EventDetailsComponent implements OnInit {
   public event: IEvent;
+  public addMode: boolean;
 
-  public constructor(private eventService: EventStorageService,
-                        private route: ActivatedRoute) { }
+  public constructor(private eventService: EventStorageService, private route: ActivatedRoute) { }
 
   public ngOnInit(): void {
     this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
+  }
+
+  public addSession(): void {
+    this.addMode = true;
+  }
+
+  public cancelAddSession(): void {
+    this.addMode = false;
   }
 
 }
