@@ -1,8 +1,18 @@
-.container { 
-    padding-left:20px; 
+.container {
+    padding-left:20px;
     padding-right: 20px;
 }
 
-.event-image { 
-    height: 100px; 
+.event-image {
+    height: 100px;
+}
+
+.sessions-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.active {
+  border: 1px solid red;
 }
