@@ -1,8 +1,8 @@
 <div [routerLink]="['/events', event.id]" class="thumbnail">
-  <h2>{{event.name}}</h2>
-  <p>Date: {{event.date}}</p>
+  <h2>{{event.name | uppercase}}</h2>
+  <p>Date: {{event.date | date }}</p>
   <p>Time: {{event.time}}</p>
-  <p>Price: $ {{event.price}}</p>
+  <p>Price: {{event.price | currency:'USD':true }}</p>
   <div>
     <span> Location: {{event.location.address}}</span>
     <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
