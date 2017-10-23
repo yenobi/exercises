@@ -1,9 +1,8 @@
 <div>
   <h1>Upcoming Angular 2 events</h1>
   <hr>
-  <app-event-thumbnail 
+  <app-event-thumbnail
     *ngFor="let event of events"
-    [event]="event"
-    (click)="handleThumbnailClick(event.name)">
+    [event]="event">
   </app-event-thumbnail>
 </div>
