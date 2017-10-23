@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-// routes to components - didn;t line them
-import { EventStorageService } from '../shared/event-storage.service'
-import { ToastrService } from '../common/toastr.service'
-import { ActivatedRoute } from '@angular/router'
+import { Component, OnInit } from '@angular/core';
+import { EventStorageService } from '../shared/event-storage.service';
+import { ActivatedRoute } from '@angular/router';
 import {IEvent} from '../shared/event.model';
 
 @Component({
@@ -13,8 +11,9 @@ import {IEvent} from '../shared/event.model';
 export class EventListComponent implements OnInit {
   public events: IEvent[];
 
-  public constructor(private eventStorageService: EventStorageService, private toastrService: ToastrService,
-                     private route: ActivatedRoute) {
+  public constructor(
+    private eventStorageService: EventStorageService,
+    private route: ActivatedRoute) {
    }
 
   //  better to put such things (fetching data with ajax for exmaple)
@@ -26,10 +25,5 @@ export class EventListComponent implements OnInit {
     //   this.events = res;
     // }
     // );
-  }
-
-  public handleThumbnailClick(eventName: string): void {
-    console.log(`eventName is ${eventName}`);
-    this.toastrService.success(eventName);
   }
 }

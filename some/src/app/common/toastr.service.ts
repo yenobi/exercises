@@ -1,29 +1,11 @@
-import { Injectable } from '@angular/core';
-
-declare let toastr: any;
-
-@Injectable()
-export class ToastrService {
-
-  constructor() { }
-
-  success(msg: string, title?: string) {
-    // no such global var -> because we didn't import toastr-files 
-    // how to do this ? 
-    // declare ? 
-    toastr.success(msg, title);
-  }
-
-  info(msg: string, title?: string) {
-    toastr.info(msg, title);
-  }
-
-  warning(msg: string, title?: string) {
-    toastr.warning(msg, title);
-  }
-
-  error(msg: string, title?: string) {
-    toastr.error(msg, title);
-  }
-
-}
+// import { InjectionToken } from '@angular/core';
+//
+// export let TOASTR_TOKEN = new InjectionToken('toastr');
+//
+// export interface IToastr {
+//   success (msg: string, title?: string): void;
+//   info(msg: string, title?: string): void;
+//   warning(msg: string, title?: string): void;
+//   error(msg: string, title?: string): void;
+// }
+//

@@ -9,12 +9,30 @@
       <a [routerLink]="['/events/new']"
              routerLinkActive="active">Create event</a>
     </li>
+    <li>
+      <form id="searchForm" class="navbar-form navbar-right" (ngSubmit)="searchSessions(searchTerm)">
+        <div class="form-group">
+          <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search Sessions">
+        </div>
+        <button class="btn btn-default" type="submit" modal-trigger>
+          Search
+        </button>
+      </form>
+    </li>
     <li style="float:right">
       <a *ngIf="!auth.isAuthenticated()" [routerLink]="['/user/login']">Login</a>
       <a *ngIf="auth.isAuthenticated()" [routerLink]="['/user/profile']">Welcome {{auth.currentUser.firstName}} {{auth.currentUser.lastName}}</a>
     </li>
   </ul>
 </nav>
+
+<simple-modal title="Matching Session">
+  <div class="list-group">
+    <a class="list-group-item"
+       *ngFor="let session of foundSessions"
+       [routerLink]="['/events', session.eventId]">{{session.name}}</a>
+  </div>
+</simple-modal>
 
 
 <!-- <h3>navbar-component, should refactor markup</h3>

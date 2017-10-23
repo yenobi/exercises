@@ -7,7 +7,6 @@ import { EventListComponent } from './event-list/event-list.component';
 import { NavComponent } from './nav/nav.component';
 import { EventStorageService } from './shared/event-storage.service';
 import { EventRouteActivatorService } from './shared/event-route-activator.service';
-import { ToastrService } from './common/toastr.service';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ErrorComponent } from './error/error.component';
@@ -19,6 +18,13 @@ import { CreateSessionComponent } from './event-details/create-session/create-se
 import { SessionListComponent } from './event-details/session-list/session-list.component';
 import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
 import { DurationPipe } from './shared/duration.pipe';
+import { SimpleModalComponent } from './common/simple-modal/simple-modal.component';
+import {JQ_TOKEN} from './common/jQuery.service';
+import { ModalTriggerDirective } from './common/modal-trigger.directive';
+
+// todo: try to fix toastr with export decalare
+// declare let toastr: IToastr;
+export declare let jQuery: any;
 
 @NgModule({
   declarations: [
@@ -33,6 +39,8 @@ import { DurationPipe } from './shared/duration.pipe';
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,8 @@ import { DurationPipe } from './shared/duration.pipe';
   ],
   providers: [
     EventStorageService,
-    ToastrService,
+    // { provide: TOASTR_TOKEN, useValue: toastr},
+    {provide: JQ_TOKEN, useValue: jQuery},
     EventRouteActivatorService,
     EventListResolverService,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState},
