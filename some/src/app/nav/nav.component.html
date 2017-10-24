@@ -14,7 +14,7 @@
         <div class="form-group">
           <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search Sessions">
         </div>
-        <button class="btn btn-default" type="submit" modal-trigger>
+        <button class="btn btn-default" type="submit" modal-trigger="searchResults">
           Search
         </button>
       </form>
@@ -26,7 +26,7 @@
   </ul>
 </nav>
 
-<simple-modal title="Matching Session">
+<simple-modal closeOnBodyClick="true" elementId="searchResults" title="Matching Session">
   <div class="list-group">
     <a class="list-group-item"
        *ngFor="let session of foundSessions"

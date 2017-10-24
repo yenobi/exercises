@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { EventStorageService } from '../shared/event-storage.service';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 import {IEvent} from '../shared/event.model';
 
 @Component({
-  // selector: 'app-event-details',
   templateUrl: './event-details.component.html',
   styleUrls: ['./event-details.component.css']
 })
@@ -17,7 +16,14 @@ export class EventDetailsComponent implements OnInit {
   public constructor(private eventService: EventStorageService, private route: ActivatedRoute) { }
 
   public ngOnInit(): void {
-    this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
+    // this fix problem of navigating from component to itself but with new id
+    this.route.params.forEach((params: Params) => {
+      this.event = this.eventService.getEvent(+params['id']);
+      this.addMode = false;
+    });
+
+    // this creates a bug with self-navigating component
+    // this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
   }
 
   public addSession(): void {
