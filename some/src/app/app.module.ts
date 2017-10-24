@@ -21,6 +21,9 @@ import { DurationPipe } from './shared/duration.pipe';
 import { SimpleModalComponent } from './common/simple-modal/simple-modal.component';
 import {JQ_TOKEN} from './common/jQuery.service';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
+import { UpvoteComponent } from './event-details/upvote/upvote.component';
+import {VoterService} from './event-details/voter-service.service';
+import { ValidateLocationDirective } from './create-event/validate-location.directive';
 
 // todo: try to fix toastr with export decalare
 // declare let toastr: IToastr;
@@ -41,6 +44,8 @@ export declare let jQuery: any;
     DurationPipe,
     SimpleModalComponent,
     ModalTriggerDirective,
+    UpvoteComponent,
+    ValidateLocationDirective,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ export declare let jQuery: any;
     EventRouteActivatorService,
     EventListResolverService,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState},
-    AuthService
+    AuthService,
+    VoterService
   ],
   bootstrap: [AppComponent]
 })
