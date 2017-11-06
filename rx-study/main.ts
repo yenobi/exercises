@@ -5,8 +5,10 @@ let btn = document.getElementById('btn');
 
 let source = Observable.fromEvent(btn, 'click');
 
+loadWithFetch('movies.json');
+
 source
-.flatMap(e => load('moviess.json'))
+.flatMap(e => loadWithFetch('movies.json'))
 .subscribe(
     renderMovies,
     e => console.log(`error is: ${e}`),
@@ -43,6 +45,7 @@ function retryStrategy({attempts = 4, delay = 1000}) {
       .delay(delay);
   }
 }
+
 function renderMovies(movies) {
     movies.forEach(m => {
         let div = document.createElement('div');
@@ -51,7 +54,11 @@ function renderMovies(movies) {
     });
 }
 
-
+function loadWithFetch(url: string) {
+  return Observable.defer(() => {
+    return Observable.fromPromise(fetch(url).then(r => r.json()));
+  })
+}
 
 
 
