@@ -1,0 +1,24 @@
+<button type="button">{{'HOME.log_in' | translate}}</button>
+<button type="button">{{'HOME.sign_up' | translate}}</button>
+
+<h1>{{'HOME.title' | translate}}</h1>
+
+<input placeholder="{{'HOME.placeholder' | translate}}">
+
+<h3>{{'HOME.subtitle' | translate}}</h3>
+
+<p>{{'HOME.icon-text-1' | translate}}</p>
+
+<p>{{'HOME.icon-text-2' | translate}}</p>
+<p>{{'HOME.icon-text-3' | translate}}</p>
+
+
+<p>{{'HOME.link-1' | translate}}</p>
+<p>{{'HOME.link-2' | translate}}</p>
+<p>{{'HOME.link-3' | translate}}</p>
+<p>{{'HOME.link-4' | translate}}</p>
+<p>{{'HOME.link-5' | translate}}</p>
+
+<select #langSelect (change)="translate.use(langSelect.value)">
+  <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+</select>
