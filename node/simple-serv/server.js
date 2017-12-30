@@ -2,8 +2,10 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 const path = require('path');
+const mime = require('mime');
 
-const ROOT = __dirname + '/pubic/';
+const ROOT = __dirname + '/public/';
+const port = 1337;
 
 http.createServer((req, res) => {
 
@@ -15,7 +17,9 @@ http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url);
 
     sendFileSafe(parsedUrl.pathname, res);
-}).listen(1337);
+}).listen(port);
+
+console.log(`Server is listening to ${port}`);
 
 function checkAccess(req) {
     return url.parse(req.url, true).query.secret === 'o_O';
@@ -49,7 +53,7 @@ function sendFileSafe(filePath, res) {
     fs.stat(filePath, (err, stats) => {
         if (err || !stats.isFile()) {
             fileNotFound(res);
-            return
+            return;
         }
     });
 
@@ -71,8 +75,7 @@ function sendFile(filePath, res) {
         if (err) throw err;
 
         // explore mime-type of file and setting it to headers
-        const mime = require('mime').lookup(filePath);
-        res.setHeader('Content-Type', `${mime}; charset=utf-8`);
+        res.setHeader('Content-Type', `${mime.getType(filePath)}; charset=utf-8`);
         res.end(data);
     })
 }
