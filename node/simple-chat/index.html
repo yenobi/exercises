@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple chat</title>
+</head>
+<body>
+<form id="publish">
+    <input type="text" placeholder="Enter your message" id="message">
+    <button type="submit">Send message</button>
+</form>
+
+<ul id="messages"></ul>
+
+<script>
+    const messageForm = document.getElementById('publish');
+    const messages = document.getElementById('messages');
+    const message = document.getElementById('message');
+
+    messageForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/publish', true);
+        console.log(message.value);
+        xhr.send(JSON.stringify({'message': message.value}));
+
+        message.value = '';
+    });
+
+    subscribe();
+
+    function subscribe() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', '/subscribe', true);
+
+        xhr.onload = () => {
+            const li = document.createElement('li');
+            li.textContent = this.responseText;
+            messages.appendChild(li);
+
+            subscribe();
+        };
+
+        xhr.onerror = xhr.onabort = () => {
+            setTimeout(subscribe, 500);
+        };
+
+        xhr.send('');
+    }
+</script>
+</body>
+</html>
