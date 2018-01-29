@@ -13,6 +13,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// custom engine for files with ejs extension
+app.engine('ejs', require('ejs-locals'));
+
 app.set('views', path.join(__dirname, '/templates'));
 app.set('view engine', 'ejs');
 
@@ -62,6 +65,12 @@ app.use(express.Router());
 app.get('/', (req, res, next) => {
     res.render('index', {
         title: 'Index'
+    });
+});
+
+app.get('/hello', (req, res, next) => {
+    res.render('hello', {
+        title: 'hello'
     });
 });
 
