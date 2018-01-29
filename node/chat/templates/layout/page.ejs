@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= blocks.title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+  </head>
+  <body>
+      <%-partial('../partials/nav')%>
+    <!-- <h1><%= title %></h1> -->
+    <p class="my-class">this is from layout with own var <%= title %></p>
+
+    <%-body -%>
+  </body>
+</html>

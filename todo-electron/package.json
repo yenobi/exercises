@@ -1,0 +1,19 @@
+{
+  "name": "todo-electron",
+  "version": "1.0.0",
+  "description": "todo-app with electron lib ",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "electron"
+  ],
+  "author": "Sergey Koshman",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.7.11"
+  }
+}
