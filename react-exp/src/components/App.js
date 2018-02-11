@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import articles from '../fixtures';
 import ArticleList from './ArticleList';
 import 'bootstrap/dist/css/bootstrap.css';
-import './App.css';
 
 class App extends Component {
   state = {
