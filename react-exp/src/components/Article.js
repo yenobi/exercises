@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentList from './CommentList';
+import PropTypes from 'prop-types';
 
 // add PureComponent
 class Article extends React.PureComponent {
@@ -28,6 +29,10 @@ class Article extends React.PureComponent {
             </section>
         );
     }
+}
+
+Article.propTypes = {
+    article: PropTypes.object.isRequired
 }
 
 export default Article;
