@@ -14,9 +14,14 @@ class CommentList extends React.Component {
     }
 
     renderList() {
+        if (!this.state.isOpen) return null;
+
         return (
                 <ul>
-                    {Object.values(this.props.comments).map(this.renderComment)}
+                    {Object.values(this.props.comments)
+                        .map(comment => {
+                            return <li key={comment.id}><Comment comment={comment} /></li>
+                        })}
                 </ul> 
         );
     }
@@ -36,13 +41,12 @@ class CommentList extends React.Component {
     }
 
     render() {
-        const list = this.state.isOpen ? this.renderList() : ''; 
         return (
             <div>
                 <button type="button" className="btn btn-primary" onClick={this.toggleComments}>
                     {this.state.isOpen ? 'close' : 'open'} comments
                 </button>
-                {list}
+                {this.renderList()}
             </div>
            
         );
