@@ -1,10 +1,11 @@
 import React from 'react';
 import CommentList from './CommentList';
+import PropTypes from 'prop-types';
+import toggleOpen from '../decorators/toggleOpen';
 
-// add PureComponent
 class Article extends React.PureComponent {
     render() {
-        const {article, isOpen, onButtonClick} = this.props;
+        const {article, isOpen, toggleOpen} = this.props;
         const body = isOpen ? <section style={{marginTop: '10px'}}>{article.text}</section> : '';
         const styleDate = {float: 'right'};
         const comments = isOpen ? <CommentList comments={article.comments}/> : '';
@@ -13,7 +14,7 @@ class Article extends React.PureComponent {
                 <header className="card-header">
                     <h2>
                         {article.title}
-                        <button className="btn btn-primary float-right" onClick={onButtonClick}>
+                        <button className="btn btn-primary float-right" onClick={(e) => toggleOpen(e)}>
                             {isOpen ? 'close' : 'open'}
                         </button>    
                     </h2>
@@ -30,4 +31,8 @@ class Article extends React.PureComponent {
     }
 }
 
-export default Article;
+Article.propTypes = {
+    article: PropTypes.object.isRequired
+}
+
+export default toggleOpen(Article);
