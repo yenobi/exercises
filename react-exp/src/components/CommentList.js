@@ -9,12 +9,17 @@ class CommentList extends React.Component {
         }
 
         this.renderList = this.renderList.bind(this);
-        this.renderComment = this.renderComment.bind(this);
         this.toggleComments = this.toggleComments.bind(this);
+    }
+
+    static defaultProps = {
+        comments: []
     }
 
     renderList() {
         if (!this.state.isOpen) return null;
+
+        if(!this.props.comments) return <p>No comments yet</p>
 
         return (
                 <ul>
@@ -24,14 +29,6 @@ class CommentList extends React.Component {
                         })}
                 </ul> 
         );
-    }
-
-    renderComment(comment) {
-        return (
-            <li key={comment.id}>
-                <Comment comment={comment} />
-            </li>
-        )
     }
 
     toggleComments() {
