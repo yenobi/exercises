@@ -1,16 +1,16 @@
 import React from 'react';
+// import {findDOMNode} from 'react-dom';
 import CommentList from './CommentList';
 import PropTypes from 'prop-types';
-import toggleOpen from '../decorators/toggleOpen';
 
 class Article extends React.PureComponent {
     render() {
         const {article, isOpen, toggleOpen} = this.props;
         const body = isOpen ? <section style={{marginTop: '10px'}}>{article.text}</section> : '';
         const styleDate = {float: 'right'};
-        const comments = isOpen ? <CommentList comments={article.comments}/> : '';
+        const comments = isOpen ? <CommentList comments={article.comments} ref={this.setContainerRef}/> : '';
         return (
-            <section className="card">
+            <section className="card" ref={this.setContainerRef}>
                 <header className="card-header">
                     <h2>
                         {article.title}
@@ -29,10 +29,16 @@ class Article extends React.PureComponent {
             </section>
         );
     }
+
+    // setContainerRef = (ref) => {
+    //     this.container = ref;
+    //     console.log(ref);
+    //     console.log(findDOMNode(ref));
+    // }
 }
 
 Article.propTypes = {
     article: PropTypes.object.isRequired
 }
 
-export default toggleOpen(Article);
+export default Article;
