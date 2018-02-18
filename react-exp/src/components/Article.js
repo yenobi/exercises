@@ -1,5 +1,4 @@
 import React from 'react';
-// import {findDOMNode} from 'react-dom';
 import CommentList from './CommentList';
 import PropTypes from 'prop-types';
 
@@ -8,7 +7,7 @@ class Article extends React.PureComponent {
         const {article, isOpen, toggleOpen} = this.props;
         const body = isOpen ? <section style={{marginTop: '10px'}}>{article.text}</section> : '';
         const styleDate = {float: 'right'};
-        const comments = isOpen ? <CommentList comments={article.comments} ref={this.setContainerRef}/> : '';
+        const comments = isOpen ? <CommentList comments={article.comments}/> : '';
         return (
             <section className="card" ref={this.setContainerRef}>
                 <header className="card-header">
@@ -29,12 +28,6 @@ class Article extends React.PureComponent {
             </section>
         );
     }
-
-    // setContainerRef = (ref) => {
-    //     this.container = ref;
-    //     console.log(ref);
-    //     console.log(findDOMNode(ref));
-    // }
 }
 
 Article.propTypes = {
