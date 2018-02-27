@@ -2,16 +2,16 @@ import React from 'react';
 
 export default (OriginalComponent) => class WrappedAccordion extends React.Component {
     state = {
-        openArticleId: null
+        openItemId: null
     }
 
-    toggleOpenArticle = (openArticleId) => {
+    toggleOpenItem = (openItemId) => {
        this.setState(
-           openArticleId === this.state.openArticleId ? {openArticleId: null} : {openArticleId}
+           openArticleId === this.state.openItemId ? {openItemId: null} : {openItemId}
         )
     }
 
     render() {
-        return <OriginalComponent {...this.props} {...this.state} toggleOpenArticle={this.toggleOpenArticle}/>
+        return <OriginalComponent {...this.props} {...this.state} toggleOpenArticle={this.toggleOpenItem}/>
     }
 }
