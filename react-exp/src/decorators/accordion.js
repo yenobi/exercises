@@ -7,7 +7,7 @@ export default (OriginalComponent) => class WrappedAccordion extends React.Compo
 
     toggleOpenItem = (openItemId) => {
        this.setState(
-           openArticleId === this.state.openItemId ? {openItemId: null} : {openItemId}
+           openItemId === this.state.openItemId ? {openItemId: null} : {openItemId}
         )
     }
 

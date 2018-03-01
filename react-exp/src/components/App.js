@@ -2,15 +2,17 @@ import React, {Component} from 'react';
 import articles from '../fixtures';
 import ArticleList from './ArticleList';
 import 'bootstrap/dist/css/bootstrap.css';
+import UserForm from './UserForm';
 
 class App extends Component {
   state = {
-    reverted: false
+    reverted: false,
   }
 
   render() {
     return (
       <div className="container">
+        <UserForm />
         <div className="jumbotron">
           <h1 className="title">App name</h1>
           <button className="btn" onClick={this.revert}>{this.state.reverted ? 'A-Z' : 'Z-A'}</button>
