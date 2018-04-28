@@ -12,6 +12,6 @@ export default (OriginalComponent) => class WrappedAccordion extends React.Compo
     }
 
     render() {
-        return <OriginalComponent {...this.props} {...this.state} toggleOpenArticle={this.toggleOpenItem}/>
+        return <OriginalComponent {...this.props} {...this.state} toggleOpen={this.toggleOpenItem}/>
     }
 }
