@@ -3,14 +3,14 @@ import Article from './Article';
 import '../assets/ArticleList.css';
 import accordion from '../decorators/accordion';
 
-function ArticleList({articles, openArticleId, toggleOpenArticle}) {
+function ArticleList({articles, openItemId, toggleOpen}) {
     const articleElements = articles.map((article, index) => {
         return (
             <li key={article.id}> 
                 <Article
                     article={article}
-                    isOpen={article.id === openArticleId}
-                    toggleOpen={() => toggleOpenArticle(article.id)}/>
+                    isOpen={article.id === openItemId}
+                    toggleOpen={() => toggleOpen(article.id)}/>
             </li>
         )
     });

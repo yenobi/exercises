@@ -1,11 +1,28 @@
 import React from 'react';
 import CommentList from './CommentList';
 import PropTypes from 'prop-types';
+import Transition from 'react-transition-group/Transition';
 
 class Article extends React.PureComponent {
+    transitionStyles = {
+        entering: { opacity: 0 },
+        entered: { opacity: 1 },
+      };
+
+      defaultStyle = {
+        transition: `opacity 300ms ease-in-out`,
+        opacity: 0,
+        padding: 20,
+        display: 'inline-block',
+        backgroundColor: '#8787d8'
+      };
+    getBody = () => {
+        if (!this.props.isOpen) return null;
+        return <section style={{marginTop: '10px',...this.defaultStyle, ...this.transitionStyles}}>{this.props.article.text}</section>;
+    };
+
     render() {
         const {article, isOpen, toggleOpen} = this.props;
-        const body = isOpen ? <section style={{marginTop: '10px'}}>{article.text}</section> : '';
         const styleDate = {float: 'right'};
         const comments = isOpen ? <CommentList comments={article.comments}/> : '';
         return (
@@ -20,7 +37,11 @@ class Article extends React.PureComponent {
                 </header>
                 <div className="card-body">
                     <h6 className="card-subtitle text-muted" style={styleDate}>date: {(new Date(article.date)).toDateString()}</h6>
-                    {body}
+                    <Transition
+                        transitionName='article'
+                        timeout={300}>
+                        {this.getBody}
+                    </Transition>
                 </div>
                 <footer>
                     {comments}
